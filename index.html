@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style/normalizacion.css" />
+    <link rel="stylesheet" href="assets/style/index.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    
+    <link
+      rel="shortcut icon"
+      href="/assets/Recursos-img/Perfil-photos/icon.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>Portfolio</title>
+  </head>
+  <body >
+   <!--- modo noche "class="dark"-->
+    <div class="menu-btn">
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+    </div>
+
+    <nav class="menu">
+      <ul class="menu-items">
+        <li value="sobre-mi" onclick="mostrarSeccion('sobre-mi')">SOBRE MÍ</li>
+        <li value="proyectos" onclick="mostrarSeccion('proyectos')">
+          PROYECTOS
+        </li>
+        <li value="skills" onclick="mostrarSeccion('skills')">SKILLS</li>
+        <li data-popup-open="popup-1">CONTACTOS</li>
+      </ul>
+    </nav>
+    <div>
+      <nav class="animate__animated animate__fadeInDown" animate__fadeInDown>
+        <ul id="sections">
+          <li
+            id="active_sobre"
+            value="sobre-mi"
+            onclick="mostrarSeccion('sobre-mi')"
+          >
+            <p id="sobremi_nav">SOBRE MÍ</p>
+          </li>
+          <li  value="proyectos" onclick="mostrarSeccion('proyectos')">
+            <p id="proyectos_nav">PROYECTOS</p>
+          </li>
+          <li  value="skills" onclick="mostrarSeccion('skills')">
+            <p  id="skills_nav">SKILLS</p>
+          </li>
+          <li  value="contactos">
+            <p id="contactos_nav">CONTACTOS</p>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <section id="sobre-mi">
+      <div>
+        <h2 class="animate__animated animate__fadeInUp">
+          <span>Camilo sol</span>
+        </h2>
+        <h3 id="subtitulo-sobremi" data-aos="zoom-in-down" data-aos-duration="1400">
+          Soy programador front-End
+        </h3>
+        <p id="description" data-aos="zoom-in-down" data-aos-duration="4000">
+          ¡Bienvenidos a mi increíble y deslumbrante portafolio web! Aquí
+          encontrarás una mezcla perfecta de talento, creatividad y un toque de
+          locura. Soy como un chef de la web, pero en lugar de ingredientes,
+          utilizo líneas de código y diseños extravagantes.
+        </p>
+        <div data-aos="zoom-in-down" data-aos-duration="7000">
+          <a href="#" id="contactame">Contactame</a>
+          <a id="descargarcv"
+            target="_blank"
+            href="/assets/Archivos/CV Camilo sol 1-2024.pdf/CV Camilo sol 1-2024.pdf"
+            >Descargar CV</a
+          >
+        </div>
+      </div>
+    </section>
+    <section class="sobre_mi_2" id="sobre_mi_2">
+      <div data-aos="fade-up" class="Educacion" id="Educacion">
+        <h2 id="estesoyyo">Este soy yo</h2>
+        <figure>
+          <img
+            loading="lazy"
+            src="/assets/Recursos-img/Perfil-photos/Perfil_2.png"
+            alt=""
+          />
+        </figure>
+      </div>
+      <div data-aos="fade-up" data-aos-duration="1000" class="gustos">
+        <figure>
+          <a href="https://www.instagram.com/camilo_abel1/" target="_blank"
+            ><img loading="lazy" src="/assets/Recursos-img/2.jpg" alt=""
+          /></a>
+        </figure>
+      </div>
+    </section>
+    <section class="sobre_mi_3" id="sobre_mi_3">
+      <div data-aos="fade-up" data-aos-duration="1000" class="gustos">
+        <a href="https://www.uniajc.edu.co/uniajc-virtual/" target="_blank">
+          <figure>
+            <img
+              src="/assets/Recursos-img/icons/link.svg"
+              alt="INIAJC-VIRTUAL"
+            />
+          </figure>
+        </a>
+      </div>
+      <div
+        data-aos="fade-up"
+        data-aos-duration="2000"
+        class="Educacion"
+        id="Educacion"
+      >
+        <h2 id="Miraloultimo">Mira lo ultimo</h2>
+        <figure>
+          <img loading="lazy" src="/assets/Recursos-img/ofrecer.png" alt="" />
+        </figure>
+      </div>
+    </section>
+    <section id="proyectos" style="display: none">
+      <div class="dev-desing">
+        <nav>
+          <ul class="animate__animated animate__fadeInLeft" id="proyectos-id">
+            <li id="active" value="1">Programación</li>
+            <li  value="2">Diseño</li>
+          </ul>
+        </nav>
+      </div>
+      <div class="programacion" id="programacion">
+        <div class="work_cola">
+          <div class="team_project">
+            <div
+              class="capa_team_project_1"
+              class="animate__animated animate__fadeInUp"
+            >
+              <div class="contenedor_icons">
+                <div class="icons"></div>
+                <div class="icons">
+                  <a
+                    href="https://www.uniajc.edu.co/semana-universitaria-unidiversidad/"
+                    target="_blank"
+                  >
+                    <figure>
+                      <img
+                        src="/assets/Recursos-img/icons/link.svg"
+                        alt="SEMANA-U"
+                      />
+                    </figure>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="team_project_1">
+            <div class="capa_team_project_1">
+              <div class="contenedor_icons">
+                <div class="icons"></div>
+                <div class="icons">
+                  <a
+                    href="https://www.uniajc.edu.co/uniajc-virtual/"
+                    target="_blank"
+                  >
+                    <figure>
+                      <img
+                        src="/assets/Recursos-img/icons/link.svg"
+                        alt="INIAJC-VIRTUAL"
+                      />
+                    </figure>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="team_project_2">
+            <div class="capa_team_project_2">
+              <div class="contenedor_icons">
+                <div class="icons"></div>
+                <div class="icons">
+                  <a href="https://urbanhousecoo.com/" target="_blank">
+                    <figure>
+                      <img
+                        src="/assets/Recursos-img/icons/link.svg"
+                        alt="urbanhousecoo"
+                      />
+                    </figure>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="team_project_3">
+            <div class="capa_team_project_1">
+              <div class="contenedor_icons">
+                <div class="icons"></div>
+                <div class="icons">
+                  <a href="https://camilosol123.wordpress.com/" target="_blank">
+                    <figure>
+                      <img
+                        src="/assets/Recursos-img/icons/link.svg"
+                        alt="fundacion"
+                      />
+                    </figure>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="team_project_4">
+            <div class="capa_team_project_1">
+              <div class="contenedor_icons">
+                <div class="icons">
+                  <a href="#" target="_blank">
+                    <figure>
+                      <img
+                        loading="lazy"
+                        src="/assets/Recursos-img/icons/link.svg"
+                        alt=""
+                      />
+                    </figure>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="decoration"></div>
+          <h5 id="proyectoscola">Proyectos en los que he colaborado</h5>
+        </div>
+        <!-- Proyectos personales--->
+
+        <div class="work_perso">
+          <div class="team_project">
+            <div class="capa_team_project_1">
+              <div class="contenedor_icons">
+                <div class="icons"></div>
+                <div class="icons">
+                  <a
+                    href="https://github.com/COLORBLUE1/codeigniter-4-login-crud"
+                    target="_blank"
+                  >
+                    <figure>
+                      <img
+                        src="/assets/Recursos-img/Github_dark.png"
+                        alt="CODEINItHER"
+                      />
+                    </figure>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="team_project_1">
+            <div class="capa_team_project_1">
+              <div class="contenedor_icons">
+                <div class="icons"></div>
+                <div class="icons">
+                  <a
+                    href="https://github.com/COLORBLUE1/JSF-Emprsa-Empleado"
+                    target="_blank"
+                  >
+                    <figure>
+                      <img
+                        src="/assets/Recursos-img/Github_dark.png"
+                        alt="JSF"
+                      />
+                    </figure>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="team_project_2">
+            <div class="capa_team_project_2">
+              <div class="contenedor_icons">
+                <div class="icons"></div>
+                <div class="icons">
+                  <a
+                    href="https://github.com/COLORBLUE1/API_LOCAL.RICKANDMORTI_-andoid_studio_java-"
+                    target="_blank"
+                  >
+                    <figure>
+                      <img
+                        loading="lazy"
+                        src="/assets/Recursos-img/github.png"
+                        alt=""
+                      />
+                    </figure>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="team_project_3">
+            <div class="capa_team_project_1">
+              <div class="contenedor_icons">
+                <div class="icons"></div>
+                <div class="icons">
+                  <a
+                    href="https://github.com/COLORBLUE1/portafolio-V1/tree/master"
+                    target="_blank"
+                  >
+                    <figure>
+                      <img
+                        src="/assets/Recursos-img/github.png"
+                        alt="portafolio-V1"
+                      />
+                    </figure>
+                  </a>
+                  <a
+                    href="https://paguina-azul.000webhostapp.com/Portafolio/app/portafolio/portafolio.component.html"
+                    target="_blank"
+                  >
+                    <figure>
+                      <img
+                        src="/assets/Recursos-img/icons/link.svg"
+                        alt="PORTAFOLIO 1.0"
+                      />
+                    </figure>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="team_project_4">
+            <div class="capa_team_project_1">
+              <div class="contenedor_icons">
+                <div class="icons">
+                  <a
+                    href="https://github.com/COLORBLUE1/Programas_java-JPANELS/tree/main"
+                    target="_blank"
+                  >
+                    <figure>
+                      <img
+                        src="/assets/Recursos-img/github.png"
+                        alt="JPANEL-JAVA"
+                      />
+                    </figure>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="team_project_5">
+            <div class="capa_team_project_1">
+              <div class="contenedor_icons">
+                <div class="icons">
+                  <a href="#" target="_blank">
+                    <figure>
+                      <img
+                        loading="lazy"
+                        src="/assets/Recursos-img/github.png"
+                        alt=""
+                      />
+                    </figure>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h5 id="proyectosperso">Proyectos personales</h5>
+
+          <div class="decoration"></div>
+        </div>
+      </div>
+      <!-- Diseño proyectos--->
+      <div class="diseño" id="diseño" style="display: none">
+        <div class="diseño_div" class="animate__animated animate__fadeInUp">
+          <div class="carrusel" id="carrusel1">
+            <div class="atras">
+              <img
+                id="atras"
+                src="/assets/Recursos-img/icons/left_dark.svg"
+                alt="atras"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="imagenes">
+              <div id="img">
+                <img
+                  class="img"
+                  src="/assets/Recursos-img/Desing-port/Abel-desing.jpg"
+                  alt="imagen 1"
+                  loading="lazy"
+                />
+              </div>
+
+              <div id="texto" class="texto">
+                <h3>Proyecto 01</h3>
+                <p>
+                  Este es el proyecto 01 fue desarrollado para un video de
+                  youtube. Si te gusta el contenido dale like y suscribete
+                </p>
+              </div>
+            </div>
+
+            <div class="adelante" id="adelante">
+              <img
+                src="/assets/Recursos-img/icons/right_dark.svg"
+                alt="adelante"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="puntos" id="puntos"></div>
+        </div>
+
+        <div class="videos">
+          <div class="contenedor_videos">
+            <!-- <div class="animate__animated animate__fadeInUp">
+              <iframe
+                src="https://www.youtube.com/embed/od5TRBgLrcI?si=EFElDNwHS6koykGu&amp;start=44"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="animate__animated animate__fadeInUp">
+              <iframe
+                src="https://www.youtube.com/embed/r0sek9vkeUQ?si=5v1zz9GPrp7jE3YS&amp;start=115"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="animate__animated animate__fadeInUp vanimate__delay-3s">
+              <iframe
+                src="https://www.youtube.com/embed/1W55aNAlH-o?si=UaMDBaFl6hhPKZrv&amp;start=50"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="animate__animated animate__fadeInUp vanimate__delay-4s">
+              <iframe
+                src="https://www.youtube.com/embed/hWOasQUHS4Y?si=jshGDv9bnMVyHNxa&amp;start=77"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="animate__animated animate__fadeInUp vanimate__delay-3s">
+              <iframe
+                src="https://www.youtube.com/embed/_IgdITsUWCc?si=BagxuLX4rWfPVz19&amp;start=77"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" style="display: none">
+      <div class="skills_div">
+        <div class="desing">
+          <h2 id="desing">Programas de diseño</h2>
+          <figure>
+            <img
+              loading="lazy"
+              src="/assets/Recursos-img/Diseño-portada.png"
+              alt=""
+            />
+          </figure>
+        </div>
+        <div class="desing_items">
+          <div>
+            <figure>
+              <img
+                loading="lazy"
+                src="/assets/Recursos-img/illustrator.png"
+                alt=""
+              />
+            </figure>
+          </div>
+          <div>
+            <figure>
+              <img
+                loading="lazy"
+                src="/assets/Recursos-img/photoshop.png"
+                alt=""
+              />
+            </figure>
+          </div>
+          <div>
+            <figure>
+              <img
+                loading="lazy"
+                src="/assets/Recursos-img/premiere.png"
+                alt=""
+              />
+            </figure>
+          </div>
+          <div>
+            <figure>
+              <img loading="lazy" src="/assets/Recursos-img/figma.png" alt="" />
+            </figure>
+          </div>
+          <div>
+            <figure>
+              <img loading="lazy" src="/assets/Recursos-img/after.png" alt="" />
+            </figure>
+          </div>
+        </div>
+        <div class="lenguajes" id="Educacion">
+          <h2 id="Tecnologías">Tecnologías y lenguajes</h2>
+          <figure>
+            <img src="/assets/Recursos-img/Portada_dev.png" alt="" />
+          </figure>
+        </div>
+        <div class="lenguajes_items">
+          <div>
+            <figure>
+              <img
+                loading="lazy"
+                src="/assets/Recursos-img/html-5.png"
+                alt=""
+              />
+            </figure>
+          </div>
+          <div>
+            <figure>
+              <img loading="lazy" src="/assets/Recursos-img/css.png" alt="" />
+            </figure>
+          </div>
+          <div>
+            <figure>
+              <img loading="lazy" src="/assets/Recursos-img/js.png" alt="" />
+            </figure>
+          </div>
+          <div>
+            <figure>
+              <img loading="lazy" src="/assets/Recursos-img/react.png" alt="" />
+            </figure>
+          </div>
+          <div>
+            <figure>
+              <img loading="lazy" src="/assets/Recursos-img/piton.png" alt="" />
+            </figure>
+          </div>
+          <div>
+            <figure>
+              <img
+                loading="lazy"
+                src="/assets/Recursos-img/Codeigniter.png"
+                alt=""
+              />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contactos popup -->
+
+    <div id="popup" class="popup" style="display: none">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <div class="chat-container">
+          <div class="chat-box" id="chatBox"></div>
+          <input
+            type="text"
+            id="userInput"
+            placeholder="Escribe un mensaje..."
+          />
+          <button onclick="sendMessage()" id="enviar">Enviar</button>
+        </div>
+      </div>
+    </div>
+    
+    <footer class="footer">
+      <div class="contenedor_footer">
+        <div class="contenedor_footer2">
+          <div class="spotify">
+            <div>
+              <figure>
+                <img
+                  loading="lazy"
+                  src="/assets/Recursos-img/Perfil-photos/icon.png"
+                  alt=""
+                />
+              </figure>
+            </div>
+            <div>
+              <p id="frase">'Cada día se aprende algo'</p>
+            </div>
+          </div>
+          <div id="messageBox" class="message-box"></div>
+          <div class="contenedor_swich">
+            <div class="swich" id="swich">
+              <img
+                id="icon_swich"
+                src="/assets/Recursos-img/icons/sun.svg"
+                alt=""
+              />
+            </div>
+            <div class="swich_2" id="swich_2">
+              <h6 id="ES-EN"></h6>
+            </div>
+          </div>
+
+          <div class="copyright">
+            <p>@ <span id="año"></span> - Color blue 😉</p>
+          </div>
+        </div>
+        <div class="contenedor_footer3">
+          <div class="adicional">
+            <h4 id="adicional">Adicional</h4>
+            <ul>
+              <li>
+                <a href="https://codepen.io/COLORBLUE1" target="_blank"
+                  >Codepen</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/abel-sol-2aa43229a/"
+                  target="_blank"
+                  >linkedin</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/COLORBLUE1" target="_blank"
+                  >Github</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer_contacto">
+            <h4 id="contactamefooter">Contactame</h4>
+            <ul>
+              <li id="mensaje" onclick="openPopup()" value="contactos">Mensaje</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Script js-->
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+    <script src="/assets/js/paginas.js"></script>
+    <script src="/assets/js/pasarpaginas.js"></script>
+    <script src="/assets/js/Carrusel.js"></script>
+    <script src="/assets/js/Animaciones.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

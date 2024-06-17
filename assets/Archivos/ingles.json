@@ -1,0 +1,127 @@
+{
+  "nav": {
+    "sobremi": {
+      "english": "ABOUT ME",
+      "spanish": "SOBRE MÍ"
+    },
+    "proyectos": {
+      "english": "PROJECTS",
+      "spanish": "PROYECTOS"
+    },
+    "skills": {
+      "english": "SKILLS",
+      "spanish": "SKILLS"
+    },
+    "contactos": {
+      "english": "CONTACTS",
+      "spanish": "CONTACTOS"
+    }
+  },
+  "sobremi": {
+    "subtitle": {
+      "english": "I am a front-end programmer",
+      "spanish": "Soy programador front-End"
+    },
+    "description": {
+      "english": "Welcome to my amazing and stunning web portfolio! Here you will find a perfect mix of talent, creativity and a touch of madness. I'm like a web chef, but instead of ingredients, I use lines of code and extravagant designs.",
+      "spanish": "¡Bienvenidos a mi increíble y deslumbrante portafolio web! Aquí encontrarás una mezcla perfecta de talento, creatividad y un toque de locura. Soy como un chef de la web, pero en lugar de ingredientes, utilizo líneas de código y diseños extravagantes."
+    },
+    "buttons": {
+      "contactame": {
+        "english": "Contact me",
+        "spanish": "Contactame"
+      },
+      "descargarcv": {
+        "english": "Download CV",
+        "spanish": "Descargar CV"
+      }
+    },
+    "estesoyyo": {
+      "english": "this is me",
+      "spanish": "este soy yo"
+    },
+    "Miraloultimo": {
+      "english": "See the latest",
+      "spanish": "Mira lo ultimo"
+    }
+  },
+  "proyectos": {
+    "menu": {
+      "programacion": {
+        "english": "PROGRAMMING",
+        "spanish": "PROGRAMACIÓN"
+      },
+      "diseño": {
+        "english": "DESIGN",
+        "spanish": "DISEÑO"
+      }
+    },
+    "proyectoscola": {
+      "english": "Projects in which I have collaborated",
+      "spanish": "Proyectos en los que he colaborado"
+    },
+    "proyectosperso": {
+      "english": "Personal projects",
+      "spanish": "Proyectos personales"
+    }
+  },
+
+  "skills": {
+    "desing": {
+      "english": "Design programs",
+      "spanish": "Programas de diseño"
+    },
+    "programming": {
+      "english": "Technologies and languages",
+      "spanish": "Tecnologías y lenguajes"
+    }
+  },
+  "contactos": {
+    "bienvenidamsj": {
+      "sms": {
+        "english": "¡Bienvenido!",
+        "spanish": "¡Welcome!"
+      },
+      "comonicase": {
+        "english": " ¿Cómo quieres comunicarte?",
+        "spanish": "How do you want to communicate?"
+      }
+    },
+    "input": {
+      "english": "ESCRIBE UN MENSAJE...",
+      "spanish": "WRITE A MESSAGE..."
+    },
+    "boton": {
+      "english": "SEND",
+      "spanish": "ENVIAR"
+    },
+    "tu": {
+      "english": "YOU",
+      "spanish": "TÚ"
+    }
+  },
+  "footer": {
+    "frase": {
+      "english": "'Every day you learn something'",
+      "spanish": "'Cada día se aprende algo'"
+    },
+    "adicional": {
+      "english": "Additional",
+      "spanish": "Adicional"
+    },
+    "contactame": {
+      "titulo": {
+        "english": "Contact me",
+        "spanish": "Contactame"
+      },
+      "mensaje": {
+        "english": "message",
+        "spanish": "mensaje"
+      }
+    },
+    "fuentes": {
+      "english": "sources",
+      "spanish": "fuentes"
+    }
+  }
+}
