@@ -1,71 +1,44 @@
-let imagenes = [
-  {
-      "url": "/assets/Recursos-img/Perfil-photos/Perfil_1.jpg",
-      "nombre": "Proyecto 001",
-      "descripcion": "Este es el proyecto 01 fue desarrollado para un video de youtube. Si te gusta el contenido dale like y suscribete"
+const slides = document.querySelectorAll(".slide");
+const nextBtn = document.querySelector(".next-arrow");
+const backBtn = document.querySelector(".back-arrow");
+const root = document.querySelector(":root");
 
-  },
-  {
-      "url": "https://img.freepik.com/fotos-premium/fondos-pantalla-geniales_947865-15239.jpg",
-      "nombre": "Proyecto 02",
-      "descripcion": "Hola a todos este es el proyecto02 y fue desarrollado para un video de youtube. Si te gusta el contenido dale like y suscribete"
+let currentSlide = 1;
+const switchSlideDuration = 1000;
+root.style.setProperty("--duration", `${switchSlideDuration}ms`);
 
-  },
-  {
-      "url": "https://img.freepik.com/fotos-premium/mejor-fondo-pantalla-alta-definicion-lindo-fondo-pantalla-siete-colores_947865-3914.jpg",
-      "nombre": "Proyecto 03",
-      "descripcion": "Este proyecto, es el 03 y fue desarrollado para un video de youtube. Si te gusta el contenido dale like y suscribete"
+const handleBack = () => {
+    makeSlideChanges((currentSlide - 1 + slides.length) % slides.length);
+};
 
-  },
-]
+const handleNext = () => {
+    makeSlideChanges((currentSlide + 1) % slides.length);
+};
 
+const makeSlideChanges = (newSlide) => {
+    slides[currentSlide].classList.replace("showcase", "right");
+    slides[newSlide].classList.replace("left", "showcase");
 
-let atras = document.getElementById('atras');
-let adelante = document.getElementById('adelante');
-let imagen = document.getElementById('img');
-let puntos = document.getElementById('puntos');
-let texto = document.getElementById('texto')
-let actual = 0
-posicionCarrusel()
+    backBtn.removeEventListener("click", handleBack);
+    nextBtn.removeEventListener("click", handleNext);
 
-atras.addEventListener('click', function(){
-  actual -=1
+    setTimeout(
+        (slide, backBtn, nextBtn) => {
+            slide.classList.replace("right", "left");
 
-  if (actual == -1){
-      actual = imagenes.length - 1
-  }
+            backBtn.addEventListener("click", handleBack);
+            nextBtn.addEventListener("click", handleNext);
+        },
+        switchSlideDuration,
+        slides[currentSlide],
+        backBtn,
+        nextBtn
+    );
 
-  imagen.innerHTML = ` <img class="img" src="${imagenes[actual].url}" alt="logo pagina" loading="lazy"></img>`
-  texto.innerHTML = `
-  <h3>${imagenes[actual].nombre}</h3>
-  <p>${imagenes[actual].descripcion}</p>
-  `
-  posicionCarrusel()
-})  
-adelante.addEventListener('click', function(){
-  actual +=1
+    currentSlide = newSlide;
 
-  if (actual == imagenes.length){
-      actual = 0
-  }
+    console.log(`${currentSlide + 1} / ${slides.length}`);
+};
 
-  imagen.innerHTML = ` <img class="img" src="${imagenes[actual].url}" alt="logo pagina" loading="lazy"></img>`
-  texto.innerHTML = `
-  <h3>${imagenes[actual].nombre}</h3>
-  <p>${imagenes[actual].descripcion}</p>
-  `
-  posicionCarrusel()
-})  
-
-function posicionCarrusel() {
-  puntos.innerHTML = ""
-  for (var i = 0; i <imagenes.length; i++){
-      if(i == actual){
-          puntos.innerHTML += '<p class="bold">.<p>'
-      }
-      else{
-          puntos.innerHTML += '<p>.<p>'
-      }
-  } 
-}
-
+backBtn.addEventListener("click", handleBack);
+nextBtn.addEventListener("click", handleNext);

@@ -6,16 +6,17 @@ const navItems = document.querySelectorAll("#proyectos-id li");
 const programacionSection = document.getElementById("programacion");
 const diseñoSection = document.getElementById("diseño");
 
-document.getElementById("active").style.width =  "100px";
+document.getElementById("active").style.width = "100px";
 
 document.getElementById("active").style.height = "20px";
 document.getElementById("active").style.borderRadius = "20px";
-document.getElementById("active").style.backgroundColor =
-  "rgb(255 255 255)";
-document.getElementById("active").style.border = "1px solid rgb(255 255 255 / 47%)";
-document.getElementById("active").style.boxShadow = "3px 1px 17px -6px rgb(0 0 0 / 69%)";
-
-
+document.getElementById("active").style.backgroundColor = "rgb(255 255 255)";
+document.getElementById("active").style.border =
+  "1px solid rgb(255 255 255 / 47%)";
+document.getElementById("active").style.boxShadow =
+  "3px 1px 17px -6px rgb(0 0 0 / 69%)";
+document.getElementById("active").style.padding = "8px";
+document.getElementById("active").style.textAlign = "center";
 
 navItems.forEach((navItem) => {
   navItem.addEventListener("click", (event) => {
@@ -57,6 +58,8 @@ navItems.forEach((navItem) => {
     event.target.style.backgroundColor = "rgb(255 255 255)";
     event.target.style.boxShadow = "3px 1px 17px -6px rgb(0 0 0 / 69%)";
     event.target.style.border = "1px solid rgb(255 255 255 / 47%)";
+    event.target.style.padding = "8px";
+    event.target.style.textAlign = "center";
   });
 });
 
