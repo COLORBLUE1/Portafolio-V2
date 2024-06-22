@@ -1355,14 +1355,14 @@ div nav ul li:hover {
     font-size: 20px;
   }
   #sobre-mi div span {
-    font-size: 70px;
+    font-size: 50px;
     font-weight: 600;
     line-height: 0.1em;
     letter-spacing: 0.2em;
     color: rgb(0, 182, 255);
   }
   #sobre-mi div p {
-    width: 400px;
+    width: 300px;
     font-size: 15px;
     letter-spacing: 0.1em;
     margin-bottom: 30px;
