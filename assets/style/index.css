@@ -1355,10 +1355,10 @@ div nav ul li:hover {
     font-size: 20px;
   }
   #sobre-mi div span {
-    font-size: 50px;
+    font-size: 70px;
     font-weight: 600;
-    line-height: 0.1em;
-    letter-spacing: 0.2em;
+    line-height: 0;
+    letter-spacing: 1px;
     color: rgb(0, 182, 255);
   }
   #sobre-mi div p {
@@ -1429,8 +1429,7 @@ div nav ul li:hover {
   }
   .sobre_mi_2 .Educacion figure img {
     position: relative;
-    top: -200px;
-    left: -150px;
+    margin: auto;
   }
   .sobre_mi_2 .Educacion:hover {
     transition: all 1s ease;
