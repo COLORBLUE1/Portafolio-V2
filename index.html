@@ -18,7 +18,6 @@
     <title>Portfolio</title>
   </head>
   <body >
-   <!--- modo noche "class="dark"-->
     <div class="menu-btn">
       <div class="btn-line"></div>
       <div class="btn-line"></div>
@@ -26,12 +25,12 @@
     </div>
 
     <nav class="menu">
-      <ul class="menu-items">
-        <li value="sobre-mi" onclick="mostrarSeccion('sobre-mi')">SOBRE MÍ</li>
-        <li value="proyectos" onclick="mostrarSeccion('proyectos')">
+      <ul class="menu-items" id="">
+        <li value="sobre-mi" class="active" onclick="mostrarSeccionmenu('sobre-mi')">SOBRE MÍ</li>
+        <li value="proyectos" onclick="mostrarSeccionmenu('proyectos')">
           PROYECTOS
         </li>
-        <li value="skills" onclick="mostrarSeccion('skills')">SKILLS</li>
+        <li value="skills" onclick="mostrarSeccionmenu('skills')">SKILLS</li>
         <li data-popup-open="popup-1">CONTACTOS</li>
       </ul>
     </nav>
@@ -57,7 +56,7 @@
         </ul>
       </nav>
     </div>
-    <section id="sobre-mi">
+    <section class="seccion" id="sobre-mi">
       <div>
         <h2 class="animate__animated animate__fadeInUp">
           <span>Camilo sol</span>
@@ -81,7 +80,7 @@
         </div>
       </div>
     </section>
-    <section class="sobre_mi_2" id="sobre_mi_2">
+    <section  class="sobre_mi_2 seccion" id="sobre_mi_2">
       <div data-aos="fade-up" class="Educacion" id="Educacion">
         <h2 id="estesoyyo">Este soy yo</h2>
         <figure>
@@ -100,7 +99,7 @@
         </figure>
       </div>
     </section>
-    <section class="sobre_mi_3" id="sobre_mi_3">
+    <section class="sobre_mi_3 seccion" id="sobre_mi_3">
       <div data-aos="fade-up" data-aos-duration="1000" class="gustos">
         <a href="https://www.uniajc.edu.co/uniajc-virtual/" target="_blank">
           <figure>
@@ -123,7 +122,7 @@
         </figure>
       </div>
     </section>
-    <section id="proyectos" style="display: none">
+    <section class="seccion" id="proyectos" style="display: none">
 
       <div class="dev-desing">
           <ul class="animate__animated animate__fadeInLeft" id="proyectos-id">
@@ -467,7 +466,7 @@
       </div>
     </section>
 
-    <section id="skills" style="display: none">
+    <section class="seccion" id="skills" style="display: none">
       <div class="skills_div">
         <div class="desing">
           <h2 id="desing">Programas de diseño</h2>

@@ -151,7 +151,15 @@ div nav ul li:hover {
 }
 
 .menu-items {
+  position: relative;
+  top: 50px;
   padding: 0;
+}
+
+/* Estilos opcionales para resaltar el item activo */
+.menu-items li.active {
+  font-weight: bold;
+  color: blue; /* Puedes cambiar el color según tu diseño */
 }
 
 .menu-items li {
@@ -1330,7 +1338,7 @@ div nav ul li:hover {
   body {
     overflow-x: hidden;
   }
-  #sections {
+  .seccion {
     display: none;
   }
   .menu-btn {
@@ -1510,6 +1518,9 @@ div nav ul li:hover {
     font-weight: 600;
     line-height: 0.1em;
     letter-spacing: 0.1em;
+  }
+  .sobre_mi_3 .Educacion h2 {
+    font-size: 30px;
   }
   .sobre_mi_3 .Educacion figure {
     margin: auto;

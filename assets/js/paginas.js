@@ -127,3 +127,46 @@ function sendMessage() {
     input.focus();
   }
 }
+// Función para mostrar la sección correspondiente y ocultar las demás
+function mostrarSeccionmenu(seccion) {
+  // Obtener todas las secciones
+  var secciones = document.querySelectorAll(".seccion");
+  var menuItems = document.querySelectorAll(".menu-items li");
+
+  // Ocultar todas las secciones
+  secciones.forEach(function (item) {
+    item.style.display = "none";
+  });
+
+  // Mostrar la sección correspondiente
+  var seccionAMostrar = document.getElementById(seccion);
+  if (seccionAMostrar) {
+    seccionAMostrar.style.display = "flex";
+  }
+
+  // Mostrar secciones adicionales si se muestra la sección 'sobre-mi'
+  if (seccion === "sobre-mi") {
+    var sobreMi2 = document.getElementById("sobre_mi_2");
+    var sobreMi3 = document.getElementById("sobre_mi_3");
+    if (sobreMi2) sobreMi2.style.display = "flex";
+    if (sobreMi3) sobreMi3.style.display = "flex";
+  }
+
+  // Remover la clase 'active' de todos los elementos de menú
+  menuItems.forEach(function (item) {
+    item.classList.remove("active");
+  });
+
+  // Agregar la clase 'active' al elemento de menú seleccionado
+  var menuItemActivo = document.querySelector(
+    '.menu-items li[value="' + seccion + '"]'
+  );
+  if (menuItemActivo) {
+    menuItemActivo.classList.add("active");
+  }
+}
+
+// Ejecutar la función inicialmente para mostrar la primera sección por defecto
+mostrarSeccionmenu("sobre-mi");
+mostrarSeccionmenu("sobre_mi_2");
+mostrarSeccionmenu("sobre_mi_3");
