@@ -151,7 +151,7 @@ div nav ul li:hover {
 }
 
 .menu-items {
-  position: relative;
+  position: fixed;
   top: 50px;
   padding: 0;
 }
@@ -1497,13 +1497,29 @@ div nav ul li:hover {
   .sobre_mi_3 .Educacion h2 {
     font-size: 30px;
   }
-  .dev-desing {
-    display: none;
-  }
   .icons a figure img {
     width: 50px;
     height: 50px;
     opacity: 0;
+  }
+  #proyectos .dev-desing ul {
+    right: 15px;
+    left: 15px;
+    margin: auto 0px;
+    width: 300px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    display: flex;
+    position: fixed;
+    top: 80px;
+    z-index: 4;
+    align-items: center;
+    border-radius: 50px;
+  }
+  #proyectos .dev-desing ul li {
+    color: #ccc;
   }
   #proyectos .programacion .work_cola,
   #proyectos .programacion .work_perso {
@@ -1517,9 +1533,22 @@ div nav ul li:hover {
     width: 100%;
     margin-bottom: 200px;
   }
+  #proyectos .programacion .work_cola .contenedor_icons,
+  #proyectos .programacion .work_perso .contenedor_icons {
+    overflow: hidden;
+  }
   #proyectos .programacion .work_cola h5,
   #proyectos .programacion .work_perso h5 {
     width: 300px;
+  }
+  #proyectos .diseño .carousel {
+    aspect-ratio: 16/9;
+    width: 250px;
+    height: 501px;
+    position: relative;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 15px -1px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
   }
 }
 

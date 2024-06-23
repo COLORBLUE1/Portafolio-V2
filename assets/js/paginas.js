@@ -141,7 +141,11 @@ function mostrarSeccionmenu(seccion) {
   // Mostrar la sección correspondiente
   var seccionAMostrar = document.getElementById(seccion);
   if (seccionAMostrar) {
+    closePopup();
     seccionAMostrar.style.display = "flex";
+
+         // Realiza scroll hacia arriba
+         window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   // Mostrar secciones adicionales si se muestra la sección 'sobre-mi'
@@ -150,8 +154,10 @@ function mostrarSeccionmenu(seccion) {
     var sobreMi3 = document.getElementById("sobre_mi_3");
     if (sobreMi2) sobreMi2.style.display = "flex";
     if (sobreMi3) sobreMi3.style.display = "flex";
+    closePopup();
+         // Realiza scroll hacia arriba
+         window.scrollTo({ top: 0, behavior: 'smooth' });
   }
-
   // Remover la clase 'active' de todos los elementos de menú
   menuItems.forEach(function (item) {
     item.classList.remove("active");
