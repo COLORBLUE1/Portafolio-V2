@@ -170,7 +170,7 @@ div {
 
 .menu-items {
   position: relative;
-  top:50px;
+  top: 50px;
   padding: 0;
 }
 /* Estilos opcionales para resaltar el item activo */
@@ -1482,6 +1482,10 @@ div {
     display: none;
   }
 
+  #sections {
+    display: none;
+  }
+
   .menu-btn {
     opacity: 100%;
     position: fixed;
@@ -1505,7 +1509,6 @@ div {
     font-size: 20px;
   }
   #sobre-mi div span {
-
     font-size: 70px;
     font-weight: 600;
     line-height: 0;
@@ -1587,15 +1590,7 @@ div {
     position: relative;
     margin: auto;
   }
-  .sobre_mi_2 .Educacion:hover {
-    transition: all 1s ease;
-    transform: translateY(-50px);
-    scale: 1.02;
-  }
-  .sobre_mi_2 .Educacion:hover img {
-    scale: 1.01;
-    transform: translateY(50px);
-  }
+
   .sobre_mi_2 .gustos {
     overflow: hidden;
     padding: 30px;
@@ -1621,25 +1616,6 @@ div {
     letter-spacing: 0.1em;
     margin: 30px auto;
     width: 300px;
-  }
-  .sobre_mi_2 .gustos figure {
-    scale: 1.5;
-  }
-  .sobre_mi_2 .gustos figure img {
-    position: relative;
-    margin: 40px auto;
-    width: 100%;
-    height: 100%;
-    transition: all 0.5s linear;
-  }
-  .sobre_mi_2 .gustos:hover {
-    transition: all 1s ease;
-    transform: translateY(-50px);
-    scale: 1.02;
-  }
-  .sobre_mi_2 .gustos:hover img {
-    scale: 1.01;
-    transform: translateY(50px);
   }
 
   .sobre_mi_3 {
@@ -1667,75 +1643,44 @@ div {
     font-weight: 600;
     line-height: 0.1em;
     letter-spacing: 0.1em;
-h2{
-  font-size: 30px;
-}
-  }
-  .sobre_mi_3 .Educacion figure {
-    margin: auto;
-  }
-  .sobre_mi_3 .Educacion figure img {
-    width: 100%;
-    height: 100%;
-  }
-  .sobre_mi_3 .Educacion:hover {
-    transition: all 1s ease;
-    transform: translateY(-50px);
-    scale: 1.02;
-  }
-  .sobre_mi_3 .Educacion:hover img {
-    scale: 1.01;
-    transform: translateY(50px);
-  }
-  .sobre_mi_3 .gustos {
-    overflow: hidden;
-    margin: 30px 30px;
-    text-align: right;
-    background-image: url(/assets/Recursos-img/Programacion-port/SEMANA-U.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 60%;
-    height: 400px;
-    border-radius: 90px;
-    transition: all 1s ease;
-    color: #3b3b3b;
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 0.1em;
-    letter-spacing: 0.3em;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-  }
-  .sobre_mi_3 .gustos p {
-    text-align: center;
-    justify-content: center;
-    width: 100%;
-    color: #3b3b3b;
-    font-size: 30px;
-    font-weight: 200;
-    line-height: 1em;
-    letter-spacing: 0.3em;
-  }
-  .sobre_mi_3 .gustos figure {
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    margin: auto;
-  }
-  .sobre_mi_3 .gustos figure img {
-    width: 150px;
-    height: 150px;
-  }
-  .sobre_mi_3 .gustos:hover {
-    transition: all 1s ease;
-    transform: translateY(-50px);
-    scale: 1.02;
-  }
-  .sobre_mi_3 .gustos:hover figure {
-    opacity: 1;
+    h2 {
+      font-size: 30px;
+    }
   }
 
+  .dev-desing {
+    display: none;
+  }
+  .icons {
+    a {
+      figure {
+        img {
+          width: 50px;
+          height: 50px;
+          opacity: 0;
+        }
+      }
+    }
+  }
 
+  #proyectos {
+    .programacion {
+      .work_cola,
+      .work_perso {
+        position: relative;
+        top: 200px;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 100px 100px 100px;
+        grid-template-rows: 100px 100px 100px;
+        grid-gap: 1rem;
+        width: 100%;
+        margin-bottom: 200px;
+
+        h5 {
+          width: 300px;
+        }
+      }
+    }
+  }
 }
