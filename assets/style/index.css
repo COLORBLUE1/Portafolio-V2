@@ -1536,6 +1536,7 @@ div nav ul li:hover {
   #proyectos .programacion .work_cola .contenedor_icons,
   #proyectos .programacion .work_perso .contenedor_icons {
     overflow: hidden;
+    width: 50px;
   }
   #proyectos .programacion .work_cola h5,
   #proyectos .programacion .work_perso h5 {

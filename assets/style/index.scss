@@ -1698,6 +1698,7 @@ div {
         margin-bottom: 200px;
         .contenedor_icons {
           overflow: hidden;
+          width: 50px;
         }
         h5 {
           width: 300px;
@@ -1707,7 +1708,7 @@ div {
 
     .diseño {
       height: 300vh;
-      .diseño_div{
+      .diseño_div {
         display: flex;
         justify-content: center;
       }
@@ -1728,8 +1729,8 @@ div {
         flex-wrap: wrap;
         gap: 20px;
         padding: 0px 0px;
-        margin-top:200px;
-        iframe{
+        margin-top: 200px;
+        iframe {
           gap: 20px;
           width: 300px;
           height: 200px;
