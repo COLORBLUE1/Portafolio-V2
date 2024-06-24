@@ -1,3 +1,5 @@
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 const sections = document.querySelectorAll("#sections li");
 
 // Add 'active' class to the initial active section
