@@ -2,6 +2,7 @@ $background: rgba(255, 255, 255, 0.897);
 $font-title: "bebas";
 $font-text: "montserrat";
 $color-text-parrafo: #616161;
+
 /*stylos globales*/
 
 li {
@@ -16,8 +17,6 @@ img {
 }
 .dark {
   background: rgb(41, 41, 41);
-  // background: radial-gradient(circle, rgba(74,74,74,1) 0%, rgba(41,41,41,1) 100%);
-  // transition: all 1s ease;
   h2 {
     color: #616161;
   }
@@ -39,8 +38,7 @@ body {
     rgba(181, 213, 228, 1) 48%,
     rgba(255, 255, 255, 1) 100%
   );
-  // background:
-  // scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 /*syilos de barra de desplazamiento*/
@@ -120,7 +118,6 @@ div {
 }
 
 /*Menu hamburgersa*/
-
 .menu-btn {
   opacity: 0;
   position: fixed;
@@ -130,7 +127,7 @@ div {
   z-index: 9999;
   width: 40px;
   height: 40px;
-  transition: opacity 0.3s ease; /* Transición para la opacidad */
+  transition: opacity 0.3s ease;
 }
 
 .btn-line {
@@ -138,7 +135,7 @@ div {
   height: 3px;
   background-color: #747474;
   margin: 5px 0;
-  transition: transform 0.3s ease, opacity 0.3s ease; /* Transiciones para transform y opacidad */
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .menu-btn.open .btn-line:nth-child(1) {
@@ -171,14 +168,15 @@ div {
 }
 
 .menu-items {
-  position: fixed;
-  top: 50px;
-  padding: 0;
+  position: absolute;
+  top: 0; 
+  width: 100%;
+  padding: 40px 0px;
 }
-/* Estilos opcionales para resaltar el item activo */
+
 .menu-items li.active {
   font-weight: bold;
-  color: rgb(80, 80, 247); /* Puedes cambiar el color según tu diseño */
+  color: rgb(80, 80, 247);
 }
 
 .menu-items li {
@@ -195,6 +193,7 @@ div {
 .menu-items li a:hover {
   color: #414141e0;
 }
+
 
 //section 3d inicial
 #sobre-mi {
@@ -260,8 +259,6 @@ div {
   justify-content: center;
   .Educacion {
     background-color: #86e3ce;
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 30%;
     height: 500px;
     border-radius: 90px;
@@ -617,7 +614,6 @@ div {
         background-size: cover;
         border-radius: 90px;
         grid-row: 2 / 5;
-        transition: all 1s ease;
         .capa_team_project_2 {
           opacity: 0%;
           border-radius: 90px;
@@ -629,7 +625,6 @@ div {
           border: 1.5px solid rgba(209, 213, 219, 0.3);
           display: grid;
           justify-items: center;
-          transition: all 1s ease;
 
           .contenedor_icons {
             display: flex;
@@ -674,7 +669,6 @@ div {
           border: 1.5px solid rgba(209, 213, 219, 0.3);
           display: grid;
           justify-items: center;
-          transition: all 1s ease;
 
           .contenedor_icons {
             display: flex;
@@ -693,7 +687,6 @@ div {
       .team_project_3:hover {
         .capa_team_project_1 {
           opacity: 100%;
-
           -webkit-box-shadow: 13px 23px 87px -9px rgba(0, 0, 0, 0.56);
           -moz-box-shadow: 13px 23px 87px -9px rgba(0, 0, 0, 0.56);
           box-shadow: 13px 23px 87px -9px rgba(0, 0, 0, 0.56);
@@ -737,7 +730,6 @@ div {
       .team_project_4:hover {
         .capa_team_project_1 {
           opacity: 100%;
-
           -webkit-box-shadow: 13px 23px 87px -9px rgba(0, 0, 0, 0.56);
           -moz-box-shadow: 13px 23px 87px -9px rgba(0, 0, 0, 0.56);
           box-shadow: 13px 23px 87px -9px rgba(0, 0, 0, 0.56);
@@ -752,7 +744,6 @@ div {
       background-size: cover;
       border-radius: 90px;
       grid-column: 2 / 4;
-      transition: all 1s ease;
       .capa_team_project_1 {
         opacity: 0%;
         border-radius: 90px;
@@ -764,7 +755,6 @@ div {
         border: 1.5px solid rgba(209, 213, 219, 0.3);
         display: grid;
         justify-items: center;
-        transition: all 1s ease;
 
         .contenedor_icons {
           display: flex;
@@ -783,7 +773,6 @@ div {
     .team_project_5:hover {
       .capa_team_project_1 {
         opacity: 100%;
-
         -webkit-box-shadow: 13px 23px 87px -9px rgba(0, 0, 0, 0.56);
         -moz-box-shadow: 13px 23px 87px -9px rgba(0, 0, 0, 0.56);
         box-shadow: 13px 23px 87px -9px rgba(0, 0, 0, 0.56);
@@ -934,19 +923,15 @@ div {
         position: absolute;
         top: 0;
         bottom: 0;
-
         overflow: hidden;
         padding: 0;
         margin: 0;
-
         transition: all ease-in-out var(--duration);
       }
 
       .overlay {
         position: absolute;
-
         z-index: 1;
-
         width: 100%;
         height: 100%;
         background: linear-gradient(
@@ -981,10 +966,8 @@ div {
       .slide-info > button {
         padding: 0.4rem 1rem;
         width: 10rem;
-
         border: 0px;
         border-radius: 0.4rem;
-
         font-size: 1.1rem;
         font-weight: 600;
       }
@@ -995,12 +978,8 @@ div {
 
       .slide-bg {
         position: relative;
-
-        width: var(--width);
-
         left: 50%;
         transform: translatex(-50%);
-
         margin: 0;
       }
     }
@@ -1033,7 +1012,6 @@ div {
 
 #skills {
   width: 100%;
-
   h2 {
     margin-top: 50px;
     color: #555555;
@@ -1158,8 +1136,6 @@ div {
     text-align: right;
     padding: 40px;
     background: radial-gradient(at center, #fffd98, #ffffff);
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 50%;
     height: 400px;
     border-radius: 90px;
@@ -1205,8 +1181,6 @@ div {
           width: 65px;
           height: 65px;
         }
-      }
-      div:nth-child(1) {
       }
 
       div:nth-child(2) {
@@ -1344,8 +1318,6 @@ div {
     letter-spacing: 0.3em;
   }
 }
-
-/* Estilos para el popup */
 
 /* Estilos para el Popup */
 .popup {
@@ -1502,13 +1474,16 @@ div {
     display: flex;
     align-items: center;
   }
+
   #sobre-mi div {
     width: 100%;
   }
+
   #sobre-mi div h3 {
     color: #616161;
     font-size: 20px;
   }
+
   #sobre-mi div span {
     font-size: 70px;
     font-weight: 600;
@@ -1516,6 +1491,7 @@ div {
     letter-spacing: 1px;
     color: rgb(0, 182, 255);
   }
+
   #sobre-mi div p {
     width: 300px;
     font-size: 15px;
@@ -1534,6 +1510,7 @@ div {
     padding: 10px 20px;
     margin: 10px;
   }
+
   #sobre-mi div div a:hover {
     background-color: rgb(57, 199, 255);
   }
@@ -1541,10 +1518,12 @@ div {
   div nav {
     display: none;
   }
+
   .contenedor_footer {
     grid-template-columns: repeat(1, 1fr);
     padding: 0;
   }
+
   .contenedor_footer .contenedor_footer2 .spotify {
     margin-bottom: 50px;
     width: 300px;
@@ -1566,6 +1545,7 @@ div {
     align-items: center;
     justify-content: center;
   }
+
   .sobre_mi_2 .Educacion {
     background-color: #86e3ce;
     background-repeat: no-repeat;
@@ -1587,6 +1567,7 @@ div {
     line-height: 0.1em;
     letter-spacing: 0.3em;
   }
+
   .sobre_mi_2 .Educacion figure img {
     position: relative;
     margin: auto;
@@ -1611,6 +1592,7 @@ div {
     line-height: 0.1em;
     letter-spacing: 0.3em;
   }
+
   .sobre_mi_2 .gustos p {
     text-align: right;
     font-size: 15px;
@@ -1627,6 +1609,7 @@ div {
     justify-content: center;
     flex-wrap: wrap;
   }
+
   .sobre_mi_3 .Educacion {
     background-color: #ffdca2;
     background-repeat: no-repeat;

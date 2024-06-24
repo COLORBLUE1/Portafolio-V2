@@ -31,6 +31,7 @@ img {
 
 body {
   background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(181, 213, 228) 48%, rgb(255, 255, 255) 100%);
+  scroll-behavior: smooth;
 }
 
 /*syilos de barra de desplazamiento*/
@@ -113,7 +114,7 @@ div nav ul li:hover {
   z-index: 9999;
   width: 40px;
   height: 40px;
-  transition: opacity 0.3s ease; /* Transición para la opacidad */
+  transition: opacity 0.3s ease;
 }
 
 .btn-line {
@@ -121,7 +122,7 @@ div nav ul li:hover {
   height: 3px;
   background-color: #747474;
   margin: 5px 0;
-  transition: transform 0.3s ease, opacity 0.3s ease; /* Transiciones para transform y opacidad */
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .menu-btn.open .btn-line:nth-child(1) {
@@ -154,15 +155,15 @@ div nav ul li:hover {
 }
 
 .menu-items {
-  position: fixed;
-  top: 50px;
-  padding: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 40px 0px;
 }
 
-/* Estilos opcionales para resaltar el item activo */
 .menu-items li.active {
   font-weight: bold;
-  color: rgb(80, 80, 247); /* Puedes cambiar el color según tu diseño */
+  color: rgb(80, 80, 247);
 }
 
 .menu-items li {
@@ -240,8 +241,6 @@ div nav ul li:hover {
 }
 .sobre_mi_2 .Educacion {
   background-color: #86e3ce;
-  background-repeat: no-repeat;
-  background-size: cover;
   width: 30%;
   height: 500px;
   border-radius: 90px;
@@ -587,7 +586,6 @@ div nav ul li:hover {
   background-size: cover;
   border-radius: 90px;
   grid-row: 2/5;
-  transition: all 1s ease;
 }
 #proyectos .programacion .work_cola .team_project_2 .capa_team_project_2,
 #proyectos .programacion .work_perso .team_project_2 .capa_team_project_2 {
@@ -601,7 +599,6 @@ div nav ul li:hover {
   border: 1.5px solid rgba(209, 213, 219, 0.3);
   display: grid;
   justify-items: center;
-  transition: all 1s ease;
 }
 #proyectos .programacion .work_cola .team_project_2 .capa_team_project_2 .contenedor_icons,
 #proyectos .programacion .work_perso .team_project_2 .capa_team_project_2 .contenedor_icons {
@@ -644,7 +641,6 @@ div nav ul li:hover {
   border: 1.5px solid rgba(209, 213, 219, 0.3);
   display: grid;
   justify-items: center;
-  transition: all 1s ease;
 }
 #proyectos .programacion .work_cola .team_project_3 .capa_team_project_1 .contenedor_icons,
 #proyectos .programacion .work_perso .team_project_3 .capa_team_project_1 .contenedor_icons {
@@ -715,7 +711,6 @@ div nav ul li:hover {
   background-size: cover;
   border-radius: 90px;
   grid-column: 2/4;
-  transition: all 1s ease;
 }
 #proyectos .programacion .team_project_5 .capa_team_project_1 {
   opacity: 0%;
@@ -728,7 +723,6 @@ div nav ul li:hover {
   border: 1.5px solid rgba(209, 213, 219, 0.3);
   display: grid;
   justify-items: center;
-  transition: all 1s ease;
 }
 #proyectos .programacion .team_project_5 .capa_team_project_1 .contenedor_icons {
   display: flex;
@@ -918,7 +912,6 @@ div nav ul li:hover {
 }
 .diseño .diseño_div .carousel .slide-bg {
   position: relative;
-  width: var(--width);
   left: 50%;
   transform: translatex(-50%);
   margin: 0;
@@ -1066,8 +1059,6 @@ div nav ul li:hover {
   text-align: right;
   padding: 40px;
   background: radial-gradient(at center, #fffd98, #ffffff);
-  background-repeat: no-repeat;
-  background-size: cover;
   width: 50%;
   height: 400px;
   border-radius: 90px;
@@ -1231,7 +1222,6 @@ div nav ul li:hover {
   letter-spacing: 0.3em;
 }
 
-/* Estilos para el popup */
 /* Estilos para el Popup */
 .popup {
   display: none;
