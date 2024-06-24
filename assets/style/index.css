@@ -155,9 +155,11 @@ div nav ul li:hover {
 }
 
 .menu-items {
-  position: fixed;
-  top: 50px;
+  position: absolute;
+  top: 0;
   padding: 0;
+  width: 100%;
+  padding: 40px 0px;
 }
 
 /* Estilos opcionales para resaltar el item activo */
