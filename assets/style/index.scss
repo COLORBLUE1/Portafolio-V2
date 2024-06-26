@@ -20,9 +20,16 @@ img {
   h2 {
     color: #616161;
   }
+  h4 {
+    color: #bebebe;
+  }
   h5 {
     color: #a3a3a3;
   }
+  #sobre-mi div h3 {
+    color: #d7d7d7;
+
+}
   p {
     color: #747474;
   }
@@ -70,6 +77,7 @@ div {
     font-size: 1.5em;
     //lista de items nav
     ul {
+      padding: 10px;
       background-color: transparent;
       border-radius: 50px;
       display: flex;
@@ -212,7 +220,7 @@ div {
     justify-items: center;
 
     h3 {
-      color: #616161;
+      color: #3f3f3f;
       font-size: 50px;
       font-weight: 400;
       line-height: 0em;
@@ -227,9 +235,8 @@ div {
       color: rgb(0 182 255);
     }
     p {
-      width: 700px;
-      font-size: 15px;
-      letter-spacing: 0.1em;
+      width: 750px;
+      font-size: 25px;
       margin-bottom: 30px;
       text-align: center;
       color: #616161;
@@ -394,7 +401,7 @@ div {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    width: 80%;
+    width: 50%;
     height: 500px;
     border-radius: 90px;
     transition: all 1s ease;
@@ -1584,7 +1591,7 @@ div {
     background-color: #41b8d6;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 60%;
+    width: 80%;
     height: 400px;
     border-radius: 90px;
     transition: all 0.5s linear;

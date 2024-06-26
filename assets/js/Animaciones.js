@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-/* swich moon day footer */
+
 /* swich moon day footer */
 document.addEventListener("DOMContentLoaded", function () {
   const swich = document.querySelector(".swich");
