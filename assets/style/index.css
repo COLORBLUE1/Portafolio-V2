@@ -2,6 +2,11 @@
 /*stylos globales*/
 li {
   list-style: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
 }
 
 img {
@@ -33,6 +38,12 @@ img {
 }
 .dark li {
   color: #616161;
+}
+.dark .contenedor_footer .contenedor_footer3 .adicional h4 {
+  color: #b8b8b8;
+}
+.dark .contenedor_footer .contenedor_footer3 .footer_contacto h4 {
+  color: #b8b8b8;
 }
 
 body {
@@ -81,9 +92,6 @@ div nav ul li {
 }
 div nav ul li p {
   margin: auto;
-}
-div nav ul li:hover {
-  cursor: pointer;
 }
 
 .sections-container {
@@ -451,9 +459,6 @@ div nav ul li:hover {
   border: 1px solid rgba(255, 255, 255, 0.47);
   padding: 8px;
   text-align: center;
-}
-#proyectos .dev-desing ul li:hover {
-  cursor: pointer;
 }
 #proyectos .programacion {
   animation: fadeInUp;
@@ -1134,7 +1139,10 @@ div nav ul li:hover {
   color: rgba(0, 0, 0, 0.391);
 }
 .contenedor_footer .contenedor_footer2 .copyright span {
-  color: rgba(13, 0, 255, 0.5215686275);
+  color: #707070;
+}
+.contenedor_footer .contenedor_footer2 .copyright a {
+  color: rgba(75, 75, 75, 0.8549019608);
 }
 .contenedor_footer .contenedor_footer3 {
   display: grid;
@@ -1143,8 +1151,9 @@ div nav ul li:hover {
   grid-gap: 30px;
 }
 .contenedor_footer .contenedor_footer3 .adicional h4 {
+  font-family: "montserrat";
   color: #6e6e6e;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 700;
   letter-spacing: 0.2em;
 }
@@ -1152,16 +1161,20 @@ div nav ul li:hover {
   margin: 0px;
   padding: 0px;
 }
-.contenedor_footer .contenedor_footer3 .adicional ul li {
+.contenedor_footer .contenedor_footer3 .adicional ul li a {
   color: #616161;
-  font-size: 15px;
-  line-height: 2em;
-  font-weight: 400;
-  letter-spacing: 0.3em;
+  font-size: 18px;
+  font-family: "montserrat";
+  letter-spacing: 2px;
+  line-height: 35px;
+}
+.contenedor_footer .contenedor_footer3 .adicional ul a:hover {
+  color: #007bff;
 }
 .contenedor_footer .contenedor_footer3 .footer_contacto h4 {
+  font-family: "montserrat";
   color: #6e6e6e;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 700;
   letter-spacing: 0.2em;
 }
@@ -1170,12 +1183,13 @@ div nav ul li:hover {
   padding: 0px;
 }
 .contenedor_footer .contenedor_footer3 .footer_contacto ul li {
-  cursor: pointer;
   color: #616161;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 2em;
-  letter-spacing: 0.3em;
+  font-size: 18px;
+  font-family: "montserrat";
+  letter-spacing: 2px;
+}
+.contenedor_footer .contenedor_footer3 .footer_contacto ul li:hover {
+  color: #00f7ff;
 }
 .contenedor_footer .contenedor_swich {
   display: flex;
@@ -1220,14 +1234,6 @@ div nav ul li:hover {
   to {
     opacity: 1;
   }
-}
-.contenedor_footer a {
-  text-decoration: none;
-  color: #616161;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 2em;
-  letter-spacing: 0.3em;
 }
 
 /* Estilos para el Popup */
@@ -1289,11 +1295,21 @@ div nav ul li:hover {
 }
 .popup .chat-box {
   height: 250px;
-  overflow: hidden;
+  overflow: auto;
   margin-bottom: 10px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+}
+.popup .chat-box::-webkit-scrollbar {
+  width: 12px;
+}
+.popup .chat-box::-webkit-scrollbar-track {
+  background: rgb(235, 235, 235);
+}
+.popup .chat-box::-webkit-scrollbar-thumb {
+  background-color: rgb(197, 197, 197);
+  border-radius: 20px;
 }
 .popup .chat-box p {
   margin: 5px 0;
