@@ -140,18 +140,6 @@ div nav ul li p {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.menu-btn.open .btn-line:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
-}
-
-.menu-btn.open .btn-line:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-btn.open .btn-line:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
-}
-
 .menu {
   position: fixed;
   top: 0;
@@ -218,7 +206,7 @@ div nav ul li p {
   letter-spacing: 0.1em;
 }
 #sobre-mi div span {
-  font-size: 150px;
+  font-size: clamp(3.3em, 9vw, 8em);
   font-weight: 600;
   line-height: 0.1em;
   letter-spacing: 0.2em;
@@ -1435,10 +1423,11 @@ div nav ul li p {
   }
   .contenedor_footer .contenedor_footer3 {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-gap: 30px;
     margin-top: -30px;
     justify-items: center;
+    text-align: center;
   }
   .sobre_mi_2 {
     display: flex;
@@ -1533,9 +1522,10 @@ div nav ul li p {
     opacity: 0;
   }
   #proyectos .dev-desing ul {
+    padding: 15px;
     right: 15px;
     left: 15px;
-    margin: auto 0px;
+    margin: auto;
     width: 300px;
     height: 80px;
     background-color: rgba(255, 255, 255, 0.15);
@@ -1544,11 +1534,13 @@ div nav ul li p {
     position: fixed;
     top: 80px;
     z-index: 4;
-    align-items: center;
     border-radius: 50px;
+    align-items: center;
+    justify-content: center;
   }
   #proyectos .dev-desing ul li {
     color: #ccc;
+    margin: auto;
   }
   #proyectos .programacion .work_cola,
   #proyectos .programacion .work_perso {
