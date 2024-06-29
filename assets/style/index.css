@@ -276,8 +276,15 @@ div nav ul li p {
   scale: 1.01;
   transform: translateY(50px);
 }
+.sobre_mi_2 .gustos::-webkit-scrollbar {
+  display: none; /* Oculta la barra de desplazamiento en Chrome, Safari, Edge */
+}
 .sobre_mi_2 .gustos {
-  overflow: hidden;
+  overflow-y: scroll; /* Agrega la barra de desplazamiento solo en el eje Y */
+  scrollbar-width: none; /* Oculta la barra de desplazamiento en Firefox */
+}
+.sobre_mi_2 .gustos {
+  overflow: auto;
   padding: 30px;
   margin: 30px 10px;
   text-align: left;
@@ -289,8 +296,10 @@ div nav ul li p {
   height: 500px;
   border-radius: 90px;
   transition: all 0.5s linear;
-  font-size: 25px;
   display: grid;
+  font-size: clamp(1em, 2vw, 5em);
+  line-height: 30px;
+  text-align: center;
 }
 .sobre_mi_2 .gustos h4 {
   font-family: "montserrat";
@@ -1463,28 +1472,6 @@ div nav ul li p {
   .sobre_mi_2 .Educacion figure img {
     margin: auto;
     left: -100%;
-  }
-  .sobre_mi_2 .gustos {
-    overflow: hidden;
-    padding: 30px;
-    margin: 20px 10px;
-    text-align: right;
-    padding: 40px;
-    background-color: #41b8d6;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 60%;
-    height: 400px;
-    border-radius: 90px;
-    transition: all 0.5s linear;
-    color: #3b3b3b;
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 0.1em;
-    letter-spacing: 0.3em;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
   }
   .sobre_mi_2 .gustos figure img {
     position: relative;

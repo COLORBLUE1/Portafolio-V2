@@ -315,8 +315,16 @@ div {
     }
   }
 
-  .gustos {    
-    overflow: hidden;
+  .gustos::-webkit-scrollbar {
+    display: none; /* Oculta la barra de desplazamiento en Chrome, Safari, Edge */
+  }
+
+  .gustos {
+    overflow-y: scroll; /* Agrega la barra de desplazamiento solo en el eje Y */
+    scrollbar-width: none; /* Oculta la barra de desplazamiento en Firefox */
+  }
+  .gustos {
+    overflow: auto;
     padding: 30px;
     margin: 30px 10px;
     text-align: left;
@@ -328,18 +336,19 @@ div {
     height: 500px;
     border-radius: 90px;
     transition: all 0.5s linear;
-   font-size: 25px;
     display: grid;
-    
-h4{
-  font-family: $font-text;
-  span{
-    font-family: $font-text;
-    letter-spacing: 3px;
-    color:#3b3b3b;
-    margin:5px;
-  }
-}
+    font-size: clamp(1em, 2vw, 5em);
+    line-height: 30px;
+    text-align: center;
+    h4 {
+      font-family: $font-text;
+      span {
+        font-family: $font-text;
+        letter-spacing: 3px;
+        color: #3b3b3b;
+        margin: 5px;
+      }
+    }
     p {
       text-align: right;
       font-size: 15px;
@@ -362,7 +371,6 @@ h4{
     scale: 1.02;
     img {
       scale: 1.01;
-      
     }
   }
 }
@@ -432,7 +440,7 @@ h4{
     align-items: center;
     display: flex;
     justify-content: center;
- 
+
     figure {
       opacity: 0;
       width: 100%;
@@ -1039,7 +1047,7 @@ h4{
     margin-top: 200px;
     display: flex;
     flex-wrap: wrap;
-    
+
     .desing {
       overflow: hidden;
       padding: 30px;
@@ -1609,29 +1617,8 @@ h4{
   }
 
   .sobre_mi_2 .gustos {
-    overflow: hidden;
-    padding: 30px;
-    margin: 20px 10px;
-    text-align: right;
-    padding: 40px;
-    background-color: #41b8d6;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 60%;
-    height: 400px;
-    border-radius: 90px;
-    transition: all 0.5s linear;
-    color: #3b3b3b;
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 0.1em;
-    letter-spacing: 0.3em;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    figure{
-      img{
+    figure {
+      img {
         position: relative;
         width: 450px;
         height: 100%;
@@ -1651,9 +1638,8 @@ h4{
   }
 
   .sobre_mi_3 {
-display: none;
+    display: none;
   }
-
 
   #proyectos {
     .dev-desing {
