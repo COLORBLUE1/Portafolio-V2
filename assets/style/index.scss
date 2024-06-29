@@ -996,11 +996,11 @@ div {
         transform: translatex(-50%);
         margin: 0;
         width: 100%;
-    height: 100%;
-    position: relative;
-    left: 50%;
-    transform: translatex(-50%);
-    margin: 0;
+        height: 100%;
+        position: relative;
+        left: 50%;
+        transform: translatex(-50%);
+        margin: 0;
       }
     }
   }
@@ -1175,7 +1175,8 @@ div {
 
 /*Footer*/
 .contenedor_footer {
-  margin-top: 200px;
+  position: relative;
+  top: 200px;
   display: grid;
   padding: 20px 100px;
   grid-template-columns: repeat(2, 1fr);
@@ -1230,7 +1231,7 @@ div {
       span {
         color: #707070;
       }
-      a{
+      a {
         color: #4b4b4bda;
       }
     }
@@ -1261,8 +1262,8 @@ div {
             line-height: 35px;
           }
         }
-        a:hover{
-          color:#007bff;
+        a:hover {
+          color: #007bff;
         }
       }
     }
@@ -1284,8 +1285,8 @@ div {
           font-family: $font-text;
           letter-spacing: 2px;
         }
-        li:hover{
-            color:#00f7ff;
+        li:hover {
+          color: #00f7ff;
         }
       }
     }
@@ -1410,16 +1411,15 @@ div {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-   
   }
   .chat-box::-webkit-scrollbar {
     width: 12px;
   }
-  
+
   .chat-box::-webkit-scrollbar-track {
     background: rgb(235, 235, 235);
   }
-  
+
   .chat-box::-webkit-scrollbar-thumb {
     background-color: rgb(197, 197, 197);
     border-radius: 20px;

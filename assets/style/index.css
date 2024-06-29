@@ -1081,7 +1081,8 @@ div nav ul li p {
 
 /*Footer*/
 .contenedor_footer {
-  margin-top: 200px;
+  position: relative;
+  top: 200px;
   display: grid;
   padding: 20px 100px;
   grid-template-columns: repeat(2, 1fr);
