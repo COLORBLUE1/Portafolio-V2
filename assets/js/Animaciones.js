@@ -92,10 +92,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-/* swich moon day footer */
 document.addEventListener("DOMContentLoaded", function () {
   const swich = document.querySelector(".swich");
   const body = document.querySelector("body");
+  const icon_swich = document.querySelector(".swich img"); // Assuming there's an <img> inside .swich for the icon
 
   // Function to verify if the user has activated the dark mode on the device
   function isDarkModePreferred() {
@@ -105,37 +105,36 @@ document.addEventListener("DOMContentLoaded", function () {
     );
   }
 
-  // Function to change between light and dark mode
+  // Function to toggle between light and dark mode
   function toggleDarkMode() {
     if (body.classList.contains("dark")) {
       body.classList.remove("dark");
       icon_swich.src = "assets/Recursos-img/icons/sun.svg";
       swich.style.backgroundColor = "#424242";
+      localStorage.setItem("theme", "light"); // Store theme preference in localStorage
     } else {
       body.classList.add("dark");
       icon_swich.src = "assets/Recursos-img/icons/moon_empy.svg";
       swich.style.backgroundColor = "white";
+      localStorage.setItem("theme", "dark"); // Store theme preference in localStorage
     }
     body.style.transition = "background-color 1s ease";
   }
 
-  // Event click on the theme change button
+  // Event listener for theme change button click
   swich.addEventListener("click", function () {
     toggleDarkMode();
   });
 
-  // Verify automatically if it should be in dark mode when the page loads
-  if (isDarkModePreferred()) {
+  // Check localStorage for theme preference on page load
+  const storedTheme = localStorage.getItem("theme");
+  if (storedTheme === "dark") {
     body.classList.add("dark");
-    if (icon_swich) {
-      icon_swich.src = "assets/Recursos-img/icons/moon_empy.svg";
-    }
+    icon_swich.src = "assets/Recursos-img/icons/moon_empy.svg";
     swich.style.backgroundColor = "white";
   } else {
     body.classList.remove("dark");
-    if (icon_swich) {
-      icon_swich.src = "assets/Recursos-img/icons/sun.svg";
-    }
+    icon_swich.src = "assets/Recursos-img/icons/sun.svg";
     swich.style.backgroundColor = "#424242";
   }
 
@@ -154,8 +153,11 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       swich.style.backgroundColor =
         newColorScheme === "dark" ? "white" : "#424242";
+
+      localStorage.setItem("theme", newColorScheme); // Update localStorage with new theme preference
     });
 });
+
 
 /* Switch de idioma */
 
