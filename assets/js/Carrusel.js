@@ -3,42 +3,39 @@ const nextBtn = document.querySelector(".next-arrow");
 const backBtn = document.querySelector(".back-arrow");
 const root = document.querySelector(":root");
 
-let currentSlide = 1;
+let currentSlide = 0; // Empezamos desde la primera imagen (índice 0)
 const switchSlideDuration = 1000;
 root.style.setProperty("--duration", `${switchSlideDuration}ms`);
 
+// Función para manejar el cambio a la imagen anterior
 const handleBack = () => {
-    makeSlideChanges((currentSlide - 1 + slides.length) % slides.length);
+    clearInterval(slideInterval); // Limpiar el intervalo al interactuar
+    const newSlide = (currentSlide - 1 + slides.length) % slides.length;
+    makeSlideChanges(newSlide);
+    slideInterval = setInterval(handleNext, 3000); // Reiniciar intervalo después de la interacción
 };
 
+// Función para manejar el cambio a la siguiente imagen
 const handleNext = () => {
-    makeSlideChanges((currentSlide + 1) % slides.length);
+    clearInterval(slideInterval); // Limpiar el intervalo al interactuar
+    const newSlide = (currentSlide + 1) % slides.length;
+    makeSlideChanges(newSlide);
+    slideInterval = setInterval(handleNext, 3000); // Reiniciar intervalo después de la interacción
 };
 
+// Función para realizar los cambios en la imagen
 const makeSlideChanges = (newSlide) => {
-    slides[currentSlide].classList.replace("showcase", "right");
-    slides[newSlide].classList.replace("left", "showcase");
-
-    backBtn.removeEventListener("click", handleBack);
-    nextBtn.removeEventListener("click", handleNext);
-
-    setTimeout(
-        (slide, backBtn, nextBtn) => {
-            slide.classList.replace("right", "left");
-
-            backBtn.addEventListener("click", handleBack);
-            nextBtn.addEventListener("click", handleNext);
-        },
-        switchSlideDuration,
-        slides[currentSlide],
-        backBtn,
-        nextBtn
-    );
+    slides[currentSlide].classList.remove("showcase");
+    slides[newSlide].classList.add("showcase");
 
     currentSlide = newSlide;
 
     console.log(`${currentSlide + 1} / ${slides.length}`);
 };
 
+// Agregar event listeners para los botones de navegación
 backBtn.addEventListener("click", handleBack);
 nextBtn.addEventListener("click", handleNext);
+
+// Intervalo para cambiar automáticamente las imágenes
+let slideInterval = setInterval(handleNext, 3000); // Cambiar imágenes cada 3 segundos (ajustar según sea necesario)
