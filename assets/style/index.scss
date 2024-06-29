@@ -357,7 +357,7 @@ div {
     scale: 1.02;
     img {
       scale: 1.01;
-      transform: translateY(50px);
+      
     }
   }
 }
@@ -1043,6 +1043,7 @@ div {
     margin-top: 200px;
     display: flex;
     flex-wrap: wrap;
+    
     .desing {
       overflow: hidden;
       padding: 30px;
@@ -1100,10 +1101,12 @@ div {
       flex-wrap: wrap;
       flex-direction: column;
       align-content: center;
+
       figure {
         img {
           width: 80px;
           height: 80px;
+          object-fit: contain;
         }
       }
     }
@@ -1168,6 +1171,7 @@ div {
       img {
         width: 80px;
         height: 80px;
+        object-fit: contain;
       }
     }
   }
@@ -1604,8 +1608,8 @@ div {
   }
 
   .sobre_mi_2 .Educacion figure img {
-    position: relative;
     margin: auto;
+    left: -100%;
   }
 
   .sobre_mi_2 .gustos {
@@ -1626,6 +1630,17 @@ div {
     font-weight: 600;
     line-height: 0.1em;
     letter-spacing: 0.3em;
+
+    figure{
+      img{
+        position: relative;
+        width: 450px;
+        height: 100%;
+        left: 50%;
+        transform: translatex(-50%);
+        margin: 0;
+      }
+    }
   }
 
   .sobre_mi_2 .gustos p {
@@ -1698,7 +1713,7 @@ div {
         align-items: center;
         justify-content: center;
         li {
-          color: #ccc;
+          color: #8d8d8d;
           margin: auto;
         }
       }

@@ -318,7 +318,6 @@ div nav ul li p {
 }
 .sobre_mi_2 .gustos:hover img {
   scale: 1.01;
-  transform: translateY(50px);
 }
 
 .sobre_mi_3 {
@@ -1017,6 +1016,7 @@ div nav ul li p {
 #skills .skills_div .desing_items figure img {
   width: 80px;
   height: 80px;
+  object-fit: contain;
 }
 #skills .lenguajes {
   z-index: 1;
@@ -1077,6 +1077,7 @@ div nav ul li p {
 #skills .lenguajes_items figure img {
   width: 80px;
   height: 80px;
+  object-fit: contain;
 }
 
 /*Footer*/
@@ -1464,8 +1465,8 @@ div nav ul li p {
     letter-spacing: 0.3em;
   }
   .sobre_mi_2 .Educacion figure img {
-    position: relative;
     margin: auto;
+    left: -100%;
   }
   .sobre_mi_2 .gustos {
     overflow: hidden;
@@ -1485,6 +1486,14 @@ div nav ul li p {
     font-weight: 600;
     line-height: 0.1em;
     letter-spacing: 0.3em;
+  }
+  .sobre_mi_2 .gustos figure img {
+    position: relative;
+    width: 450px;
+    height: 100%;
+    left: 50%;
+    transform: translatex(-50%);
+    margin: 0;
   }
   .sobre_mi_2 .gustos p {
     text-align: right;
@@ -1545,7 +1554,7 @@ div nav ul li p {
     justify-content: center;
   }
   #proyectos .dev-desing ul li {
-    color: #ccc;
+    color: #8d8d8d;
     margin: auto;
   }
   #proyectos .programacion .work_cola,
