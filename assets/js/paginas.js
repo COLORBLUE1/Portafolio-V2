@@ -136,16 +136,14 @@ function mostrarSeccionmenu(seccion) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
-  // Mostrar secciones adicionales si se muestra la sección 'sobre-mi'
-  if (seccion === "sobre-mi") {
-    var sobreMi2 = document.getElementById("sobre_mi_2");
-    var sobreMi3 = document.getElementById("sobre_mi_3");
-    if (sobreMi2) sobreMi2.style.display = "flex";
-    if (sobreMi3) sobreMi3.style.display = "flex";
-    document.getElementById("popup").style.display = "none";
-    // Realiza scroll hacia arriba
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
+    // Mostrar secciones adicionales si se muestra la sección 'sobre-mi'
+    if (seccion === "sobre-mi") {
+      var sobre-mi = document.getElementById("sobre-mi");
+      if (sobre-mi) sobre-mi.style.display = "flex";
+      document.getElementById("popup").style.display = "none";
+      // Realiza scroll hacia arriba
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
 
   // Remover la clase 'active' de todos los elementos de menú
   menuItems.forEach(function (item) {
@@ -167,8 +165,6 @@ function mostrarSeccionmenu(seccion) {
 
 // Ejecutar la función inicialmente para mostrar la primera sección por defecto
 mostrarSeccionmenu("sobre-mi");
-mostrarSeccionmenu("sobre_mi_2");
-mostrarSeccionmenu("sobre_mi_3");
 
 document.addEventListener('DOMContentLoaded', function() {
   var menuBtn = document.querySelector('.menu-btn');
