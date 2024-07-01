@@ -51,6 +51,9 @@ img {
 .dark .contenedor_footer .contenedor_footer3 .footer_contacto ul li {
   color: #9f9f9f;
 }
+.dark #description {
+  color: #9f9f9f;
+}
 
 body {
   background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(181, 213, 228) 48%, rgb(255, 255, 255) 100%);
@@ -1419,7 +1422,6 @@ div nav ul li p {
     letter-spacing: 0.1em;
     margin-bottom: 30px;
     text-align: center;
-    color: #616161;
   }
   #sobre-mi div div a {
     letter-spacing: 0.1em;
@@ -1498,6 +1500,9 @@ div nav ul li p {
     letter-spacing: 0.1em;
     margin: 30px auto;
     width: 300px;
+  }
+  .sobre_mi_2 .gustos h4 span {
+    line-height: 20px;
   }
   .sobre_mi_3 {
     display: none;

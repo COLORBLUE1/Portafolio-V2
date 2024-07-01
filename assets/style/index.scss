@@ -59,7 +59,9 @@ img {
 .contenedor_footer .contenedor_footer3 .footer_contacto ul li {
   color:  #9f9f9f;
 }
-
+#description{
+      color:#9f9f9f;
+    }
 }
 
 body {
@@ -1551,7 +1553,6 @@ div {
     letter-spacing: 0.1em;
     margin-bottom: 30px;
     text-align: center;
-    color: #616161;
   }
 
   #sobre-mi div div a {
@@ -1647,7 +1648,9 @@ div {
     margin: 30px auto;
     width: 300px;
   }
-
+  .sobre_mi_2 .gustos h4 span {
+    line-height: 20px;
+}
   .sobre_mi_3 {
     display: none;
   }
