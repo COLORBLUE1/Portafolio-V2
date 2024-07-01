@@ -91,9 +91,6 @@ yo.addEventListener("click", function () {
   }
 });
 
-
-
-
 function sendMessage() {
   var input = document.querySelector(".input input");
   var message = input.value;
@@ -112,7 +109,6 @@ function sendMessage() {
     input.focus();
   }
 }
-
 
 /* Menu hamburgesa */
 
@@ -136,14 +132,14 @@ function mostrarSeccionmenu(seccion) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
-    // Mostrar secciones adicionales si se muestra la sección 'sobre-mi'
-    if (seccion === "sobre-mi") {
-      var sobre-mi = document.getElementById("sobre-mi");
-      if (sobre-mi) sobre-mi.style.display = "flex";
-      document.getElementById("popup").style.display = "none";
-      // Realiza scroll hacia arriba
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
+  // Mostrar secciones adicionales si se muestra la sección 'sobre-mi'
+  if (seccion === "sobre-mi") {
+    var sobreMi2 = document.getElementById("sobre_mi_2");
+    if (sobreMi2) sobreMi2.style.display = "flex";
+    document.getElementById("popup").style.display = "none";
+    // Realiza scroll hacia arriba
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
 
   // Remover la clase 'active' de todos los elementos de menú
   menuItems.forEach(function (item) {
@@ -159,49 +155,52 @@ function mostrarSeccionmenu(seccion) {
   }
 
   // Ocultar el menú al hacer clic en un elemento del menú
-  var menu = document.querySelector('.menu');
-  menu.classList.remove('open');
+  var menu = document.querySelector(".menu");
+  menu.classList.remove("open");
 }
 
 // Ejecutar la función inicialmente para mostrar la primera sección por defecto
 mostrarSeccionmenu("sobre-mi");
+mostrarSeccionmenu("sobre_mi_2");
 
-document.addEventListener('DOMContentLoaded', function() {
-  var menuBtn = document.querySelector('.menu-btn');
-  var menu = document.querySelector('.menu');
-  var popupTrigger = document.querySelector('.menu-items li[data-popup-open="popup-1"]');
-  var popup = document.getElementById('popup-1');
+document.addEventListener("DOMContentLoaded", function () {
+  var menuBtn = document.querySelector(".menu-btn");
+  var menu = document.querySelector(".menu");
+  var popupTrigger = document.querySelector(
+    '.menu-items li[data-popup-open="popup-1"]'
+  );
+  var popup = document.getElementById("popup-1");
 
   // Event listener para abrir y cerrar el menú al hacer clic en el botón del menú
-  menuBtn.addEventListener('click', function(event) {
+  menuBtn.addEventListener("click", function (event) {
     event.stopPropagation(); // Evita que el evento de cierre se propague al documento
-    menu.classList.toggle('open');
-    menuBtn.classList.toggle('open');
+    menu.classList.toggle("open");
+    menuBtn.classList.toggle("open");
   });
 
   // Event listener para cerrar el menú al hacer clic fuera de él
-  document.addEventListener('click', function(event) {
+  document.addEventListener("click", function (event) {
     if (!menu.contains(event.target) && event.target !== popupTrigger) {
-      menu.classList.remove('open');
-      menuBtn.classList.remove('open');
+      menu.classList.remove("open");
+      menuBtn.classList.remove("open");
     }
   });
 
   // Event listener para abrir el popup al hacer clic en el elemento 'CONTACTOS'
-  popupTrigger.addEventListener('click', function(event) {
+  popupTrigger.addEventListener("click", function (event) {
     event.stopPropagation(); // Evita que el evento de cierre se propague al documento
-    popup.style.display = 'block'; // Muestra el popup
-    menu.classList.remove('open'); // Cierra el menú
-    menuBtn.classList.remove('open'); // Remueve la clase 'open' del botón del menú
+    popup.style.display = "block"; // Muestra el popup
+    menu.classList.remove("open"); // Cierra el menú
+    menuBtn.classList.remove("open"); // Remueve la clase 'open' del botón del menú
   });
 
   // Función para cerrar el popup (si es necesario)
   function closePopup() {
-    popup.style.display = 'none'; // Oculta el popup
+    popup.style.display = "none"; // Oculta el popup
   }
 
   // Event listener para cerrar el popup si se hace clic fuera de él
-  document.addEventListener('click', function(event) {
+  document.addEventListener("click", function (event) {
     if (event.target !== popupTrigger && event.target !== popup) {
       closePopup();
     }
