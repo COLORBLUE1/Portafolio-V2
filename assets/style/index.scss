@@ -39,7 +39,7 @@ img {
   }
 
   p {
-    color:  #9f9f9f;
+    color: #fff;
   }
   li {
     color: #616161;
@@ -55,13 +55,13 @@ img {
 
   .contenedor_footer .contenedor_footer3 .adicional ul li a {
     color: #9f9f9f;
-}
-.contenedor_footer .contenedor_footer3 .footer_contacto ul li {
-  color:  #9f9f9f;
-}
-#description{
-      color:#9f9f9f;
-    }
+  }
+  .contenedor_footer .contenedor_footer3 .footer_contacto ul li {
+    color: #9f9f9f;
+  }
+  #description {
+    color: #9f9f9f;
+  }
 }
 
 body {
@@ -251,7 +251,7 @@ div {
     }
 
     span {
-      font-size: clamp(3.3em, 9vw, 8em);
+      font-size: clamp(3.3em, 12vw, 8em);
       font-weight: 600;
       line-height: 0.1em;
       letter-spacing: 0.2em;
@@ -299,6 +299,7 @@ div {
     padding: 30px;
     margin: 50px 10px;
     overflow: hidden;
+
     h2 {
       text-align: center;
       color: #3b3b3b;
@@ -309,14 +310,14 @@ div {
     }
     figure {
       display: flex;
-    justify-content: center;
+      justify-content: center;
       img {
         position: relative;
         top: -100px;
-        filter: drop-shadow(0 0 50px gray);
       }
     }
   }
+
   .Educacion:hover {
     transition: all 1s ease;
     transform: translateY(-50px);
@@ -352,6 +353,18 @@ div {
     font-size: clamp(1em, 2vw, 5em);
     line-height: 30px;
     text-align: center;
+
+    #scroll-sobremi {
+      display: flex;
+      justify-content: center;
+      animation: scrollUpDown 2s ease-in-out infinite;
+      img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+      }
+    }
+
     h4 {
       font-family: $font-text;
       span {
@@ -1404,15 +1417,6 @@ div {
       opacity: 1;
     }
   }
-  /* Estilos para las animaciones */
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
 
   .fade-in {
     animation: fade-in 0.5s ease;
@@ -1461,7 +1465,15 @@ div {
       transform: translateY(0);
     }
   }
-
+  @keyframes scrollUpDown {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
   input[type="text"] {
     border: 1px;
     width: 70%;
@@ -1625,7 +1637,6 @@ div {
 
   .sobre_mi_2 .Educacion figure img {
     margin: auto;
-    filter: drop-shadow(0 0 0 gray);    
   }
 
   .sobre_mi_2 .gustos {
@@ -1650,7 +1661,7 @@ div {
   }
   .sobre_mi_2 .gustos h4 span {
     line-height: 20px;
-}
+  }
   .sobre_mi_3 {
     display: none;
   }

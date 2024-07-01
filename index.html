@@ -6,22 +6,20 @@
     <link rel="stylesheet" href="assets/style/normalizacion.css" />
     <link rel="stylesheet" href="assets/style/index.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    
+
     <link
       rel="icon"
-      href="/assets/Recursos-img/Perfil-photos/icon.png" type="image/png"
+      href="/assets/Recursos-img/Perfil-photos/icon.png"
+      type="image/png"
     />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <link
-    rel="stylesheet"
-    href="/assets/style/Fonts.css"
-  />
+    <link rel="stylesheet" href="/assets/style/Fonts.css" />
     <title>Portfolio</title>
   </head>
-  <body >
+  <body>
     <div class="menu-btn">
       <div class="btn-line"></div>
       <div class="btn-line"></div>
@@ -30,7 +28,13 @@
 
     <nav class="menu">
       <ul class="menu-items" id="">
-        <li value="sobre-mi" class="active" onclick="mostrarSeccionmenu('sobre-mi')">SOBRE MÍ</li>
+        <li
+          value="sobre-mi"
+          class="active"
+          onclick="mostrarSeccionmenu('sobre-mi')"
+        >
+          SOBRE MÍ
+        </li>
         <li value="proyectos" onclick="mostrarSeccionmenu('proyectos')">
           PROYECTOS
         </li>
@@ -48,13 +52,13 @@
           >
             <p id="sobremi_nav">SOBRE MÍ</p>
           </li>
-          <li  value="proyectos" onclick="mostrarSeccion('proyectos')">
+          <li value="proyectos" onclick="mostrarSeccion('proyectos')">
             <p id="proyectos_nav">PROYECTOS</p>
           </li>
-          <li  value="skills" onclick="mostrarSeccion('skills')">
-            <p  id="skills_nav">SKILLS</p>
+          <li value="skills" onclick="mostrarSeccion('skills')">
+            <p id="skills_nav">SKILLS</p>
           </li>
-          <li  value="contactos">
+          <li value="contactos">
             <p id="contactos_nav">CONTACTOS</p>
           </li>
         </ul>
@@ -65,7 +69,11 @@
         <h2 class="animate__animated animate__fadeInUp">
           <span>Camilo sol</span>
         </h2>
-        <h3 id="subtitulo-sobremi" data-aos="zoom-in-down" data-aos-duration="1400">
+        <h3
+          id="subtitulo-sobremi"
+          data-aos="zoom-in-down"
+          data-aos-duration="1400"
+        >
           Soy programador front-End
         </h3>
         <p id="description" data-aos="zoom-in-down" data-aos-duration="4000">
@@ -76,7 +84,8 @@
         </p>
         <div data-aos="zoom-in-down" data-aos-duration="7000">
           <a href="#" id="contactame" onclick="openPopup()">Contactame</a>
-          <a id="descargarcv"
+          <a
+            id="descargarcv"
             target="_blank"
             href="/assets/Archivos/CV Camilo sol 1-2024.pdf/CV Camilo sol 1-2024.pdf"
             >Descargar CV</a
@@ -84,7 +93,7 @@
         </div>
       </div>
     </section>
-    <section  class="sobre_mi_2 seccion" id="sobre_mi_2">
+    <section class="sobre_mi_2 seccion" id="sobre_mi_2">
       <div data-aos="fade-up" class="Educacion" id="Educacion">
         <h2 id="estesoyyo">Este soy yo</h2>
         <figure>
@@ -96,9 +105,26 @@
         </figure>
       </div>
       <div data-aos="fade-up" data-aos-duration="1000" class="gustos">
-       <div><h4>Estudiante de<span>Ingenieria en sistemas</span></h4></div>
-       <div><h4>Edad <span> 21</span></h4></div>
-       <div><h4>Que puedo aportar <span>Como programador front-end, aporto habilidades en HTML, CSS y JavaScript para desarrollar interfaces intuitivas y visualmente atractivas. con el objetivo de optimizar el rendimiento y la experiencia del usuario en cada proyecto.</span></h4></div>
+        <div id="scroll-sobremi">
+          <img src="/assets/Recursos-img/icons/scroll-bottom-icon.svg" alt="" />
+        </div>
+        <div>
+          <h4>Estudiante de<span>Ingenieria en sistemas</span></h4>
+        </div>
+        <div>
+          <h4>Edad <span> 21</span></h4>
+        </div>
+        <div>
+          <h4>
+            Que puedo aportar
+            <span
+              >Como programador front-end, aporto habilidades en HTML, CSS y
+              JavaScript para desarrollar interfaces intuitivas y visualmente
+              atractivas. con el objetivo de optimizar el rendimiento y la
+              experiencia del usuario en cada proyecto.</span
+            >
+          </h4>
+        </div>
       </div>
     </section>
     <section class="sobre_mi_3 seccion" id="sobre_mi_3">
@@ -120,16 +146,20 @@
       >
         <h2 id="Miraloultimo">Mira lo ultimo</h2>
         <figure>
-          <img loading="lazy" src="/assets/Recursos-img/loultimo.png" alt="ver lo ultimo" />
+          <img
+            loading="lazy"
+            src="/assets/Recursos-img/loultimo.png"
+            alt="ver lo ultimo"
+          />
         </figure>
       </div>
     </section>
     <section class="seccion" id="proyectos" style="display: none">
       <div class="dev-desing">
-          <ul class="animate__animated animate__fadeInLeft" id="proyectos-id">
-            <li id="active" value="1">Programación</li>
-            <li value="2">Diseño</li>
-          </ul>
+        <ul class="animate__animated animate__fadeInLeft" id="proyectos-id">
+          <li id="active" value="1">Programación</li>
+          <li value="2">Diseño</li>
+        </ul>
       </div>
 
       <div class="programacion" id="programacion">
@@ -378,27 +408,44 @@
       <div class="diseño" id="diseño" style="display: none">
         <div class="diseño_div" class="animate__animated animate__fadeInUp">
           <div class="carousel">
-            <button class="arrow back-arrow"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1jaGV2cm9uLWxlZnQiPjxwYXRoIGQ9Im0xNSAxOC02LTYgNi02Ii8+PC9zdmc+" /></button>
+            <button class="arrow back-arrow">
+              <img
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1jaGV2cm9uLWxlZnQiPjxwYXRoIGQ9Im0xNSAxOC02LTYgNi02Ii8+PC9zdmc+"
+              />
+            </button>
             <div class="slide left">
-                <div class="overlay"></div>
-                <img class="slide-bg" src="/assets/Recursos-img/Desing-port/Abel-desing.jpg"/>
+              <div class="overlay"></div>
+              <img
+                class="slide-bg"
+                src="/assets/Recursos-img/Desing-port/Abel-desing.jpg"
+              />
             </div>
 
             <div class="slide showcase">
-                <div class="overlay"></div>
-                <img class="slide-bg" src="/assets/Recursos-img/Desing-port/mowren_2.png" />
+              <div class="overlay"></div>
+              <img
+                class="slide-bg"
+                src="/assets/Recursos-img/Desing-port/mowren_2.png"
+              />
             </div>
             <div class="slide left">
-                <div class="overlay"></div>
-                <img class="slide-bg" src="/assets/Recursos-img/Desing-port/Mowren-desing.jpg" />
+              <div class="overlay"></div>
+              <img
+                class="slide-bg"
+                src="/assets/Recursos-img/Desing-port/Mowren-desing.jpg"
+              />
             </div>
-            <button class="arrow next-arrow"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1jaGV2cm9uLXJpZ2h0Ij48cGF0aCBkPSJtOSAxOCA2LTYtNi02Ii8+PC9zdmc+" /></button>
-        </div>
+            <button class="arrow next-arrow">
+              <img
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1jaGV2cm9uLXJpZ2h0Ij48cGF0aCBkPSJtOSAxOCA2LTYtNi02Ii8+PC9zdmc+"
+              />
+            </button>
+          </div>
         </div>
 
         <div class="videos">
           <div class="contenedor_videos">
-          <div class="animate__animated animate__fadeInUp">
+            <div class="animate__animated animate__fadeInUp">
               <iframe
                 src="https://www.youtube.com/embed/od5TRBgLrcI?si=EFElDNwHS6koykGu&amp;start=44"
                 title="YouTube video player"
@@ -448,7 +495,7 @@
                 allowfullscreen
               ></iframe>
             </div>
-          </div> 
+          </div>
         </div>
       </div>
     </section>
@@ -495,12 +542,20 @@
           </div>
           <div>
             <figure>
-              <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="figma" />
+              <img
+                loading="lazy"
+                src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg"
+                alt="figma"
+              />
             </figure>
           </div>
           <div>
             <figure>
-              <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg" alt="Adobe After Effects" />
+              <img
+                loading="lazy"
+                src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg"
+                alt="Adobe After Effects"
+              />
             </figure>
           </div>
         </div>
@@ -522,22 +577,38 @@
           </div>
           <div>
             <figure>
-              <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS3" />
+              <img
+                loading="lazy"
+                src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"
+                alt="CSS3"
+              />
             </figure>
           </div>
           <div>
             <figure>
-              <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" alt="js" />
+              <img
+                loading="lazy"
+                src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
+                alt="js"
+              />
             </figure>
           </div>
           <div>
             <figure>
-              <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React" />
+              <img
+                loading="lazy"
+                src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+                alt="React"
+              />
             </figure>
           </div>
           <div>
             <figure>
-              <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg" alt="Sass" />
+              <img
+                loading="lazy"
+                src="https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg"
+                alt="Sass"
+              />
             </figure>
           </div>
           <div>
@@ -568,7 +639,7 @@
         </div>
       </div>
     </div>
-    
+
     <footer class="footer">
       <div class="contenedor_footer">
         <div class="contenedor_footer2">
@@ -601,7 +672,12 @@
           </div>
 
           <div class="copyright">
-            <p><span id="año"> </span> - <a href="https://github.com/COLORBLUE1" target="_blank"> @COLORBLUE1 😉</a> </p>
+            <p>
+              <span id="año"> </span> -
+              <a href="https://github.com/COLORBLUE1" target="_blank">
+                @COLORBLUE1 😉</a
+              >
+            </p>
           </div>
         </div>
         <div class="contenedor_footer3">
@@ -630,7 +706,9 @@
           <div class="footer_contacto">
             <h4 id="contactamefooter">Contactame</h4>
             <ul>
-              <li id="mensaje" onclick="openPopup()" value="contactos">Mensaje</li>
+              <li id="mensaje" onclick="openPopup()" value="contactos">
+                Mensaje
+              </li>
             </ul>
           </div>
         </div>

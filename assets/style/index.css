@@ -34,7 +34,7 @@ img {
   color: #d7d7d7;
 }
 .dark p {
-  color: #9f9f9f;
+  color: #fff;
 }
 .dark li {
   color: #616161;
@@ -215,7 +215,7 @@ div nav ul li p {
   letter-spacing: 0.1em;
 }
 #sobre-mi div span {
-  font-size: clamp(3.3em, 9vw, 8em);
+  font-size: clamp(3.3em, 12vw, 8em);
   font-weight: 600;
   line-height: 0.1em;
   letter-spacing: 0.2em;
@@ -278,7 +278,6 @@ div nav ul li p {
 .sobre_mi_2 .Educacion figure img {
   position: relative;
   top: -100px;
-  filter: drop-shadow(0 0 50px gray);
 }
 .sobre_mi_2 .Educacion:hover {
   transition: all 1s ease;
@@ -313,6 +312,16 @@ div nav ul li p {
   font-size: clamp(1em, 2vw, 5em);
   line-height: 30px;
   text-align: center;
+}
+.sobre_mi_2 .gustos #scroll-sobremi {
+  display: flex;
+  justify-content: center;
+  animation: scrollUpDown 2s ease-in-out infinite;
+}
+.sobre_mi_2 .gustos #scroll-sobremi img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
 }
 .sobre_mi_2 .gustos h4 {
   font-family: "montserrat";
@@ -1264,7 +1273,6 @@ div nav ul li p {
   padding: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   /* Estilos para las animaciones */
-  /* Estilos para las animaciones */
   /* Estilos para el chat */
 }
 .popup .popup-content {
@@ -1281,14 +1289,6 @@ div nav ul li p {
   color: rgb(247, 80, 80);
   text-decoration: none;
   cursor: pointer;
-}
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 @keyframes fade-in {
   from {
@@ -1338,6 +1338,14 @@ div nav ul li p {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@keyframes scrollUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }
 .popup input[type=text] {
@@ -1484,7 +1492,6 @@ div nav ul li p {
   }
   .sobre_mi_2 .Educacion figure img {
     margin: auto;
-    filter: drop-shadow(0 0 0 gray);
   }
   .sobre_mi_2 .gustos figure img {
     position: relative;
