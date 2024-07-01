@@ -262,10 +262,14 @@ div nav ul li p {
   line-height: 0.1em;
   letter-spacing: 0.3em;
 }
+.sobre_mi_2 .Educacion figure {
+  display: flex;
+  justify-content: center;
+}
 .sobre_mi_2 .Educacion figure img {
   position: relative;
   top: -100px;
-  left: -30%;
+  filter: drop-shadow(0 0 50px gray);
 }
 .sobre_mi_2 .Educacion:hover {
   transition: all 1s ease;
@@ -309,6 +313,7 @@ div nav ul li p {
   letter-spacing: 3px;
   color: #3b3b3b;
   margin: 5px;
+  line-height: 70px;
 }
 .sobre_mi_2 .gustos p {
   text-align: right;
@@ -1471,7 +1476,7 @@ div nav ul li p {
   }
   .sobre_mi_2 .Educacion figure img {
     margin: auto;
-    left: -100%;
+    filter: drop-shadow(0 0 0 gray);
   }
   .sobre_mi_2 .gustos figure img {
     position: relative;

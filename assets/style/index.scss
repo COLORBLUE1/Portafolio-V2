@@ -298,10 +298,12 @@ div {
       letter-spacing: 0.3em;
     }
     figure {
+      display: flex;
+    justify-content: center;
       img {
         position: relative;
         top: -100px;
-        left: -30%;
+        filter: drop-shadow(0 0 50px gray);
       }
     }
   }
@@ -347,6 +349,7 @@ div {
         letter-spacing: 3px;
         color: #3b3b3b;
         margin: 5px;
+        line-height: 70px;
       }
     }
     p {
@@ -1613,7 +1616,7 @@ div {
 
   .sobre_mi_2 .Educacion figure img {
     margin: auto;
-    left: -100%;
+    filter: drop-shadow(0 0 0 gray);    
   }
 
   .sobre_mi_2 .gustos {
