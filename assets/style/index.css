@@ -1409,7 +1409,7 @@ div nav ul li p {
     z-index: 9999;
   }
   #sobre-mi {
-    height: 100vh;
+    height: 150vh;
     padding: 10rem 10rem;
     display: flex;
     align-items: center;
@@ -1469,7 +1469,7 @@ div nav ul li p {
   .sobre_mi_2 {
     display: flex;
     width: 100%;
-    height: 150vh;
+    height: 200vh;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
