@@ -320,6 +320,7 @@ div nav ul li p {
   display: flex;
   justify-content: center;
   animation: scrollUpDown 2s ease-in-out infinite;
+  cursor: pointer;
 }
 .sobre_mi_2 .gustos #scroll-sobremi img {
   width: 50px;

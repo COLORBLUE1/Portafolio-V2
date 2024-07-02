@@ -108,24 +108,57 @@
         <div id="scroll-sobremi">
           <img src="/assets/Recursos-img/icons/scroll-bottom-icon.svg" alt="" />
         </div>
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            var scrollSobremi = document.getElementById('scroll-sobremi');
+            var gustosDiv = document.querySelector('.gustos'); // Obtener el div con clase 'gustos'
+      
+            // Función para hacer scroll suave hacia abajo
+            scrollSobremi.addEventListener('click', function() {
+              var currentScroll = gustosDiv.scrollTop; // Obtener el scroll actual del div 'gustos'
+      
+              // Calcular la posición de destino dentro del div 'gustos'
+              var targetPosition = gustosDiv.scrollHeight - gustosDiv.clientHeight;
+      
+              // Duración del scroll suave en milisegundos
+              var duration = 1000; // 1 segundo
+      
+              // Función de animación de scroll suave
+              function easeInOutQuad(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t + b;
+                t--;
+                return -c / 2 * (t * (t - 2) - 1) + b;
+              }
+      
+              // Iniciamos la animación de scroll suave
+              var startTime = performance.now();
+              function scroll() {
+                var elapsed = performance.now() - startTime;
+                gustosDiv.scrollTop = easeInOutQuad(elapsed, currentScroll, targetPosition - currentScroll, duration);
+                if (elapsed < duration) {
+                  requestAnimationFrame(scroll);
+                }
+              }
+              scroll();
+            });
+          });
+        </script>
+      
         <div>
           <h4>Estudiante de<span>Ingeniería en sistemas</span></h4>
         </div>
         <div>
-          <h4>Edad <span> 21</span></h4>
+          <h4>Edad <span>21</span></h4>
         </div>
         <div>
           <h4>
             Que puedo aportar
-            <span
-              >Como programador front-end, aporto habilidades en HTML, CSS y
-              JavaScript para desarrollar interfaces intuitivas y visualmente
-              atractivas. Con el objetivo de optimizar el rendimiento y la
-              experiencia del usuario en cada proyecto.</span
-            >
+            <span>Como programador front-end, aporto habilidades en HTML, CSS y JavaScript para desarrollar interfaces intuitivas y visualmente atractivas. Con el objetivo de optimizar el rendimiento y la experiencia del usuario en cada proyecto.</span>
           </h4>
         </div>
       </div>
+      
     </section>
     <section class="sobre_mi_3 seccion" id="sobre_mi_3">
       <div data-aos="fade-up" data-aos-duration="1000" class="gustos">
