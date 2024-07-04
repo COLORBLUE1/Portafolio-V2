@@ -30,7 +30,7 @@ const makeSlideChanges = (newSlide) => {
 
     currentSlide = newSlide;
 
-    console.log(`${currentSlide + 1} / ${slides.length}`);
+//    console.log(`${currentSlide + 1} / ${slides.length}`);
 };
 
 // Agregar event listeners para los botones de navegación
