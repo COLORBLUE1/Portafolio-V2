@@ -281,6 +281,8 @@ div nav ul li p {
 .sobre_mi_2 .Educacion figure img {
   position: relative;
   top: -100px;
+  width: 500px;
+  height: 100%;
 }
 .sobre_mi_2 .Educacion:hover {
   transition: all 1s ease;
@@ -969,10 +971,50 @@ div nav ul li p {
   justify-items: center;
   flex-wrap: wrap;
 }
-.diseño .videos .contenedor_videos div iframe {
+.diseño .videos .contenedor_videos .portada_videos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.diseño .videos .contenedor_videos .portada_videos:hover img {
+  opacity: 1;
+}
+.diseño .videos .contenedor_videos div {
   border-radius: 20px;
   width: 400px;
   height: 300px;
+  padding: 20px;
+  cursor: pointer;
+}
+.diseño .videos .contenedor_videos div:nth-child(1) {
+  background: radial-gradient(at center, #965829, #f1f8fa);
+}
+.diseño .videos .contenedor_videos div:nth-child(1) img {
+  opacity: 0;
+}
+.diseño .videos .contenedor_videos div:nth-child(2) {
+  background: radial-gradient(at center, #6b4222, #f1f8fa);
+}
+.diseño .videos .contenedor_videos div:nth-child(2) img {
+  opacity: 0;
+}
+.diseño .videos .contenedor_videos div:nth-child(3) {
+  background: radial-gradient(at center, #1f169e, #f1f8fa);
+}
+.diseño .videos .contenedor_videos div:nth-child(3) img {
+  opacity: 0;
+}
+.diseño .videos .contenedor_videos div:nth-child(4) {
+  background: radial-gradient(at center, #ff6f00, #f1f8fa);
+}
+.diseño .videos .contenedor_videos div:nth-child(4) img {
+  opacity: 0;
+}
+.diseño .videos .contenedor_videos div:nth-child(5) {
+  background: radial-gradient(at center, #ff0000, #f1f8fa);
+}
+.diseño .videos .contenedor_videos div:nth-child(5) img {
+  opacity: 0;
 }
 
 #skills {
@@ -1561,7 +1603,7 @@ div nav ul li p {
     width: 300px;
   }
   #proyectos .diseño {
-    height: 230vh;
+    height: 300vh;
   }
   #proyectos .diseño .diseño_div {
     display: flex;
@@ -1584,10 +1626,16 @@ div nav ul li p {
     padding: 0px 0px;
     margin-top: 100px;
   }
-  #proyectos .diseño .contenedor_videos iframe {
-    gap: 20px;
-    width: 300px;
-    height: 200px;
+  #proyectos .diseño .contenedor_videos div {
+    border-radius: 20px;
+    width: 340px;
+    height: 250px;
+    padding: 20px;
+    cursor: pointer;
+    margin: 30px;
+  }
+  #proyectos .diseño .contenedor_videos img {
+    opacity: 1;
   }
   #skills .desing,
   #skills .lenguajes {

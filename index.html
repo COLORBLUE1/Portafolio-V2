@@ -31,14 +31,14 @@
         <li
           value="sobre-mi"
           class="active"
-        
+          onclick="mostrarSeccionmenu('sobre-mi')"
         >
           SOBRE MÍ
         </li>
-        <li value="proyectos" >
+        <li value="proyectos" onclick="mostrarSeccionmenu('proyectos')">
           PROYECTOS
         </li>
-        <li value="skills" >SKILLS</li>
+        <li value="skills" onclick="mostrarSeccionmenu('skills')">SKILLS</li>
         <li onclick="openPopup()">CONTACTOS</li>
       </ul>
     </nav>
@@ -49,7 +49,7 @@
           <li
             id="active_sobre"
             value="sobre-mi"
-          
+            
           >
             <p id="sobremi_nav">SOBRE MÍ</p>
           </li>
@@ -99,7 +99,7 @@
       <div data-aos="fade-up" class="Educacion" id="Educacion">
         <h2 id="estesoyyo">Este soy yo</h2>
         <figure>
-          <img
+          <img 
             src="/assets/Recursos-img/Perfil-photos/Perfil_2.png"
             alt=""
           />
@@ -364,7 +364,14 @@
               </div>
             </div>
           </div>
-
+<!-- ▄───▄
+█▀█▀█
+█▄█▄█
+─███──▄▄
+─████▐█─█
+─████───█
+─▀▀▀▀▀▀▀
+-->
           <div class="team_project_3">
             <div class="capa_team_project_1">
               <div class="contenedor_icons">
@@ -478,63 +485,24 @@
 
         <div class="videos">
           <div class="contenedor_videos">
-            <div class="animate__animated animate__fadeInUp">
-              <iframe
-                src="https://www.youtube.com/embed/od5TRBgLrcI?si=EFElDNwHS6koykGu&amp;start=44"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
+              <div class="portada_videos">
+              <a href=""><img src="/assets/Recursos-img/icons/play.svg" alt=""></a>
+              </div>
+              <div class="portada_videos">
+              <a href=""><img src="/assets/Recursos-img/icons/play.svg" alt=""></a>
             </div>
-            <div class="animate__animated animate__fadeInUp">
-              <iframe
-                src="https://www.youtube.com/embed/r0sek9vkeUQ?si=5v1zz9GPrp7jE3YS&amp;start=115"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
+              <div class="portada_videos">
+              <a href=""><img src="/assets/Recursos-img/icons/play.svg" alt=""></a>
             </div>
-            <div class="animate__animated animate__fadeInUp vanimate__delay-3s">
-              <iframe
-                src="https://www.youtube.com/embed/1W55aNAlH-o?si=UaMDBaFl6hhPKZrv&amp;start=50"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
+              <div class="portada_videos">
+              <a href=""><img src="/assets/Recursos-img/icons/play.svg" alt=""></a>
             </div>
-            <div class="animate__animated animate__fadeInUp vanimate__delay-4s">
-              <iframe
-                src="https://www.youtube.com/embed/hWOasQUHS4Y?si=jshGDv9bnMVyHNxa&amp;start=77"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
-            </div>
-            <div class="animate__animated animate__fadeInUp vanimate__delay-3s">
-              <iframe
-                src="https://www.youtube.com/embed/_IgdITsUWCc?si=BagxuLX4rWfPVz19&amp;start=77"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
+            <div class="portada_videos">
+            <a href=""><img src="/assets/Recursos-img/icons/play.svg" alt=""></a>
             </div>
           </div>
         </div>
+        
     </section>
 
     <section class="seccion" id="skills" style="display: none">
@@ -707,7 +675,23 @@
               <h6 id="ES-EN"></h6>
             </div>
           </div>
+<!-- ░░░░░░░░░░░░░░░░░░░░░░█████████
+░░███████░░░░░░░░░░███▒▒▒▒▒▒▒▒███
+░░█▒▒▒▒▒▒█░░░░░░░███▒▒▒▒▒▒▒▒▒▒▒▒▒███
+░░░█▒▒▒▒▒▒█░░░░██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██
+░░░░█▒▒▒▒▒█░░░██▒▒▒▒▒██▒▒▒▒▒▒██▒▒▒▒▒███
+░░░░░█▒▒▒█░░░█▒▒▒▒▒▒████▒▒▒▒████▒▒▒▒▒▒██
+░░░█████████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██
+░░░█▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒▒▒██
+░██▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒██▒▒▒▒▒▒▒▒▒▒██▒▒▒▒██
+██▒▒▒███████████▒▒▒▒▒██▒▒▒▒▒▒▒▒██▒▒▒▒▒██
+█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒████████▒▒▒▒▒▒▒██
+██▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██
+░█▒▒▒███████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██
+░██▒▒▒▒▒▒▒▒▒▒████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█
+░░████████████░░░█████████████████
 
+-->
           <div class="copyright">
             <p>
               <span id="año"> </span> -
