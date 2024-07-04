@@ -42,9 +42,11 @@ document.addEventListener("DOMContentLoaded", function () {
       // Actualizar el color de fondo del elemento de navegación activo
       navItems.forEach((item) => {
         item.style.backgroundColor = ""; // Resetear todos los fondos
-        item.style.transition = "all 1s cubic-bezier(0.91, -0.12, 0.31, 0.94) 0s";
+        item.style.transition =
+          "all 1s cubic-bezier(0.91, -0.12, 0.31, 0.94) 0s";
       });
-      event.target.style.transition = "all 1s cubic-bezier(0.91, -0.12, 0.31, 0.94) 0s";
+      event.target.style.transition =
+        "all 1s cubic-bezier(0.91, -0.12, 0.31, 0.94) 0s";
       event.target.style.width = "100px";
       event.target.style.height = "20px";
       event.target.style.borderRadius = "20px";
@@ -70,19 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
   actualizarFecha(); // Actualizar inicialmente la fecha
   setInterval(actualizarFecha, 31536000000); // Actualizar cada año
 
-  /* Mostrar y ocultar detalles de imagen de perfil */
-  const yo = document.getElementById("yo");
-  const text = document.getElementById("text"); // Agregado: definición de 'text'
-
-  yo.addEventListener("click", function () {
-    if (text.style.display === "block") {
-      text.style.display = "none";
-    } else {
-      text.style.display = "block";
-      text.style.top = "160px";
-    }
-  });
-
   function sendMessage() {
     var input = document.querySelector(".input input");
     var message = input.value;
@@ -105,7 +94,9 @@ document.addEventListener("DOMContentLoaded", function () {
   /* Menú hamburguesa */
   var menuBtn = document.querySelector(".menu-btn");
   var menu = document.querySelector(".menu");
-  var popupTrigger = document.querySelector('.menu-items li[data-popup-open="popup-1"]');
+  var popupTrigger = document.querySelector(
+    '.menu-items li[data-popup-open="popup-1"]'
+  );
   var popup = document.getElementById("popup-1");
 
   // Función para mostrar la sección correspondiente y ocultar las demás
@@ -143,7 +134,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Agregar la clase 'active' al elemento de menú seleccionado
-    var menuItemActivo = document.querySelector('.menu-items li[value="' + seccion + '"]');
+    var menuItemActivo = document.querySelector(
+      '.menu-items li[value="' + seccion + '"]'
+    );
     if (menuItemActivo) {
       menuItemActivo.classList.add("active");
     }
@@ -168,23 +161,43 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Event listener para abrir el popup al hacer clic en el elemento 'CONTACTOS'
-  popupTrigger.addEventListener("click", function (event) {
-    event.stopPropagation(); // Evitar que el evento de cierre se propague al documento
-    popup.style.display = "block"; // Mostrar el popup
-    menu.classList.remove("open"); // Cerrar el menú
-    menuBtn.classList.remove("open"); // Quitar la clase 'open' del botón del menú
-  });
+  document.addEventListener("DOMContentLoaded", function () {
+    // Definición de variables después de que el DOM está completamente cargado
+    const popupTrigger = document.getElementById("popupTrigger");
+    const popup = document.getElementById("popup");
+    const menu = document.getElementById("menu");
+    const menuBtn = document.getElementById("menuBtn");
 
-  // Función para cerrar el popup si es necesario
-  function closePopup() {
-    popup.style.display = "none"; // Ocultar el popup
-  }
-
-  // Event listener para cerrar el popup si se hace clic fuera de él
-  document.addEventListener("click", function (event) {
-    if (event.target !== popupTrigger && event.target !== popup) {
-      closePopup();
+    // Event listener para abrir el popup al hacer clic en el elemento 'CONTACTOS'
+    if (popupTrigger && popup && menu && menuBtn) {
+      popupTrigger.addEventListener("click", function (event) {
+        event.stopPropagation(); // Evitar que el evento de cierre se propague al documento
+        popup.style.display = "block"; // Mostrar el popup
+        menu.classList.remove("open"); // Cerrar el menú
+        menuBtn.classList.remove("open"); // Quitar la clase 'open' del botón del menú
+      });
+    } else {
+      console.error(
+        "No se encontraron todos los elementos necesarios para el popup o el menú."
+      );
     }
   });
+// Función para cerrar el popup si es necesario
+function closePopup() {
+  var popup = document.getElementById('id_del_popup');
+  if (popup) {
+    popup.style.display = "none"; // Ocultar el popup
+  }
+}
+
+// Event listener para cerrar el popup si se hace clic fuera de él
+document.addEventListener("click", function (event) {
+  var popup = document.getElementById('id_del_popup');
+  var popupTrigger = document.getElementById('id_del_popup_trigger');
+  
+  if (popup && event.target !== popupTrigger && event.target !== popup) {
+    closePopup();
+  }
+});
+
 });
