@@ -79,7 +79,16 @@ actualizarFecha(); // Actualizar inicialmente la fecha
 setInterval(actualizarFecha, 31536000000); // Actualizar cada año
 
 /* Mostrar y ocultar detalles de imagen de perfil */
+const yo = document.getElementById("yo");
 
+yo.addEventListener("click", function () {
+  if (text.style.display === "block") {
+    text.style.display = "none";
+  } else {
+    text.style.display = "block";
+    text.style.top = "160px";
+  }
+});
 
 function sendMessage() {
   var input = document.querySelector(".input input");
