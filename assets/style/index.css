@@ -1628,11 +1628,11 @@ div nav ul li p {
   }
   #proyectos .diseño .contenedor_videos div {
     border-radius: 20px;
-    width: 340px;
-    height: 250px;
-    padding: 20px;
+    width: 250px;
+    height: 200px;
+    padding: 40px;
     cursor: pointer;
-    margin: 30px;
+    margin-bottom: 30px;
   }
   #proyectos .diseño .contenedor_videos img {
     opacity: 1;
