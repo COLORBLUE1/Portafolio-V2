@@ -518,6 +518,18 @@ div nav ul li p {
 #proyectos .programacion .work_perso div {
   transition: all 1s ease-out;
 }
+#proyectos .programacion .work_cola .contenedor_icons,
+#proyectos .programacion .work_perso .contenedor_icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#proyectos .programacion .work_cola .contenedor_icons figure img,
+#proyectos .programacion .work_perso .contenedor_icons figure img {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+}
 #proyectos .programacion .work_cola .team_project,
 #proyectos .programacion .work_perso .team_project {
   grid-column: 4/1;
@@ -541,18 +553,6 @@ div nav ul li p {
   display: grid;
   justify-items: center;
   transition: all 1s ease;
-}
-#proyectos .programacion .work_cola .team_project .capa_team_project_1 .contenedor_icons,
-#proyectos .programacion .work_perso .team_project .capa_team_project_1 .contenedor_icons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#proyectos .programacion .work_cola .team_project .capa_team_project_1 .contenedor_icons figure img,
-#proyectos .programacion .work_perso .team_project .capa_team_project_1 .contenedor_icons figure img {
-  cursor: pointer;
-  width: 100px;
-  height: 100px;
 }
 #proyectos .programacion .work_cola .team_project:hover,
 #proyectos .programacion .work_perso .team_project:hover {
@@ -593,18 +593,6 @@ div nav ul li p {
   justify-items: center;
   transition: all 1s ease;
 }
-#proyectos .programacion .work_cola .team_project_1 .capa_team_project_1 .contenedor_icons,
-#proyectos .programacion .work_perso .team_project_1 .capa_team_project_1 .contenedor_icons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#proyectos .programacion .work_cola .team_project_1 .capa_team_project_1 .contenedor_icons figure img,
-#proyectos .programacion .work_perso .team_project_1 .capa_team_project_1 .contenedor_icons figure img {
-  cursor: pointer;
-  width: 100px;
-  height: 100px;
-}
 #proyectos .programacion .work_cola .team_project_1:hover .capa_team_project_1,
 #proyectos .programacion .work_perso .team_project_1:hover .capa_team_project_1 {
   opacity: 100%;
@@ -633,18 +621,6 @@ div nav ul li p {
   border: 1.5px solid rgba(209, 213, 219, 0.3);
   display: grid;
   justify-items: center;
-}
-#proyectos .programacion .work_cola .team_project_2 .capa_team_project_2 .contenedor_icons,
-#proyectos .programacion .work_perso .team_project_2 .capa_team_project_2 .contenedor_icons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#proyectos .programacion .work_cola .team_project_2 .capa_team_project_2 .contenedor_icons figure img,
-#proyectos .programacion .work_perso .team_project_2 .capa_team_project_2 .contenedor_icons figure img {
-  cursor: pointer;
-  width: 100px;
-  height: 100px;
 }
 #proyectos .programacion .work_cola .team_project_2:hover .capa_team_project_2,
 #proyectos .programacion .work_perso .team_project_2:hover .capa_team_project_2 {
@@ -675,18 +651,6 @@ div nav ul li p {
   border: 1.5px solid rgba(209, 213, 219, 0.3);
   display: grid;
   justify-items: center;
-}
-#proyectos .programacion .work_cola .team_project_3 .capa_team_project_1 .contenedor_icons,
-#proyectos .programacion .work_perso .team_project_3 .capa_team_project_1 .contenedor_icons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#proyectos .programacion .work_cola .team_project_3 .capa_team_project_1 .contenedor_icons figure img,
-#proyectos .programacion .work_perso .team_project_3 .capa_team_project_1 .contenedor_icons figure img {
-  cursor: pointer;
-  width: 100px;
-  height: 100px;
 }
 #proyectos .programacion .work_cola .team_project_3:hover .capa_team_project_1,
 #proyectos .programacion .work_perso .team_project_3:hover .capa_team_project_1 {
@@ -719,18 +683,6 @@ div nav ul li p {
   justify-items: center;
   transition: all 1s ease;
 }
-#proyectos .programacion .work_cola .team_project_4 .capa_team_project_1 .contenedor_icons,
-#proyectos .programacion .work_perso .team_project_4 .capa_team_project_1 .contenedor_icons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#proyectos .programacion .work_cola .team_project_4 .capa_team_project_1 .contenedor_icons figure img,
-#proyectos .programacion .work_perso .team_project_4 .capa_team_project_1 .contenedor_icons figure img {
-  cursor: pointer;
-  width: 100px;
-  height: 100px;
-}
 #proyectos .programacion .work_cola .team_project_4:hover .capa_team_project_1,
 #proyectos .programacion .work_perso .team_project_4:hover .capa_team_project_1 {
   opacity: 100%;
@@ -757,16 +709,6 @@ div nav ul li p {
   border: 1.5px solid rgba(209, 213, 219, 0.3);
   display: grid;
   justify-items: center;
-}
-#proyectos .programacion .team_project_5 .capa_team_project_1 .contenedor_icons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#proyectos .programacion .team_project_5 .capa_team_project_1 .contenedor_icons figure img {
-  cursor: pointer;
-  width: 100px;
-  height: 100px;
 }
 #proyectos .programacion .team_project_5:hover .capa_team_project_1 {
   opacity: 100%;
@@ -987,31 +929,36 @@ div nav ul li p {
   cursor: pointer;
 }
 .diseño .videos .contenedor_videos div:nth-child(1) {
-  background: radial-gradient(at center, #965829, #f1f8fa);
+  background: url(/assets/Recursos-img/Desing-port/neider_1.png) no-repeat center;
+  background-size: cover;
 }
 .diseño .videos .contenedor_videos div:nth-child(1) img {
   opacity: 0;
 }
 .diseño .videos .contenedor_videos div:nth-child(2) {
-  background: radial-gradient(at center, #6b4222, #f1f8fa);
+  background: url(/assets/Recursos-img/Desing-port/neider_2.png) no-repeat center;
+  background-size: cover;
 }
 .diseño .videos .contenedor_videos div:nth-child(2) img {
   opacity: 0;
 }
 .diseño .videos .contenedor_videos div:nth-child(3) {
-  background: radial-gradient(at center, #1f169e, #f1f8fa);
+  background: url(/assets/Recursos-img/Desing-port/mowren_video1.png) no-repeat center;
+  background-size: cover;
 }
 .diseño .videos .contenedor_videos div:nth-child(3) img {
   opacity: 0;
 }
 .diseño .videos .contenedor_videos div:nth-child(4) {
-  background: radial-gradient(at center, #ff6f00, #f1f8fa);
+  background: url(/assets/Recursos-img/Desing-port/mowren_video2.png) no-repeat center;
+  background-size: cover;
 }
 .diseño .videos .contenedor_videos div:nth-child(4) img {
   opacity: 0;
 }
 .diseño .videos .contenedor_videos div:nth-child(5) {
-  background: radial-gradient(at center, #ff0000, #f1f8fa);
+  background: url(/assets/Recursos-img/Desing-port/mowren_video4.png) no-repeat center;
+  background-size: cover;
 }
 .diseño .videos .contenedor_videos div:nth-child(5) img {
   opacity: 0;
@@ -1593,10 +1540,11 @@ div nav ul li p {
     width: 100%;
     margin-bottom: 200px;
   }
-  #proyectos .programacion .work_cola .contenedor_icons,
-  #proyectos .programacion .work_perso .contenedor_icons {
-    overflow: hidden;
+  #proyectos .programacion .work_cola .contenedor_icons figure img,
+  #proyectos .programacion .work_perso .contenedor_icons figure img {
     width: 50px;
+    height: 50px;
+    object-fit: contain;
   }
   #proyectos .programacion .work_cola h5,
   #proyectos .programacion .work_perso h5 {
@@ -1636,6 +1584,9 @@ div nav ul li p {
   }
   #proyectos .diseño .contenedor_videos img {
     opacity: 1;
+  }
+  #proyectos .diseño .contenedor_videos div:nth-child(5) {
+    margin-bottom: 55px;
   }
   #skills .desing,
   #skills .lenguajes {
