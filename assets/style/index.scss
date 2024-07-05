@@ -573,13 +573,12 @@ div {
         display: flex;
         align-items: center;
         justify-content: center;
-        figure {
-          img {
+          figure img {
             cursor: pointer;
             width: 100px;
             height: 100px;
           }
-        }
+        
       }
 
       .team_project {
@@ -602,16 +601,14 @@ div {
           display: grid;
           justify-items: center;
           transition: all 1s ease;
-
-       
         }
       }
+
       .team_project:hover {
         scale: 1.01;
         transform: translateY(-2px);
         .capa_team_project_1 {
           opacity: 100%;
-
           -webkit-box-shadow: 13px 23px 87px -9px rgba(0, 0, 0, 0.56);
           -moz-box-shadow: 13px 23px 87px -9px rgba(0, 0, 0, 0.56);
           box-shadow: 13px 23px 87px -9px rgba(0, 0, 0, 0.56);
@@ -628,6 +625,7 @@ div {
         display: flex;
         justify-content: center;
         align-items: center;
+
         .capa_team_project_1 {
           opacity: 0%;
           border-radius: 90px;
@@ -640,14 +638,12 @@ div {
           display: grid;
           justify-items: center;
           transition: all 1s ease;
-
-        
         }
       }
+
       .team_project_1:hover {
         .capa_team_project_1 {
           opacity: 100%;
-
           -webkit-box-shadow: 13px 23px 87px -9px rgba(0, 0, 0, 0.56);
           -moz-box-shadow: 13px 23px 87px -9px rgba(0, 0, 0, 0.56);
           box-shadow: 13px 23px 87px -9px rgba(0, 0, 0, 0.56);
@@ -661,6 +657,7 @@ div {
         background-size: cover;
         border-radius: 90px;
         grid-row: 2 / 5;
+
         .capa_team_project_2 {
           opacity: 0%;
           border-radius: 90px;
@@ -672,14 +669,12 @@ div {
           border: 1.5px solid rgba(209, 213, 219, 0.3);
           display: grid;
           justify-items: center;
-
-         
         }
       }
+
       .team_project_2:hover {
         .capa_team_project_2 {
           opacity: 100%;
-
           -webkit-box-shadow: 13px 23px 87px -9px rgba(0, 0, 0, 0.56);
           -moz-box-shadow: 13px 23px 87px -9px rgba(0, 0, 0, 0.56);
           box-shadow: 13px 23px 87px -9px rgba(0, 0, 0, 0.56);
@@ -694,6 +689,7 @@ div {
         border-radius: 90px;
         grid-column: 2/1;
         transition: all 1s ease;
+
         .capa_team_project_1 {
           opacity: 0%;
           border-radius: 90px;
@@ -705,10 +701,9 @@ div {
           border: 1.5px solid rgba(209, 213, 219, 0.3);
           display: grid;
           justify-items: center;
-
-          
         }
       }
+
       .team_project_3:hover {
         .capa_team_project_1 {
           opacity: 100%;
@@ -717,6 +712,7 @@ div {
           box-shadow: 13px 23px 87px -9px rgba(0, 0, 0, 0.56);
         }
       }
+
       .team_project_4 {
         background-image: url("https://media.es.wired.com/photos/6501e7429fa9000811a95fe8/16:9/w_2560%2Cc_limit/Adobe%2520Firefly.jpeg");
         background-position: center;
@@ -725,6 +721,7 @@ div {
         border-radius: 90px;
         grid-column: 2 / 4;
         transition: all 1s ease;
+
         .capa_team_project_1 {
           opacity: 0%;
           border-radius: 90px;
@@ -737,10 +734,9 @@ div {
           display: grid;
           justify-items: center;
           transition: all 1s ease;
-
- 
         }
       }
+
       .team_project_4:hover {
         .capa_team_project_1 {
           opacity: 100%;
@@ -758,6 +754,7 @@ div {
       background-size: cover;
       border-radius: 90px;
       grid-column: 2 / 4;
+
       .capa_team_project_1 {
         opacity: 0%;
         border-radius: 90px;
@@ -769,9 +766,9 @@ div {
         border: 1.5px solid rgba(209, 213, 219, 0.3);
         display: grid;
         justify-items: center;
-
       }
     }
+
     .team_project_5:hover {
       .capa_team_project_1 {
         opacity: 100%;
@@ -784,6 +781,7 @@ div {
     .work_perso {
       animation: fadeInUp;
       animation-duration: 2s;
+
       .team_project {
         grid-column: 2 / 1;
         background-image: url("/assets/Recursos-img/Programacion-port/inicio-crud.jpg");
@@ -832,6 +830,7 @@ div {
         border-radius: 90px;
         grid-column: 1 / 5;
       }
+
       .team_project_5 {
         background-image: url("https://media.es.wired.com/photos/6501e7429fa9000811a95fe8/16:9/w_2560%2Cc_limit/Adobe%2520Firefly.jpeg");
         background-position: center;
@@ -864,6 +863,7 @@ div {
       border-radius: 1rem;
       box-shadow: 0px 4px 15px -1px rgba(0, 0, 0, 0.4);
       overflow: hidden;
+
       .arrow {
         position: absolute;
         top: 50%;
@@ -991,6 +991,7 @@ div {
   .videos {
     position: relative;
     top: 100px;
+
     .contenedor_videos {
       width: 900px;
       top: 150px;
@@ -1002,6 +1003,7 @@ div {
       position: relative;
       justify-items: center;
       flex-wrap: wrap;
+      
       .portada_videos {
         display: flex;
         justify-content: center;
@@ -1138,13 +1140,12 @@ div {
       flex-direction: column;
       align-content: center;
 
-      figure {
-        img {
+       figure  img {
           width: 80px;
           height: 80px;
           object-fit: contain;
         }
-      }
+      
     }
   }
   .lenguajes {
@@ -1203,13 +1204,12 @@ div {
     flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
-    figure {
-      img {
+    
+    figure img {
         width: 80px;
         height: 80px;
         object-fit: contain;
       }
-    }
   }
 }
 
@@ -1237,12 +1237,12 @@ div {
       border-radius: 50px;
       height: 100px;
       width: 500px;
-      figure {
-        img {
+      
+        figure img {
           width: 65px;
           height: 65px;
         }
-      }
+      
 
       div:nth-child(2) {
         display: flex;
@@ -1290,6 +1290,7 @@ div {
         font-weight: 700;
         letter-spacing: 0.2em;
       }
+
       ul {
         margin: 0px;
         padding: 0px;
@@ -1316,6 +1317,7 @@ div {
         font-weight: 700;
         letter-spacing: 0.2em;
       }
+
       ul {
         margin: 0px;
         padding: 0px;
@@ -1336,6 +1338,7 @@ div {
     display: flex;
     gap: 30px;
     justify-content: center;
+
     .swich,
     .swich_2 {
       -webkit-box-shadow: -2px 3px 37px -9px rgba(0, 0, 0, 0.75);
@@ -1646,8 +1649,8 @@ div {
   }
 
   .sobre_mi_2 .gustos {
-    figure {
-      img {
+     
+     figure img {
         position: relative;
         width: 450px;
         height: 100%;
@@ -1655,7 +1658,6 @@ div {
         transform: translatex(-50%);
         margin: 0;
       }
-    }
   }
 
   .sobre_mi_2 .gustos p {
@@ -1709,15 +1711,13 @@ div {
         grid-gap: 1rem;
         width: 100%;
         margin-bottom: 200px;
+
         .contenedor_icons {
-         
-          figure {
-            img {
+           figure  img {
               width: 50px;
               height: 50px;
               object-fit: contain;
             }
-          }
         }
         h5 {
           width: 300px;
