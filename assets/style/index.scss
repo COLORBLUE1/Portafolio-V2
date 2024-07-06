@@ -1024,7 +1024,7 @@ div {
         cursor: pointer;
       }
 
-      div:nth-child(1) {
+      div:first-child {
         background: url(/assets/Recursos-img/Desing-port/neider_1.png) no-repeat
           center;
         background-size: cover;
@@ -1056,7 +1056,7 @@ div {
           opacity: 0;
         }
       }
-      div:nth-child(5) {
+      div:last-child {
         background: url(/assets/Recursos-img/Desing-port/mowren_video4.png)
           no-repeat center;
         background-size: cover;
