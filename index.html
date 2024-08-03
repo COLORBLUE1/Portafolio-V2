@@ -6,7 +6,10 @@
     <link rel="stylesheet" href="assets/style/normalizacion.css" />
     <link rel="stylesheet" href="assets/style/index.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <meta name="description" content="Segunda version del portfolio perteneciente a camilo sol, el diseño es propio de camilo sol, al igual del codigo">
+    <meta
+      name="description"
+      content="Segunda version del portfolio perteneciente a camilo sol, el diseño es propio de camilo sol, al igual del codigo"
+    />
     <link
       rel="icon"
       href="/assets/Recursos-img/Perfil-photos/icon.png"
@@ -44,27 +47,23 @@
     </nav>
     <div>
       <header>
-      <nav class="animate__animated animate__fadeInDown" animate__fadeInDown>
-        <ul id="sections">
-          <li
-            id="active_sobre"
-            value="sobre-mi"
-            
-          >
-            <p id="sobremi_nav">SOBRE MÍ</p>
-          </li>
-          <li value="proyectos" >
-            <p id="proyectos_nav">PROYECTOS</p>
-          </li>
-          <li value="skills" >
-            <p id="skills_nav">SKILLS</p>
-          </li>
-          <li value="contactos">
-            <p id="contactos_nav">CONTACTOS</p>
-          </li>
-        </ul>
-      </nav>
-    </header>
+        <nav class="animate__animated animate__fadeInDown" animate__fadeInDown>
+          <ul id="sections">
+            <li id="active_sobre" value="sobre-mi">
+              <p id="sobremi_nav">SOBRE MÍ</p>
+            </li>
+            <li value="proyectos">
+              <p id="proyectos_nav">PROYECTOS</p>
+            </li>
+            <li value="skills">
+              <p id="skills_nav">SKILLS</p>
+            </li>
+            <li value="contactos">
+              <p id="contactos_nav">CONTACTOS</p>
+            </li>
+          </ul>
+        </nav>
+      </header>
     </div>
     <section class="seccion" id="sobre-mi">
       <div>
@@ -99,31 +98,31 @@
       <div data-aos="fade-up" class="Educacion" id="Educacion">
         <h2 id="estesoyyo">Este soy yo</h2>
         <figure>
-          <img 
-            src="/assets/Recursos-img/Perfil-photos/Perfil_2.png"
-            alt=""
-          />
+          <img src="/assets/Recursos-img/Perfil-photos/Perfil_2.png" alt="" />
         </figure>
       </div>
       <div data-aos="fade-up" data-aos-duration="1000" class="gustos">
         <div id="scroll-sobremi">
-          <img src="/assets/Recursos-img/icons/scroll-bottom-icon.svg" alt="mause down scroll" />
+          <img
+            src="/assets/Recursos-img/icons/scroll-bottom-icon.svg"
+            alt="mause down scroll"
+          />
         </div>
         <script>
           document.addEventListener('DOMContentLoaded', function() {
             var scrollSobremi = document.getElementById('scroll-sobremi');
-            var gustosDiv = document.querySelector('.gustos'); // Obtener el div con clase 'gustos'
-      
+            var gustosDiv = document.querySelector('.gustos'); /
+
             // Función para hacer scroll suave hacia abajo
             scrollSobremi.addEventListener('click', function() {
-              var currentScroll = gustosDiv.scrollTop; // Obtener el scroll actual del div 'gustos'
-      
-              // Calcular la posición de destino dentro del div 'gustos'
+              var currentScroll = gustosDiv.scrollTop;
+
+              // Calcular la posición de destino dentro del div
               var targetPosition = gustosDiv.scrollHeight - gustosDiv.clientHeight;
-      
+
               // Duración del scroll suave en milisegundos
               var duration = 1000; // 1 segundo
-      
+
               // Función de animación de scroll suave
               function easeInOutQuad(t, b, c, d) {
                 t /= d / 2;
@@ -131,7 +130,7 @@
                 t--;
                 return -c / 2 * (t * (t - 2) - 1) + b;
               }
-      
+
               // Iniciamos la animación de scroll suave
               var startTime = performance.now();
               function scroll() {
@@ -145,25 +144,30 @@
             });
           });
         </script>
-      
+
         <div>
           <h4>Estudiante de<span>Ingeniería en sistemas</span></h4>
         </div>
         <div>
-          <h4>Edad <span>21</span></h4>
+          <h4>Edad : <span>21</span></h4>
         </div>
         <div>
-          <h4>
-            Que puedo aportar
-            <span>Como programador front-end, aporto habilidades en HTML, CSS y JavaScript para desarrollar interfaces intuitivas y visualmente atractivas. Con el objetivo de optimizar el rendimiento y la experiencia del usuario en cada proyecto.</span>
-          </h4>
+          <h4>¿Que puedo aportar?</h4>
+          <span
+            >Como programador front-end, aporto habilidades en HTML, CSS y
+            JavaScript para desarrollar interfaces intuitivas y visualmente
+            atractivas. Con el objetivo de optimizar el rendimiento y la
+            experiencia del usuario en cada proyecto.</span
+          >
         </div>
       </div>
-      
     </section>
     <section class="sobre_mi_3 seccion" id="sobre_mi_3">
       <div data-aos="fade-up" data-aos-duration="1000" class="gustos">
-        <a href="https://www.uniajc.edu.co/uniajc-virtual/" target="_blank">
+        <a
+          href="https://www.uniajc.edu.co/semana-universitaria-unidiversidad/"
+          target="_blank"
+        >
           <figure>
             <img
               src="/assets/Recursos-img/icons/link.svg"
@@ -180,11 +184,7 @@
       >
         <h2 id="Miraloultimo">Mira lo ultimo</h2>
         <figure>
-          <img
-            
-            src="/assets/Recursos-img/loultimo.png"
-            alt="ver lo ultimo"
-          />
+          <img src="/assets/Recursos-img/loultimo.png" alt="ver lo ultimo" />
         </figure>
       </div>
     </section>
@@ -285,11 +285,7 @@
                 <div class="icons">
                   <a href="#" target="_blank">
                     <figure>
-                      <img
-                        
-                        src="/assets/Recursos-img/icons/link.svg"
-                        alt=""
-                      />
+                      <img src="/assets/Recursos-img/icons/link.svg" alt="" />
                     </figure>
                   </a>
                 </div>
@@ -354,7 +350,6 @@
                   >
                     <figure>
                       <img
-                        
                         src="https://upload.wikimedia.org/wikipedia/commons/2/24/Github_logo_svg.svg"
                         alt="Github"
                       />
@@ -364,7 +359,7 @@
               </div>
             </div>
           </div>
-<!-- ▄───▄
+          <!-- ▄───▄
 █▀█▀█
 █▄█▄█
 ─███──▄▄
@@ -427,11 +422,22 @@
             <div class="capa_team_project_1">
               <div class="contenedor_icons">
                 <div class="icons">
-                  <a href="#" target="_blank">
+                  <a
+                    href="https://github.com/COLORBLUE1/Tres_colores"
+                    target="_blank"
+                  >
                     <figure>
                       <img
                         src="https://upload.wikimedia.org/wikipedia/commons/2/24/Github_logo_svg.svg"
                         alt="Github"
+                      />
+                    </figure>
+                  </a>
+                  <a href="https://tres-colores.vercel.app/" target="_blank">
+                    <figure>
+                      <img
+                        src="/assets/Recursos-img/icons/link.svg"
+                        alt="tres colores"
                       />
                     </figure>
                   </a>
@@ -484,24 +490,45 @@
         </div>
 
         <div class="videos">
-          <div class="contenedor_videos animate__animated animate__fadeInUp" >
-              <div class="portada_videos">
-              <a href="https://www.youtube.com/watch?v=_IgdITsUWCc" target="_blank"><img src="/assets/Recursos-img/icons/play.svg" alt=""></a>
-              </div>
-              <div class="portada_videos">
-              <a href="https://www.youtube.com/watch?v=hWOasQUHS4Y" target="_blank"><img src="/assets/Recursos-img/icons/play.svg" alt=""></a>
-            </div>
-              <div class="portada_videos">
-              <a href="https://www.youtube.com/watch?v=4QQoJVfKhVc" target="_blank"><img src="/assets/Recursos-img/icons/play.svg" alt=""></a>
-            </div>
-              <div class="portada_videos">
-              <a href="https://www.youtube.com/watch?v=od5TRBgLrcI" target="_blank"><img src="/assets/Recursos-img/icons/play.svg" alt=""></a>
+          <div class="contenedor_videos animate__animated animate__fadeInUp">
+            <div class="portada_videos">
+              <a
+                href="https://www.youtube.com/watch?v=_IgdITsUWCc"
+                target="_blank"
+                ><img src="/assets/Recursos-img/icons/play.svg" alt=""
+              /></a>
             </div>
             <div class="portada_videos">
-            <a href="https://www.youtube.com/watch?v=r0sek9vkeUQ" target="_blank"><img src="/assets/Recursos-img/icons/play.svg" alt=""></a>
+              <a
+                href="https://www.youtube.com/watch?v=hWOasQUHS4Y"
+                target="_blank"
+                ><img src="/assets/Recursos-img/icons/play.svg" alt=""
+              /></a>
+            </div>
+            <div class="portada_videos">
+              <a
+                href="https://www.youtube.com/watch?v=4QQoJVfKhVc"
+                target="_blank"
+                ><img src="/assets/Recursos-img/icons/play.svg" alt=""
+              /></a>
+            </div>
+            <div class="portada_videos">
+              <a
+                href="https://www.youtube.com/watch?v=od5TRBgLrcI"
+                target="_blank"
+                ><img src="/assets/Recursos-img/icons/play.svg" alt=""
+              /></a>
+            </div>
+            <div class="portada_videos">
+              <a
+                href="https://www.youtube.com/watch?v=r0sek9vkeUQ"
+                target="_blank"
+                ><img src="/assets/Recursos-img/icons/play.svg" alt=""
+              /></a>
             </div>
           </div>
         </div>
+      </div>
     </section>
 
     <section class="seccion" id="skills" style="display: none">
@@ -509,18 +536,13 @@
         <div class="desing">
           <h2 id="desing">Programas de diseño</h2>
           <figure>
-            <img
-              
-              src="/assets/Recursos-img/Diseño-portada.png"
-              alt=""
-            />
+            <img src="/assets/Recursos-img/Diseño-portada.png" alt="" />
           </figure>
         </div>
         <div class="desing_items">
           <div>
             <figure>
               <img
-                
                 src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg"
                 alt="Adobe Illustrator"
               />
@@ -529,7 +551,6 @@
           <div>
             <figure>
               <img
-                
                 src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg"
                 alt="Adobe Photoshop"
               />
@@ -538,7 +559,6 @@
           <div>
             <figure>
               <img
-                
                 src="https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg"
                 alt="Adobe Premiere"
               />
@@ -547,7 +567,6 @@
           <div>
             <figure>
               <img
-                
                 src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg"
                 alt="figma"
               />
@@ -556,7 +575,6 @@
           <div>
             <figure>
               <img
-                
                 src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg"
                 alt="Adobe After Effects"
               />
@@ -573,7 +591,6 @@
           <div>
             <figure>
               <img
-                
                 src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
                 alt=""
               />
@@ -582,7 +599,6 @@
           <div>
             <figure>
               <img
-                
                 src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"
                 alt="CSS3"
               />
@@ -591,7 +607,6 @@
           <div>
             <figure>
               <img
-                
                 src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
                 alt="js"
               />
@@ -600,7 +615,6 @@
           <div>
             <figure>
               <img
-                
                 src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
                 alt="React"
               />
@@ -609,7 +623,6 @@
           <div>
             <figure>
               <img
-                
                 src="https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg"
                 alt="Sass"
               />
@@ -618,7 +631,6 @@
           <div>
             <figure>
               <img
-                
                 src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg"
                 alt="Bootstrap"
               />
@@ -650,11 +662,7 @@
           <div class="spotify">
             <div>
               <figure>
-                <img
-                  
-                  src="/assets/Recursos-img/Perfil-photos/icon.png"
-                  alt=""
-                />
+                <img src="/assets/Recursos-img/Perfil-photos/icon.png" alt="" />
               </figure>
             </div>
             <div>
@@ -674,7 +682,7 @@
               <h6 id="ES-EN"></h6>
             </div>
           </div>
-<!-- ░░░░░░░░░░░░░░░░░░░░░░█████████
+          <!-- ░░░░░░░░░░░░░░░░░░░░░░█████████
 ░░███████░░░░░░░░░░███▒▒▒▒▒▒▒▒███
 ░░█▒▒▒▒▒▒█░░░░░░░███▒▒▒▒▒▒▒▒▒▒▒▒▒███
 ░░░█▒▒▒▒▒▒█░░░░██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██
@@ -711,7 +719,7 @@
               </li>
               <li>
                 <a
-                  href="https://www.linkedin.com/in/abel-sol-2aa43229a/"
+                  href="https://www.linkedin.com/in/camilo-sol/"
                   target="_blank"
                   >Linkedin</a
                 >

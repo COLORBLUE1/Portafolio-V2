@@ -82,7 +82,6 @@ document.addEventListener("DOMContentLoaded", function () {
     swich_2.classList.add("clicked");
     const containerHeight = swich_2.clientHeight;
     swich_2.style.height = containerHeight + "px";
-    swich_2.style.opacity = 0;
 
     const messageBox = document.getElementById("messageBox");
     const messageText = language === "ES" ? "Traduciendo a inglés..." : "Translating to Spanish...";

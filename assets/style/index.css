@@ -765,7 +765,7 @@ div nav ul li p {
   grid-column: 1/5;
 }
 #proyectos .programacion .work_perso .team_project_5 {
-  background-image: url("https://media.es.wired.com/photos/6501e7429fa9000811a95fe8/16:9/w_2560%2Cc_limit/Adobe%2520Firefly.jpeg");
+  background-image: url("/assets/Recursos-img/Programacion-port/trescolores.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
