@@ -573,12 +573,11 @@ div {
         display: flex;
         align-items: center;
         justify-content: center;
-          figure img {
-            cursor: pointer;
-            width: 100px;
-            height: 100px;
-          }
-        
+        figure img {
+          cursor: pointer;
+          width: 100px;
+          height: 100px;
+        }
       }
 
       .team_project {
@@ -784,7 +783,7 @@ div {
 
       .team_project {
         grid-column: 2 / 1;
-        background-image: url("/assets/Recursos-img/Programacion-port/inicio-crud.jpg");
+        background-image: url("https://i.postimg.cc/sXyfNqsp/Fire-Shot-Capture-1669-FOOD-DELIVERY-food-delivery-lovat-delta-vercel-app.png");
         background-position: top;
         background-repeat: no-repeat;
         background-size: cover;
@@ -794,7 +793,7 @@ div {
       .team_project_1 {
         animation: fadeInUp;
         animation-duration: 2s;
-        background-image: url("/assets/Recursos-img/Programacion-port/Inicio-jsf.jpg");
+        background-image: url("https://i.postimg.cc/3wFnpvPd/Screenshot-2024-09-29-121825.png");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -814,7 +813,7 @@ div {
       }
 
       .team_project_3 {
-        background-image: url("/assets/Recursos-img/Programacion-port/Portafolio_1.0.png");
+        background-image: url("https://i.postimg.cc/NMpBHsS5/Fire-Shot-Capture-1677-Preguntas-dailybitsa-colorblue1s-projects-vercel-app.png");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -1003,7 +1002,7 @@ div {
       position: relative;
       justify-items: center;
       flex-wrap: wrap;
-      
+
       .portada_videos {
         display: flex;
         justify-content: center;
@@ -1140,12 +1139,11 @@ div {
       flex-direction: column;
       align-content: center;
 
-       figure  img {
-          width: 80px;
-          height: 80px;
-          object-fit: contain;
-        }
-      
+      figure img {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+      }
     }
   }
   .lenguajes {
@@ -1204,12 +1202,12 @@ div {
     flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
-    
+
     figure img {
-        width: 80px;
-        height: 80px;
-        object-fit: contain;
-      }
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+    }
   }
 }
 
@@ -1237,12 +1235,11 @@ div {
       border-radius: 50px;
       height: 100px;
       width: 500px;
-      
-        figure img {
-          width: 65px;
-          height: 65px;
-        }
-      
+
+      figure img {
+        width: 65px;
+        height: 65px;
+      }
 
       div:nth-child(2) {
         display: flex;
@@ -1649,15 +1646,14 @@ div {
   }
 
   .sobre_mi_2 .gustos {
-     
-     figure img {
-        position: relative;
-        width: 450px;
-        height: 100%;
-        left: 50%;
-        transform: translatex(-50%);
-        margin: 0;
-      }
+    figure img {
+      position: relative;
+      width: 450px;
+      height: 100%;
+      left: 50%;
+      transform: translatex(-50%);
+      margin: 0;
+    }
   }
 
   .sobre_mi_2 .gustos p {
@@ -1713,18 +1709,18 @@ div {
         margin-bottom: 200px;
 
         .contenedor_icons {
-           figure  img {
-              width: 50px;
-              height: 50px;
-              object-fit: contain;
-            }
+          figure img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+          }
         }
         h5 {
           width: 300px;
         }
       }
     }
-  
+
     .diseño {
       height: 300vh;
       .diseño_div {
