@@ -757,7 +757,7 @@ div nav ul li p {
   grid-column: 2/2;
 }
 #proyectos .programacion .work_perso .team_project_4 {
-  background-image: url("/assets/Recursos-img/Programacion-port/Ventana Principal.jpg");
+  background: url("https://i.postimg.cc/SQv0WBMF/main.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
