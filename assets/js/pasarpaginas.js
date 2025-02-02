@@ -1,106 +1,97 @@
 const sections = document.querySelectorAll("#sections li");
-
-// Add 'active' class to the initial active section
-document.getElementById('active_sobre').classList.add('active');
-
-sections.forEach((section) => {
-  section.addEventListener("click", () => {
-    const sectionId = section.getAttribute("value");
-    if (sectionId === "contactos") {
-      // Aquí abrir el popup en lugar de mostrar una sección
-      // Por ejemplo, si estás utilizando un modal, puedes activarlo así:
-      openPopup();
-      return;
-    }
-
-    const selectedSection = document.getElementById(sectionId);
-    const otherSections = document.querySelectorAll("section:not(#" + sectionId + ")");
-    
-    // Remove 'active' class from all sections
-    sections.forEach((s) => {
-      s.classList.remove('active');
-    });
-
-    // Add 'active' class to the clicked section
-    section.classList.add('active');
-
-    otherSections.forEach((section) => {
-      section.style.display = "none";
-    });
-
-    // Realiza scroll hacia arriba
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    selectedSection.style.display = "flex";
-  });
-
-  if (section.getAttribute("id") === "active_sobre") {
-    section.addEventListener("click", () => {
-      const sobreMiSections = document.querySelectorAll("#sobre_mi_2, #sobre_mi_3");
-      sobreMiSections.forEach((section) => {
-        section.style.display = "flex";
-      });
-    });
-  }
-});
-
 const chatBox = document.getElementById('chatBox');
 const userInput = document.getElementById('userInput');
-let currentLanguage = 'es'; // Variable para controlar el idioma actual ('es' para español, 'en' para inglés)
+let currentLanguage = 'es'; // 'es' para español, 'en' para inglés
+
+// Establece el estado inicial de la sección activa
+document.getElementById('active_sobre').classList.add('active');
+sections.forEach((section) => section.addEventListener("click", handleSectionClick));
+
+function handleSectionClick() {
+  const sectionId = this.getAttribute("value");
+  if (sectionId === "contactos") {
+    openPopup();
+    return;
+  }
+
+  // Ocultar todas las secciones y mostrar la seleccionada
+  document.querySelectorAll("section").forEach((section) => {
+    section.style.display = section.id === sectionId ? "flex" : "none";
+  });
+
+  // Actualizar la clase 'active' en las secciones
+  sections.forEach((s) => s.classList.remove('active'));
+  this.classList.add('active');
+
+  // Hacer scroll hacia arriba
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  if (sectionId === 'active_sobre') {
+    document.querySelectorAll("#sobre_mi_2, #sobre_mi_3").forEach((section) => {
+      section.style.display = "flex";
+    });
+  }
+}
 
 // Función para iniciar el chatbot
 function startChatbot() {
-  appendMessageWithAnimation('Chatbot', getWelcomeMessage());
+  appendMessage('Chatbot', getWelcomeMessage());
   showCommunicationOptions();
 }
 
-// Saludo inicial del chatbot con animación
 setTimeout(startChatbot, 500);
 
+userInput.addEventListener('keypress', (event) => {
+  if (event.key === 'Enter') sendMessage();
+});
+
 function sendMessage() {
-  const message = userInput.value;
-  if (message.trim() !== '') {
-    appendMessageWithAnimation('Tú', message);
+  const message = userInput.value.trim();
+  if (message) {
+    appendMessage('Tú', message);
     respondToUser(message);
     userInput.value = '';
   }
 }
 
-function showCommunicationOptions() {
-  appendMessageWithAnimation('Chatbot', getCommunicationQuestion());
-  
-  const whatsappButton = document.createElement('button');
-  whatsappButton.innerText = currentLanguage === 'es' ? 'WhatsApp' : 'WhatsApp';
-  whatsappButton.addEventListener('click', () => {
-    window.open('https://wa.me/+573173457029', '_blank');
-    closePopup();
-  });
-  chatBox.appendChild(whatsappButton);
-  
-  const correoButton = document.createElement('button');
-  correoButton.innerText = currentLanguage === 'es' ? 'Correo' : 'Email';
-  correoButton.addEventListener('click', () => {
-    window.open('mailto:camilosol123@gmail.com', '_blank');
-    closePopup();
-  });
-  chatBox.appendChild(correoButton);
+function appendMessage(sender, message) {
+  const messageElement = document.createElement('p');
+  messageElement.innerHTML = `<strong>${sender}:</strong> ${message}`;
+  messageElement.classList.add('fade-in');
+  chatBox.appendChild(messageElement);
+  chatBox.scrollTop = chatBox.scrollHeight;
+}
 
+function showCommunicationOptions() {
+  appendMessage('Chatbot', getCommunicationQuestion());
+
+  createButton('WhatsApp', 'es', 'https://wa.me/+573173457029');
+  createButton('Correo', 'es', 'mailto:camilosol123@gmail.com');
+  createLanguageButton();
+}
+
+function createButton(textKey, languageKey, link) {
+  const button = document.createElement('button');
+  button.innerText = currentLanguage === 'es' ? textKey : textKey;
+  button.addEventListener('click', () => {
+    window.open(link, '_blank');
+    closePopup();
+  });
+  chatBox.appendChild(button);
+}
+
+function createLanguageButton() {
   const languageButton = document.createElement('button');
   languageButton.innerText = currentLanguage === 'es' ? 'Cambiar Idioma' : 'Change Language';
-  languageButton.addEventListener('click', () => {
-    changeLanguage();
-  });
+  languageButton.addEventListener('click', changeLanguage);
   chatBox.appendChild(languageButton);
 }
 
 function changeLanguage() {
-  // Cambiar el idioma actual
   currentLanguage = currentLanguage === 'es' ? 'en' : 'es';
-  
-  // Mostrar mensaje de cambio de idioma
   const message = currentLanguage === 'es' ? 'Idioma cambiado a español.' : 'Language changed to English.';
-  appendMessageWithAnimation('Chatbot', message);
+  appendMessage('Chatbot', message);
 
-  // Limpiar el chatBox y mostrar el mensaje de bienvenida y opciones de comunicación
   setTimeout(() => {
     clearChat();
     startChatbot();
@@ -109,48 +100,25 @@ function changeLanguage() {
 
 function respondToUser(message) {
   let response;
-  
-  if (currentLanguage === 'es') {
-    // Respuestas en español
-    switch (message.toLowerCase()) {
-      case 'hola':
-        response = '¡Hola! ¿En qué puedo ayudarte?';
-        break;
-      case 'adios':
-        response = '¡Adiós! Que tengas un buen día.';
-        break;
-      default:
-        response = 'No comprendo lo que dices.';
-        break;
+  const messages = {
+    'es': {
+      'hola': '¡Hola! ¿En qué puedo ayudarte?',
+      'adios': '¡Adiós! Que tengas un buen día.',
+      'default': 'No comprendo lo que dices.'
+    },
+    'en': {
+      'hello': 'Hello! How can I help you?',
+      'bye': 'Goodbye! Have a nice day.',
+      'default': 'I do not understand what you are saying.'
     }
-  } else {
-    // Respuestas en inglés
-    switch (message.toLowerCase()) {
-      case 'hello':
-        response = 'Hello! How can I help you?';
-        break;
-      case 'bye':
-        response = 'Goodbye! Have a nice day.';
-        break;
-      default:
-        response = 'I do not understand what you are saying.';
-        break;
-    }
-  }
-  
-  appendMessageWithAnimation('Chatbot', response);
-}
+  };
 
-function appendMessageWithAnimation(sender, message) {
-  const messageElement = document.createElement('p');
-  messageElement.innerHTML = '<strong>' + sender + ':</strong> ' + message;
-  messageElement.classList.add('fade-in');
-  chatBox.appendChild(messageElement);
-  chatBox.scrollTop = chatBox.scrollHeight;
+  response = messages[currentLanguage][message.toLowerCase()] || messages[currentLanguage]['default'];
+  appendMessage('Chatbot', response);
 }
 
 function clearChat() {
-  chatBox.innerHTML = ''; // Limpiar el contenido del chatBox
+  chatBox.innerHTML = '';
 }
 
 function openPopup() {
@@ -168,9 +136,3 @@ function getWelcomeMessage() {
 function getCommunicationQuestion() {
   return currentLanguage === 'es' ? '¿Cómo quieres comunicarte?' : 'How would you like to communicate?';
 }
-
-userInput.addEventListener('keypress', function(event) {
-  if (event.key === 'Enter') {
-    sendMessage();
-  }
-});

@@ -311,7 +311,7 @@ div nav ul li p {
   background-size: cover;
   width: 50%;
   height: 500px;
-  border-radius: 90px;
+  border-radius: 55px;
   transition: all 0.5s linear;
   display: grid;
   font-size: clamp(1em, 2vw, 5em);
@@ -480,6 +480,9 @@ div nav ul li p {
   border: 1px solid rgba(255, 255, 255, 0.47);
   padding: 8px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #proyectos .programacion {
   animation: fadeInUp;
