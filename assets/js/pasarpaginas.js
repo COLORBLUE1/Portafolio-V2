@@ -26,10 +26,9 @@ function handleSectionClick() {
   // Hacer scroll hacia arriba
   window.scrollTo({ top: 0, behavior: 'smooth' });
 
-  if (sectionId === 'active_sobre') {
-    document.querySelectorAll("#sobre_mi_2, #sobre_mi_3").forEach((section) => {
-      section.style.display = "flex";
-    });
+  if (sectionId === 'sobre-mi') {
+    document.getElementById("sobre_mi_2").style.display = "flex";
+    document.getElementById("sobre_mi_3").style.display = "flex";
   }
 }
 
