@@ -109,16 +109,17 @@
           />
         </div>
         <script>
-          document.addEventListener('DOMContentLoaded', function() {
-            var scrollSobremi = document.getElementById('scroll-sobremi');
-            var gustosDiv = document.querySelector('.gustos'); 
+          document.addEventListener("DOMContentLoaded", function () {
+            var scrollSobremi = document.getElementById("scroll-sobremi");
+            var gustosDiv = document.querySelector(".gustos");
 
             // Función para hacer scroll suave hacia abajo
-            scrollSobremi.addEventListener('click', function() {
+            scrollSobremi.addEventListener("click", function () {
               var currentScroll = gustosDiv.scrollTop;
 
               // Calcular la posición de destino dentro del div
-              var targetPosition = gustosDiv.scrollHeight - gustosDiv.clientHeight;
+              var targetPosition =
+                gustosDiv.scrollHeight - gustosDiv.clientHeight;
 
               // Duración del scroll suave en milisegundos
               var duration = 1000; // 1 segundo
@@ -126,16 +127,21 @@
               // Función de animación de scroll suave
               function easeInOutQuad(t, b, c, d) {
                 t /= d / 2;
-                if (t < 1) return c / 2 * t * t + b;
+                if (t < 1) return (c / 2) * t * t + b;
                 t--;
-                return -c / 2 * (t * (t - 2) - 1) + b;
+                return (-c / 2) * (t * (t - 2) - 1) + b;
               }
 
               // Iniciamos la animación de scroll suave
               var startTime = performance.now();
               function scroll() {
                 var elapsed = performance.now() - startTime;
-                gustosDiv.scrollTop = easeInOutQuad(elapsed, currentScroll, targetPosition - currentScroll, duration);
+                gustosDiv.scrollTop = easeInOutQuad(
+                  elapsed,
+                  currentScroll,
+                  targetPosition - currentScroll,
+                  duration
+                );
                 if (elapsed < duration) {
                   requestAnimationFrame(scroll);
                 }
@@ -189,7 +195,6 @@
       </div>
     </section>
 
-    
     <section class="seccion" id="proyectos" style="display: none">
       <div class="dev-desing">
         <ul class="animate__animated animate__fadeInLeft" id="proyectos-id">
@@ -298,7 +303,6 @@
           <h5 id="proyectoscola">Proyectos en los que he colaborado</h5>
         </div>
 
-
         <!-- Proyectos personales--->
 
         <div class="work_perso">
@@ -324,7 +328,7 @@
                   >
                     <figure>
                       <img
-                      src="/assets/Recursos-img/icons/link dark.svg"
+                        src="/assets/Recursos-img/icons/link dark.svg"
                         alt="tres colores"
                       />
                     </figure>
@@ -377,7 +381,7 @@
                   >
                     <figure>
                       <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+                        src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
                         alt="Github"
                       />
                     </figure>
@@ -428,7 +432,7 @@
                   >
                     <figure>
                       <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+                        src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
                         alt="Github"
                       />
                     </figure>
@@ -436,7 +440,7 @@
                   <a href="https://tres-colores.vercel.app/" target="_blank">
                     <figure>
                       <img
-                      src="/assets/Recursos-img/icons/link dark.svg"
+                        src="/assets/Recursos-img/icons/link dark.svg"
                         alt="tres colores"
                       />
                     </figure>
@@ -455,7 +459,7 @@
                   >
                     <figure>
                       <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+                        src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
                         alt="Github"
                       />
                     </figure>
