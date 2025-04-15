@@ -147,7 +147,7 @@ div nav ul li p {
 .btn-line {
   width: 30px;
   height: 3px;
-  background-color: #747474;
+  background-color: #ffffff;
   margin: 5px 0;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -1393,12 +1393,19 @@ div nav ul li p {
     display: none;
   }
   .menu-btn {
+    background: #00b6ff;
+    border-radius: 100%;
     opacity: 100%;
     position: fixed;
     top: 20px;
     left: 20px;
     cursor: pointer;
     z-index: 9999;
+    display: flex;
+    justify-items: center;
+    padding: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   #sobre-mi {
     height: 500px;
@@ -1509,7 +1516,6 @@ div nav ul li p {
   }
   .sobre_mi_3 {
     display: none;
-    
   }
   #proyectos .dev-desing ul {
     padding: 15px;
