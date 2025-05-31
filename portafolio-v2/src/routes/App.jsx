@@ -1,9 +1,12 @@
+import { BrowserRouter, Routes, Route } from "react-router";
+import VistaMain from "../views/VistaMain";
+
 
 function App() {
   return (
     <BrowserRouter>
       <Routes >
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<VistaMain />} />
       </Routes>
     </BrowserRouter>
   )
