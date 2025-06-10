@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'; 
 import NavBar from '../components/NavBar';
+import Footer from '../components/Footer';
 
 const Main = styled.section `
     width: 100%;
@@ -18,7 +19,7 @@ const Main = styled.section `
     @media (max-width: 768px) {
         padding: 10px;
     }
-`
+`;
 
 export const LayoutMain = ({ children }) => {
   return (
@@ -27,6 +28,7 @@ export const LayoutMain = ({ children }) => {
     <Main>
         {children}
     </Main>
+    <Footer />
     </>
   )
 }

@@ -1,9 +1,10 @@
 import React from 'react'
 import { LayoutMain } from '../layouts/LayautMain'
+import SobreMi from '../pages/SobreMi'
 
 const VistaMain = () => {
   return (
-    <LayoutMain>vistaMain</LayoutMain>
+    <LayoutMain><SobreMi /></LayoutMain>
   )
 }
 

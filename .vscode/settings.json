@@ -1,4 +1,13 @@
 {
     "livePreview.defaultPreviewPath": "/index.html",
-    "liveServer.settings.port": 5502
+    "liveServer.settings.port": 5502,
+    "animations.Command-Palette": "Slide",
+    "animations.CursorAnimation": false,
+    "animations.Custom-CSS": false,
+    "animations.Install-Method": "Custom UI Style",
+    "animations.UseCursorColorForCursorAnimation": false,
+    "notebook.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "animations.Focus-Dimming-Mode": "None",
+    "animations.Active": "Indent"
 }

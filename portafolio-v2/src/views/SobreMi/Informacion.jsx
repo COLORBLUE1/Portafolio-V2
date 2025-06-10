@@ -1,0 +1,172 @@
+import styled from 'styled-components'
+
+const Section = styled.section`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .yo {
+    font-family: $font-text;
+    background-color: #86e3ce;
+    width: 30%;
+    height: 500px;
+    border-radius: 90px;
+    text-align: right;
+    padding: 30px;
+    margin: 50px 10px;
+    overflow: hidden;
+
+    h2 {
+      text-align: center;
+      color: #3b3b3b;
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 0.1em;
+      letter-spacing: 0.3em;
+    }
+
+    figure {
+      display: flex;
+      justify-content: center;
+
+      img {
+        position: relative;
+        top: -100px;
+        scale: 1.5;
+        margin: auto;
+        left: -50px;
+      }
+    }
+
+    &:hover {
+    transition: all 1s ease;
+    transform: translateY(-50px);
+    scale: 1.02;
+
+    img {
+      scale: 1.01;
+      transform: translateY(50px);
+    }
+  }
+}
+
+  .informacio {
+    scrollbar-width: none; 
+    overflow: auto;
+    overflow-y: scroll; 
+    padding: 30px;
+    background-color: #252525c3;
+    outline: 2px solid #41b8d6;
+    width: 50%;
+    height: 500px;
+    border-radius: 55px;
+    transition: all 0.5s linear;
+    font-size: clamp(1em, 2vw, 5em);
+    text-align: center;
+    font-family: roboto;
+
+    #scroll-sobremi {
+      display: flex;
+      justify-content: center;
+      animation: scrollUpDown 2s ease-in-out infinite;
+      cursor: pointer;
+
+      img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+      }
+    }
+
+    h4 {
+      letter-spacing: 2px;
+      color: #c2c2c2;
+      margin: 5px;
+      line-height: 70px;
+    }
+
+    p {
+      font-size: 15px;
+      letter-spacing: 0.1em;
+      margin: 30px auto;
+      width: 100%;
+      color: #b6b6b6;
+      font-size: clamp(1.25rem, 0.804rem + 1.19vw, 1.875rem);
+    }
+
+    figure {
+      scale: 1.5;
+      img {
+        position: relative;
+        width: 200px;
+        height: 250px;
+      }
+    }
+
+  &::-webkit-scrollbar {
+    display: none; 
+  }
+ &:hover {
+    transition: all 1s ease;
+    transform: translateY(-50px);
+    scale: 1.02;
+    img {
+      scale: 1.01;
+    }
+  }
+}
+
+    @keyframes scrollUpDown {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+        100% {
+        transform: translateY(0);
+      }
+    }
+
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
+`
+
+const Informacion = () => {
+  return (
+    <Section className="sobre_mi_2 seccion" id="sobre_mi_2">
+      <div data-aos="fade-up" data-aos-duration="2000" className="yo" id="yo">
+        <h2 id="estesoyyo">Este soy yo</h2>
+        <figure>
+          <img src="https://res.cloudinary.com/dehpi4905/image/upload/v1749327251/photo_5055586398052134396_y-removebg-preview_vf8w7s.png" alt="" />
+        </figure>
+      </div>
+      <div data-aos="fade-down" data-aos-duration="2000" className="informacio">
+        <div id="scroll-sobremi">
+          <img
+            src="https://res.cloudinary.com/dehpi4905/image/upload/v1748704009/Portafolio/icons/vpvx3dkig8a1akuybkjl.svg"
+            alt="mause down scroll"
+          />
+        </div>
+        <div>
+          <h4>Estudiante de Ingeniería en sistemas</h4>
+        </div>
+        <div>
+          <h4>Edad : 22</h4>
+        </div>
+        <div>
+          <h4>¿Que puedo aportar?</h4>
+          <p>  Como programador front-end, aporto habilidades en HTML, CSS y
+            JavaScript para desarrollar interfaces intuitivas y visualmente
+            atractivas. Con el objetivo de optimizar el rendimiento y la
+            experiencia del usuario en cada proyecto.</p>
+        </div>
+      </div>
+    </Section>
+  )
+}
+
+export default Informacion

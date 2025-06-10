@@ -19,6 +19,7 @@ const NavCont = styled.nav`
         border-radius: 50px;
         padding: 15px;
         margin: 30px auto;
+        box-shadow: -2px 3px 37px -13px rgba(0, 0, 0, 0.199);
 
         li {
             font-family: roboto;
@@ -37,9 +38,7 @@ const NavCont = styled.nav`
         }
     }
 
-    @media (max-width: 768px) {
-        padding: 10px;
-    }
+
 
     .contenedor_swich {
         display: flex;
@@ -132,12 +131,12 @@ const NavBar = () => {
 
     return (
         <NavCont>
-            <ul>
+            <ul className="animate__animated animate__fadeInDown">
                 <li className={active === 'Sobre mí' ? 'active' : ''} onClick={() => { handleScroll('sobre-mi'); setActive('Sobre mí'); }}>Sobre mí</li>
                 <li className={active === 'Proyectos' ? 'active' : ''} onClick={() => { handleScroll('proyectos'); setActive('Proyectos'); }}>Proyectos</li>
                 <li className={active === 'Skills' ? 'active' : ''} onClick={() => { handleScroll('skills'); setActive('Skills'); }}>Skills</li>
                 <li className={active === 'Contacto' ? 'active' : ''} onClick={() => { handleScroll('contacto'); setActive('Contacto'); }}>Contacto</li>
-                <div className="contenedor_swich">
+                <div className="contenedor_swich animate__animated animate__fadeInUp">
                     <div className="swich" id="swich" onClick={toggleTheme} style={{ backgroundColor: theme === 'dark' ? '#424242' : 'white', outline: theme === 'light' ? '2px solid #0000007f' : 'none' }}>
                         <img className='animate__animated animate__fadeInDown'
                             id="icon_swich"
