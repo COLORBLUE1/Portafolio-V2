@@ -16,7 +16,8 @@ const FooterSection = styled.footer`
       align-items: center;
       align-content: center;
       gap: 30px;
-      span{
+      justify-items: center;
+      span {
       display: flex;
       justify-content: center;
       background-color: rgba(255, 255, 255, 0.59);
@@ -27,6 +28,7 @@ const FooterSection = styled.footer`
       border-radius: 50px;
       align-items: center;
       gap: 40px;
+      
       p {
         font-family: roboto;
       color: #4b4b4b;
@@ -38,15 +40,20 @@ const FooterSection = styled.footer`
       width: 65px;
       height: 65px;
       }
-      strong{
-        color: black;
+    }
+    strong {
+      font-size: 0.8em;
+      color: white;
+      font-family: inco;
+      a {
+        color: aqua;
+        text-transform: uppercase;
       }
     }
   }
 
 
  div:last-child {
-    background-color: red;
     display: flex;
     justify-content: space-around;
     width: 70%;
@@ -77,6 +84,38 @@ const FooterSection = styled.footer`
     margin: 5px 0;
   }
 
+@media (max-width: 768px) {
+  grid-template-columns: 100%;
+  height: auto;
+  div:first-child {
+    width: 100%;
+    span {
+      width: 90%;
+      height: 80px;
+      padding: 10px;
+      gap: 0;
+        p {
+      letter-spacing: auto;
+      }
+    }
+    strong {
+      font-size: 0.8em;
+      color: white;
+      font-family: inco;
+      a {
+        color: aqua;
+        text-transform: uppercase;
+      }
+    }
+  }
+  
+  div:last-child {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
 `;
 
 const Footer = () => {
@@ -88,23 +127,23 @@ const Footer = () => {
           <img src={logo} alt="Description" />
           <p>Cada día se aprende algo</p>
         </span>
-      <strong>2025 - <a href=""></a>@Color blue</strong>
+        <strong>2025 - <a href="https://github.com/COLORBLUE1">@Color blue</a></strong>
       </div>
       <div><ul>
-        <h2>Mira mis redes</h2>
+        <h2>Mira tambien</h2>
         <li>Our Story</li>
         <li>Team</li>
         <li>Careers</li>
       </ul>
-      
-      <ul>
-        <h2>COntactame</h2>
-        <li>Mensaje</li>
-      </ul>
+
+        <ul>
+          <h2>Contactame</h2>
+          <li>Mensaje</li>
+        </ul>
       </div>
 
     </FooterSection>
-  ) 
+  )
 }
 
 export default Footer

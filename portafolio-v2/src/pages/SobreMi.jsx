@@ -14,10 +14,7 @@ const SobreMi = () => {
     <div>
       <Presentacion />
       <Informacion /> 
-       <LoUltimo /> 
-      {/* <Proyectos /> */}
-      {/* <Contacto /> */}
-      
+      <LoUltimo /> 
     </div>
   )
 }

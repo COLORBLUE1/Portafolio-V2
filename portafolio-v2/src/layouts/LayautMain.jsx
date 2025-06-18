@@ -24,11 +24,10 @@ const Main = styled.section `
 export const LayoutMain = ({ children }) => {
   return (
     <>
-    <NavBar/>
+ 
     <Main>
         {children}
     </Main>
-    <Footer />
     </>
   )
 }

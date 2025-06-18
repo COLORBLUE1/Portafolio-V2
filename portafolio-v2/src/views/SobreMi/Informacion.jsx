@@ -6,9 +6,11 @@ const Section = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 
   .yo {
-    font-family: $font-text;
+    font-family: inco;
     background-color: #86e3ce;
     width: 30%;
     height: 500px;
@@ -37,19 +39,29 @@ const Section = styled.section`
         scale: 1.5;
         margin: auto;
         left: -50px;
+        transition: all 1s ease;
       }
     }
 
     &:hover {
     transition: all 1s ease;
     transform: translateY(-50px);
-    scale: 1.02;
+
 
     img {
-      scale: 1.01;
+      scale: 1.3;
       transform: translateY(50px);
     }
   }
+@media (max-width: 768px) {
+    width: 70%;
+    figure img {
+        position: relative;
+        top: -100px;
+        scale: 1.8;
+        transition: all 1s ease;
+      }
+    }
 }
 
   .informacio {
@@ -77,6 +89,8 @@ const Section = styled.section`
         width: 50px;
         height: 50px;
         object-fit: contain;
+        transition: all 1s ease;
+        
       }
     }
 
@@ -109,13 +123,19 @@ const Section = styled.section`
     display: none; 
   }
  &:hover {
-    transition: all 1s ease;
     transform: translateY(-50px);
     scale: 1.02;
     img {
       scale: 1.01;
     }
   }
+  @media (max-width: 768px) {
+    width: 70%;
+
+    p{
+      font-size: 14px;
+      line-height: 1.5;
+    }
 }
 
     @keyframes scrollUpDown {
@@ -129,9 +149,6 @@ const Section = styled.section`
         transform: translateY(0);
       }
     }
-
-  @media (max-width: 768px) {
-    padding: 10px;
   }
 `
 
@@ -152,10 +169,10 @@ const Informacion = () => {
           />
         </div>
         <div>
-          <h4>Estudiante de Ingeniería en sistemas</h4>
+          <h4>Ingeniero en sistemas</h4>
         </div>
         <div>
-          <h4>Edad : 22</h4>
+          <h4>22 anos de edad</h4>
         </div>
         <div>
           <h4>¿Que puedo aportar?</h4>
