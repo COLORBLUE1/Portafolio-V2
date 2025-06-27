@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 
 const Main = styled.section `
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,7 +15,6 @@ const Main = styled.section `
     color: #333;
     font-family: Arial, sans-serif;
     overflow-y: auto;
-
     @media (max-width: 768px) {
         padding: 10px;
     }

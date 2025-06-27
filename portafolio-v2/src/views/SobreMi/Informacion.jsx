@@ -24,9 +24,10 @@ const Section = styled.section`
       text-align: center;
       color: #3b3b3b;
       font-size: 30px;
-      font-weight: 600;
+      font-weight: 800;
       line-height: 0.1em;
       letter-spacing: 0.3em;
+      text-transform: uppercase;
     }
 
     figure {
@@ -131,7 +132,6 @@ const Section = styled.section`
   }
   @media (max-width: 768px) {
     width: 70%;
-
     p{
       font-size: 14px;
       line-height: 1.5;
@@ -150,18 +150,22 @@ const Section = styled.section`
       }
     }
   }
-`
+  @media (max-width: 768px) {
+    height: auto;
+    padding: 30px 0;
+    }
+`;
 
 const Informacion = () => {
   return (
-    <Section className="sobre_mi_2 seccion" id="sobre_mi_2">
+    <Section>
       <div data-aos="fade-up" data-aos-duration="2000" className="yo" id="yo">
         <h2 id="estesoyyo">Este soy yo</h2>
         <figure>
           <img src="https://res.cloudinary.com/dehpi4905/image/upload/v1749327251/photo_5055586398052134396_y-removebg-preview_vf8w7s.png" alt="" />
         </figure>
       </div>
-      <div data-aos="fade-down" data-aos-duration="2000" className="informacio">
+      <div data-aos="fade-down" className="informacio">
         <div id="scroll-sobremi">
           <img
             src="https://res.cloudinary.com/dehpi4905/image/upload/v1748704009/Portafolio/icons/vpvx3dkig8a1akuybkjl.svg"

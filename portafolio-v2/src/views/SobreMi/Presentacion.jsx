@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { FaReact, FaAngular } from "react-icons/fa";
+import TextCursor from '../../components/ui/SobremiTitulo/TextCursor';
 
 
 const Section = styled.section`
@@ -79,6 +80,7 @@ const Section = styled.section`
 const Presentacion = () => {
   return (
     <Section >
+      <TextCursor/>
       <div>
         <h1 className="animate__animated animate__fadeInUp">Camilo sol</h1>
         <h3

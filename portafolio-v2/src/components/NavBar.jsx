@@ -44,7 +44,7 @@ const NavCont = styled.nav`
     background-color: transparent;
     position: fixed;
     top: 0;
-    left: -500px;
+    left: -100%;
     width: 70%;
     height: 100%;
     z-index: 98;
@@ -54,6 +54,7 @@ const NavCont = styled.nav`
     outline: 4px solid #00ffff78;
     border-radius: 0  30px  30px 0;
     transition: all 0.3s ease-in-out !important;
+
     ul {
         display: grid;
         box-shadow: -2px 3px 37px -13px rgba(0, 0, 0, 0.199);
@@ -104,7 +105,11 @@ const NavCont = styled.nav`
         padding: 15px;
         margin: 30px auto;
         box-shadow: -2px 3px 37px -13px rgba(0, 0, 0, 0.199);
-
+   a {
+                text-decoration: none !important;
+                color: #6e6e6ed6;
+                font-weight: 600;
+          
         li {
             font-family: roboto;
             cursor: pointer;
@@ -113,22 +118,15 @@ const NavCont = styled.nav`
             border-radius: 50px;
             text-transform: uppercase;
             transition: all 0.3s ease-in-out !important;
-            a {
-                text-decoration: none !important;
-                color: #6e6e6ed6;
-                font-weight: 600;
-            }
+         
             &.active {
                 background-color: #00ccd373;
                 padding: 13px 15px;
-
-            a {
                 color: #ffffff;
                 font-weight: 800;
-            }
         }
     }
-
+  }
     .contenedor_swich {
         display: flex;
         gap: 10px;
@@ -244,26 +242,26 @@ const NavBar = () => {
     }, [theme]);
 
 
-const HandleResize = () => {
-    const botonMenu = document.querySelector('.hamburgerMenu');
-    const hamburgerMenuContainer = document.querySelector('.hamburgerMenuContainer');
+    const HandleResize = () => {
+        const botonMenu = document.querySelector('.hamburgerMenu');
+        const hamburgerMenuContainer = document.querySelector('.hamburgerMenuContainer');
 
-    // Asegúrate que el menú empieza oculto con left -500px
-    hamburgerMenuContainer.style.left = hamburgerMenuContainer.style.left || '-500px';
+        // Asegúrate que el menú empieza oculto con left -500px
+        hamburgerMenuContainer.style.left = hamburgerMenuContainer.style.left || '-100%';
 
-    // Evita añadir múltiples event listeners
-    const onClick = () => {
-        if (hamburgerMenuContainer.style.left === '0px') {
-            hamburgerMenuContainer.style.left = '-500px';  // Ocultar menú
-        } else {
-            hamburgerMenuContainer.style.left = '0';        // Mostrar menú
-        }
+        // Evita añadir múltiples event listeners
+        const onClick = () => {
+            if (hamburgerMenuContainer.style.left === '0') {
+                hamburgerMenuContainer.style.left = '-100%';  // Ocultar menú
+            } else {
+                hamburgerMenuContainer.style.left = '0';        // Mostrar menú
+            }
+        };
+
+        // Remueve listener previo para evitar duplicados (por seguridad)
+        botonMenu.removeEventListener('click', onClick);
+        botonMenu.addEventListener('click', onClick);
     };
-
-    // Remueve listener previo para evitar duplicados (por seguridad)
-    botonMenu.removeEventListener('click', onClick);
-    botonMenu.addEventListener('click', onClick);
-};
 
     return (
         <NavCont>
@@ -271,10 +269,10 @@ const HandleResize = () => {
                 <RxHamburgerMenu />
             </div>
             <ul className="animate__animated animate__fadeInDown">
-                <li className={active === 'Sobre mí' ? 'active' : ''} onClick={() => { handleScroll('sobre-mi'); setActive('Sobre mí'); }}><Link to="/">Sobre mí</Link></li>
-                <li className={active === 'Proyectos' ? 'active' : ''} onClick={() => { handleScroll('proyectos'); setActive('Proyectos'); }}><Link to="/proyectos">Proyectos</Link></li>
-                <li className={active === 'Skills' ? 'active' : ''} onClick={() => { handleScroll('skills'); setActive('Skills'); }}><Link to="/skills">Skills</Link></li>
-                <li className={active === 'Contacto' ? 'active' : ''} onClick={() => { handleScroll('contacto'); setActive('Contacto'); }}><Link to="/contacto">Contacto</Link></li>
+                <Link to="/"><li className={active === 'Sobre mí' ? 'active' : ''} onClick={() => { handleScroll('sobre-mi'); setActive('Sobre mí'); }}>Sobre mí</li></Link>
+                <Link to="/proyectos"><li className={active === 'Proyectos' ? 'active' : ''} onClick={() => { handleScroll('proyectos'); setActive('Proyectos'); }}>Proyectos</li></Link>
+                <Link to="/skills"><li className={active === 'Skills' ? 'active' : ''} onClick={() => { handleScroll('skills'); setActive('Skills'); }}>Skills</li></Link>
+                <Link to="/contacto"><li className={active === 'Contacto' ? 'active' : ''} onClick={() => { handleScroll('contacto'); setActive('Contacto'); }}>Contacto</li></Link>
                 <div className="contenedor_swich animate__animated animate__fadeInUp">
                     <div className="swich" id="swich" onClick={toggleTheme} style={{ backgroundColor: theme === 'dark' ? '#424242' : 'white', outline: theme === 'light' ? '2px solid #0000007f' : 'none' }}>
                         <img className='animate__animated animate__fadeInDown'

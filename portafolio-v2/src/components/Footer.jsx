@@ -8,7 +8,8 @@ const FooterSection = styled.footer`
   text-align: center;
   display: grid;
   grid-template-columns: 50% 50%;
-  
+  padding: 30px 0;
+
     div:first-child {
       margin: 0 auto;
       display: grid;
@@ -30,10 +31,10 @@ const FooterSection = styled.footer`
       gap: 40px;
       
       p {
-        font-family: roboto;
-      color: #4b4b4b;
-      font-weight: 800;
-      letter-spacing: 0.3em;
+      font-family: inco;
+      color: #222222;
+      font-weight: 600;
+      letter-spacing: 0.2em;
       }
   
       img {
@@ -48,9 +49,9 @@ const FooterSection = styled.footer`
       a {
         color: aqua;
         text-transform: uppercase;
-      }
     }
   }
+}
 
 
  div:last-child {
@@ -60,8 +61,6 @@ const FooterSection = styled.footer`
     margin: 0 auto;
     align-items: center;
 
-  }
-
   ul {
     list-style: none;
     padding: 0;
@@ -70,19 +69,21 @@ const FooterSection = styled.footer`
       font-size: 1.5em;
       margin-bottom: 10px;
       font-family: roboto;
+      letter-spacing: 6px;
     }
-    li{
+    li a{
+      color: #bfadff;
       font-family: inco;
+      &:hover{
+        color: #2366f7;
+      }
     }
   }
 
   h2 {
     margin-bottom: 10px;
   }
-
-  li {
-    margin: 5px 0;
-  }
+}
 
 @media (max-width: 768px) {
   grid-template-columns: 100%;
@@ -127,18 +128,20 @@ const Footer = () => {
           <img src={logo} alt="Description" />
           <p>Cada día se aprende algo</p>
         </span>
-        <strong>2025 - <a href="https://github.com/COLORBLUE1">@Color blue</a></strong>
+        <strong>2025 - <a target='_blank' href="https://github.com/COLORBLUE1">@Color blue</a></strong>
       </div>
       <div><ul>
-        <h2>Mira tambien</h2>
-        <li>Our Story</li>
-        <li>Team</li>
-        <li>Careers</li>
+        <h2>Adicional</h2>
+        <li><a href="">Github</a></li>
+        <li><a href="">Codepen</a></li>
+        <li><a href="">Linkedin</a></li>
       </ul>
 
         <ul>
           <h2>Contactame</h2>
-          <li>Mensaje</li>
+          <li><a href="">whatsapp</a></li>
+          <li><a href="">Telegram</a></li>
+          <li><a href="">camilosol123@gmail.com</a></li>
         </ul>
       </div>
 

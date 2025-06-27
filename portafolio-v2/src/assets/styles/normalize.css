@@ -48,7 +48,6 @@ body {
   }
 }
 
-
 .dark {
   background: rgb(41, 41, 41);
   h2 {
@@ -111,6 +110,11 @@ h1 {
   margin: 0.67em 0;
 }
 
+h2 {
+  font-family: roboto;
+  text-transform: uppercase;
+}
+
 /* Grouping content
    ========================================================================== */
 
@@ -146,8 +150,13 @@ a {
   background-color: transparent;
 }
 
+ul{
+    padding: 0;
+}
+
 li {
   list-style: none;
+  cursor: pointer;
 }
 
 /**
