@@ -25,25 +25,34 @@ const Section = styled.section`
   width: 50%;
 
 figure {
-  opacity: 1;
+  opacity: 0;
+  transition: all 1s;
   width: 100%;
   height: 100%;
   margin: auto;
-  background-color: red;
- img {
+  background-color: #3b3b3b9d;
+  backdrop-filter: blur(10px);
+  border-radius: 90px;
+
+  img {
   width: 150px;
   height: 150px;
 }
+
 &:hover  {
   opacity: 1;
+  }
 }
-}
+
 &:hover {
-  transition: all 1s ease;
+  transition: all 1s;
   transform: translateY(-15px);
   scale: 1.01;
 
-}
+  figure {
+    opacity: 1;
+  }
+  }
   @media (max-width: 768px) {
     width: 80%;
 }
@@ -66,7 +75,7 @@ div:last-child {
   line-height: 0.1em;
   letter-spacing: 0.1em;
   
-    h2{
+    h2 {
 font-size: clamp(1.875rem, 1.429rem + 1.19vw, 2.5rem);
   }
 
@@ -85,7 +94,13 @@ figure {
   &:hover  {
     transform: translateY(50px);
   }
-}
+
+  @media (max-width: 768px) {
+    width: 70%;
+    left: 0;
+    bottom: 0;
+    }
+  }
 }
 
   @media (max-width: 768px) {
@@ -97,6 +112,7 @@ figure {
   transform: translateY(-50px);
   scale: 1.02;
 }
+
 }
   @media (max-width: 768px) {
     height: auto;
@@ -141,10 +157,9 @@ const LoUltimo = () => {
         <h2 id="Miraloultimo">Mira lo ultimo</h2>
         <figure>
           <img
-            src={isMobile ? "https://wallpapers.com/images/hd/1920-x-1080-naruto-puo1nvsest4fw828.jpg" : "https://res.cloudinary.com/dehpi4905/image/upload/v1748704013/Portafolio/fixvdrg0athbp9ddp321.png"}
+            src={isMobile ? "https://res.cloudinary.com/dehpi4905/image/upload/v1751384460/ChatGPT_Image_Jul_1__2025__10_40_25_AM-removebg-preview_ztbiyn.png" : "https://res.cloudinary.com/dehpi4905/image/upload/v1748704013/Portafolio/fixvdrg0athbp9ddp321.png"}
             alt="ver lo ultimo"
           />
-
         </figure>
       </div>
     </Section>

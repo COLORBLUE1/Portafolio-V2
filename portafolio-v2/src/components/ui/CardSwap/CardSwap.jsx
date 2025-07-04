@@ -9,6 +9,7 @@ import React, {
 } from "react";
 import gsap from "gsap";
 import "./CardSwap.css";
+import { Link } from "react-router-dom";
 
 export const Card = forwardRef(
   ({ customClass, ...rest }, ref) => (
@@ -46,14 +47,14 @@ const placeNow = (el, slot, skew) =>
   });
 
 const CardSwap = ({
-  width = 500,
+  width = 700,
   height = 400,
   cardDistance = 60,
   verticalDistance = 70,
-  delay = 5000,
+  delay = 2000,
   pauseOnHover = false,
   onCardClick,
-  skewAmount = 6,
+  skewAmount = 4,
   easing = "elastic",
   children,
 }) => {
@@ -212,6 +213,14 @@ const CardSwap = ({
   );
 
   return (
+   <section className="card-swap-section">
+   
+   <div>
+    <h2>Estos son algunos de los proyectos mas recientes</h2>
+      
+        <Link to="/proyectos">Ver mas proyectos</Link>
+      
+   </div>
     <div
       ref={container}
       className="card-swap-container"
@@ -219,6 +228,8 @@ const CardSwap = ({
     >
       {rendered}
     </div>
+
+   </section>
   );
 };
 

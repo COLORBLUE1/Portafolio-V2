@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { FaReact, FaAngular } from "react-icons/fa";
-import TextCursor from '../../components/ui/SobremiTitulo/TextCursor';
 
 
 const Section = styled.section`
@@ -37,7 +36,7 @@ const Section = styled.section`
 
     }
     h3 {
-      color: #a3a3a371;
+      color: #00000070;
       font-size: clamp(0.625rem, 0.179rem + 1.19vw, 1.25rem); 
       font-weight: 400;
       line-height: 0em;
@@ -48,7 +47,7 @@ const Section = styled.section`
     }
 
     p {
-      width: 80%;
+      width:clamp(21.875rem, -2.679rem + 65.476vw, 56.25rem);
       font-size: clamp(0.938rem, 0.714rem + 0.595vw, 1.25rem);
       margin-bottom: 30px;
       text-align: center;
@@ -72,6 +71,13 @@ const Section = styled.section`
       outline: rgb(0 182 255) solid 2px;
       background-color: transparent;
   }
+
+      a:hover {
+        background-color: aqua !important;
+        color: black;
+        transition: all 0.3s ease;
+        scale: 1.1;
+  }
 }
 }
 `;
@@ -79,10 +85,10 @@ const Section = styled.section`
 
 const Presentacion = () => {
   return (
-    <Section >
-      <TextCursor/>
+    <Section className='Presentacion'>
       <div>
         <h1 className="animate__animated animate__fadeInUp">Camilo sol</h1>
+
         <h3
           id="subtitulo-sobremi"
           className="animate__animated animate__fadeInUp animate__delay-1s"

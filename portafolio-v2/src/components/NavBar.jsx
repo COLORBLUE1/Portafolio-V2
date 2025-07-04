@@ -61,10 +61,20 @@ const NavCont = styled.nav`
         background-color: transparent;
         padding: 0;
         margin: 0 auto;
-        margin-top: 100px;
+        margin-top: 200px;
         gap: 30px;
         justify-items: center;
         
+
+  
+        .contenedor_swich {
+        right: 0; 
+        box-shadow: -2px 3px 37px -9px rgba(255, 255, 255, 0.733);
+        bottom: 0;
+        position: relative;
+}
+
+
         li {
             font-family: roboto;
             cursor: pointer;
@@ -73,9 +83,9 @@ const NavCont = styled.nav`
             border-radius: 50px;
             text-transform: uppercase;
             transition: all 0.3s ease-in-out !important;
-                a {
+            a {
+                color: #353535;
                 text-decoration: none !important;
-                color: #6e6e6ed6;
                 font-weight: 600;
             }
                 &.active {
@@ -132,7 +142,7 @@ const NavCont = styled.nav`
         gap: 10px;
         justify-content: center;
         position: absolute;
-        right: -80%;
+        right: -250px;
         background-color: #ffffff;
         border-radius: 50px;
         padding: 10px;
@@ -289,7 +299,7 @@ const NavBar = () => {
 
             {/* //Hamburguer menu for mobile view */}
 
-            <div className="hamburgerMenuContainer animate__animated animate__fadeInDown">
+            <div className="hamburgerMenuContainer animate__animated animate__fadeInLeft">
                 <ul>
                     <li className={active === 'Sobre mí' ? 'active' : ''} onClick={() => { handleScroll('sobre-mi'); setActive('Sobre mí'); }}><Link to="/">Sobre mí</Link></li>
                     <li className={active === 'Proyectos' ? 'active' : ''} onClick={() => { handleScroll('proyectos'); setActive('Proyectos'); }}><Link to="/proyectos">Proyectos</Link></li>

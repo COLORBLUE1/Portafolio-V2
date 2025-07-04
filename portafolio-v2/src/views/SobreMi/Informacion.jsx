@@ -70,8 +70,8 @@ const Section = styled.section`
     overflow: auto;
     overflow-y: scroll; 
     padding: 30px;
-    background-color: #252525c3;
-    outline: 2px solid #41b8d6;
+    background-color: #41fd70c3;
+    outline: 2px solid #ffffff;
     width: 50%;
     height: 500px;
     border-radius: 55px;
@@ -97,7 +97,7 @@ const Section = styled.section`
 
     h4 {
       letter-spacing: 2px;
-      color: #c2c2c2;
+      color: #3a3a3a;
       margin: 5px;
       line-height: 70px;
     }
@@ -107,7 +107,7 @@ const Section = styled.section`
       letter-spacing: 0.1em;
       margin: 30px auto;
       width: 100%;
-      color: #b6b6b6;
+      color: #4e4e4e;
       font-size: clamp(1.25rem, 0.804rem + 1.19vw, 1.875rem);
     }
 
@@ -172,19 +172,12 @@ const Informacion = () => {
             alt="mause down scroll"
           />
         </div>
-        <div>
-          <h4>Ingeniero en sistemas</h4>
-        </div>
-        <div>
-          <h4>22 anos de edad</h4>
-        </div>
-        <div>
+          <h4>Ingeniero en sistemas - Desarrollador web</h4>
           <h4>¿Que puedo aportar?</h4>
           <p>  Como programador front-end, aporto habilidades en HTML, CSS y
             JavaScript para desarrollar interfaces intuitivas y visualmente
             atractivas. Con el objetivo de optimizar el rendimiento y la
             experiencia del usuario en cada proyecto.</p>
-        </div>
       </div>
     </Section>
   )

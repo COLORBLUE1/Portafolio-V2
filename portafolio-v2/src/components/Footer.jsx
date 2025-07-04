@@ -4,7 +4,6 @@ import { logo } from '../assets/const';
 const FooterSection = styled.footer`
   width: 100%;
   height: 300px;
-  color: white;
   text-align: center;
   display: grid;
   grid-template-columns: 50% 50%;
@@ -44,10 +43,8 @@ const FooterSection = styled.footer`
     }
     strong {
       font-size: 0.8em;
-      color: white;
       font-family: inco;
       a {
-        color: aqua;
         text-transform: uppercase;
     }
   }
@@ -65,23 +62,20 @@ const FooterSection = styled.footer`
     list-style: none;
     padding: 0;
     h2{
-      color: #ffffff;
+      color: #333333;
       font-size: 1.5em;
       margin-bottom: 10px;
       font-family: roboto;
       letter-spacing: 6px;
     }
     li a{
-      color: #bfadff;
+      color: #977fee;
+
       font-family: inco;
       &:hover{
         color: #2366f7;
       }
     }
-  }
-
-  h2 {
-    margin-bottom: 10px;
   }
 }
 
@@ -101,10 +95,10 @@ const FooterSection = styled.footer`
     }
     strong {
       font-size: 0.8em;
-      color: white;
       font-family: inco;
       a {
-        color: aqua;
+                color: aqua;
+
         text-transform: uppercase;
       }
     }
@@ -121,8 +115,7 @@ const FooterSection = styled.footer`
 
 const Footer = () => {
   return (
-    <FooterSection>
-
+    <FooterSection className='footer'>
       <div>
         <span>
           <img src={logo} alt="Description" />
@@ -136,7 +129,6 @@ const Footer = () => {
         <li><a href="">Codepen</a></li>
         <li><a href="">Linkedin</a></li>
       </ul>
-
         <ul>
           <h2>Contactame</h2>
           <li><a href="">whatsapp</a></li>
@@ -144,7 +136,6 @@ const Footer = () => {
           <li><a href="">camilosol123@gmail.com</a></li>
         </ul>
       </div>
-
     </FooterSection>
   )
 }
