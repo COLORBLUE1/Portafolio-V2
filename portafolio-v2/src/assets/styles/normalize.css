@@ -128,8 +128,8 @@ body {
 }
 
 .card-swap-section {
-  background-color: rgba(0, 0, 0, 0.445);
-  box-shadow: 0 0 20px rgb(0, 0, 0);
+  background-color: rgba(94, 23, 23, 0);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.404);
 
   div:first-child {
     h2 {

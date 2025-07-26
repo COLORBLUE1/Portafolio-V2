@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { iconMoon, iconSon } from '../services/const';
 import { Link, useLocation } from "react-router-dom"; // Use useLocation from react-router-dom
 import { RxHamburgerMenu, RxHeight } from "react-icons/rx";
+import ModalContactos from '../views/Contactos/modal-contactos';
 
 const NavCont = styled.nav`
     width: 100%;
@@ -184,7 +185,6 @@ const NavCont = styled.nav`
    display: none;
 }
 }
-
 `;
 
 const NavBar = () => {
@@ -206,12 +206,13 @@ const NavBar = () => {
                 setActive('Skills');
                 break;
             case '/contacto':
-                setActive('Contacto');
+                modal();
                 break;
             default:
                 setActive('Sobre mí');
         }
     }, [location]);
+
 
     // Handle scrolling to sections
     const handleScroll = (section) => {
@@ -219,7 +220,7 @@ const NavBar = () => {
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
         }
-    };
+};
 
     // Toggle theme and persist in localStorage
     const toggleTheme = () => {
@@ -282,7 +283,7 @@ const NavBar = () => {
                 <Link to="/"><li className={active === 'Sobre mí' ? 'active' : ''} onClick={() => { handleScroll('sobre-mi'); setActive('Sobre mí'); }}>Sobre mí</li></Link>
                 <Link to="/proyectos"><li className={active === 'Proyectos' ? 'active' : ''} onClick={() => { handleScroll('proyectos'); setActive('Proyectos'); }}>Proyectos</li></Link>
                 <Link to="/skills"><li className={active === 'Skills' ? 'active' : ''} onClick={() => { handleScroll('skills'); setActive('Skills'); }}>Skills</li></Link>
-                <Link to="/contacto"><li className={active === 'Contacto' ? 'active' : ''} onClick={() => { handleScroll('contacto'); setActive('Contacto'); }}>Contacto</li></Link>
+                <a ><li onClick={() => { modal('block !important'); }}>Contacto</li></a>
                 <div className="contenedor_swich animate__animated animate__fadeInUp">
                     <div className="swich" id="swich" onClick={toggleTheme} style={{ backgroundColor: theme === 'dark' ? '#424242' : 'white', outline: theme === 'light' ? '2px solid #0000007f' : 'none' }}>
                         <img className='animate__animated animate__fadeInDown'

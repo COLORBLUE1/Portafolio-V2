@@ -21,10 +21,7 @@ const Main = styled.section `
 export const LayoutMain = ({ children }) => {
   return (
     <>
- 
     <Main>
-
-
         {children}
     </Main>
     </>

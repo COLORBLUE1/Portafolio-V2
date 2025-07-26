@@ -1,6 +1,6 @@
 import React from 'react'
 import { LayoutMain } from '../layouts/LayautMain'
-import Gallery from '../components/gallery';
+import Gallery from '../components/Gallery';
 
 const Proyectos = () => {
   React.useEffect(() => {

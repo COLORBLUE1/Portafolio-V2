@@ -8,6 +8,8 @@ const FooterSection = styled.footer`
   display: grid;
   grid-template-columns: 50% 50%;
   padding: 30px 0;
+  position: relative;
+  bottom: 0;
 
     div:first-child {
       margin: 0 auto;

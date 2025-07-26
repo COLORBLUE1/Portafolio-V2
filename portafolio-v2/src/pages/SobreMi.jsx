@@ -7,6 +7,7 @@ import FlowingMenu from '../components/ui/FlowingMenu/FlowingMenu';
 import { Link } from 'react-router-dom';
 import { demoItems } from '../components/ui/FlowingMenu/data';
 import BlurText from '../components/ui/BlurText/BlurText';
+import MetaBalls from '../components/ui/MetaBalls/MetaBalls';
 
 
 const SobreMi = () => {
@@ -47,6 +48,18 @@ const SobreMi = () => {
         <FlowingMenu items={demoItems} />
         <Link className='more-skill' to="/skills">Ver mas informacion</Link>
       </section>
+      <MetaBalls
+        color="#1dafe9"
+        cursorBallColor="#1b86ff"
+        cursorBallSize={2}
+        ballCount={15}
+        animationSize={30}
+        enableMouseInteraction={true}
+        enableTransparency={true}
+        hoverSmoothness={0.05}
+        clumpFactor={1}
+        speed={0.3}
+      />
     </section>
   )
 }
