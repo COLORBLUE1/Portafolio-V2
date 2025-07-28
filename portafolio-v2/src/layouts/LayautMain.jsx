@@ -18,10 +18,10 @@ const Main = styled.section `
     }
 `;
 
-export const LayoutMain = ({ children }) => {
+export const LayoutMain = ({ children, stylo }) => {
   return (
     <>
-    <Main>
+    <Main style={{height: stylo}}>
         {children}
     </Main>
     </>
