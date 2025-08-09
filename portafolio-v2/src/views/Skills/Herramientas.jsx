@@ -1,232 +1,274 @@
-import styled from 'styled-components';
-import { Diseno, Framework, lenguajes, Librerias } from '../../services/const';
+import styled from "styled-components";
+import { Diseno, Framework, lenguajes, Librerias } from "../../services/const";
 
-const Sectionmain = styled.section`
-
-section:first-child{
+const SectionMain = styled.section`
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  gap: 50px;
   padding: 30px;
-  border-radius: 50px;
+`;
+
+const SkillSection = styled.section`
+  display: flex;
+  justify-content: center;
+  gap: 40px;
   position: relative;
   flex-wrap: wrap;
-  width: 100%;
-  margin: auto;
-  justify-content: center;
 
-  div {
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const Card = styled.div`
   width: 450px;
   height: 300px;
   border-radius: 30px;
   padding: 10px;
-  cursor: pointer;
-  opacity: 1;
-  transition: all 1s;
   position: relative;
-  top: 0;
   overflow: hidden;
+  cursor: pointer;
+  background: ${({ bg }) => bg || "#fff"};
+  z-index: ${({ z }) => z || "1"};
+  animation: ${({ animate }) => animate || "none"};
+  top: 0;
+  transition: all 1s;
 
   h2 {
-  color: #5a5a5a;
-  text-align: center;
-}
-
-  &:hover{
-  opacity: 0;
-  position: relative;
-  top: -60px;
+    color: #5a5a5a;
+    text-align: center;
   }
-}
 
-div:first-child{
-  background: radial-gradient(at center, #fffd98, #ffffff);
-  z-index: 20;
-  animation: fadeIn 3s infinite;
-}
+  img {
+    width: 80%;
+    position: relative;
+    top: -20px;
+  }
 
+  &:hover {
+    opacity: 0;
+    top: -60px;
+  }
+`;
 
-div:nth-child(2){
+const OverlayFlex = styled(Card)`
   position: absolute;
-  bottom: 0;
   top: 30px;
-  left: 0;
-  margin-left:60px ;
-  background: radial-gradient(at center, #7f7df1, #ffffff);
+  left: ${({ left }) => (left ? "60px" : "auto")};
+  right: ${({ right }) => (right ? "60px" : "auto")};
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-
-img{
-    width: 100px;
-    height: 100px;
-}
-
   border: 4px solid white;
-    @media (max-width: 768px) {
-    width: 75%;
-  }
-}
 
-div:nth-child(3){
-  position: absolute;
-  bottom: 0;
-  top: 30px;
-  right: 0;
-  margin-right:60px;
-  background: radial-gradient(at center, #918ff7, #ffffff);
-  border: 4px solid white;
-  display: grid;
-  grid-template-columns: 30% 30% 30%;
-  justify-items: center;
-  align-items: center;
-  gap: 5px;
-  justify-content: center;
-img{
+  img {
     width: 100px;
     height: 100px;
     border-radius: 15px;
     background-color: white;
-}
-    @media (max-width: 768px) {
-    width: 75%;
   }
-}
 
-div:last-child{
-  background: radial-gradient(at center, #b2d48a, #fffffe);
-  animation: fadeIn 4s infinite;
-  z-index: 20;
-  }
+  display: ${({ hide }) => (hide ? "none" : "flex")};
+
   @media (max-width: 768px) {
-   display: : ;
-}
-
-    //Animations
-
-      @keyframes fadeIn {
-      0% {
-        transform: translateY(-10px);
-      }
-      50% {
-        transform: translateY(-25px);
-      }
-        100% {
-        transform: translateY(-10px);
-    }
+    width: 100%;
   }
-}
+`;
 
-section:last-child {
-  display: grid;
-  gap: 20px;
+const InfoSection = styled.section`
+  text-align: center;
   padding: 30px;
   border-radius: 50px;
-  position: relative;
-  flex-wrap: wrap;
-  width: 100%;
-  margin: auto;
-  justify-content: center;
-  text-align: center;
-  margin: 20px auto;
-  div:first-child {
-  strong{
-  text-transform: uppercase;
-  color: #ffffff;
-  font-size: 25px;
-}
 
-.cont{
-  border-radius: 50px;
-  display: flex;
-  overflow: hidden;
-  padding: 10px;
-  justify-content: center;
+  > div > strong {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 25px;
+    display: block;
+    margin-bottom: 10px;
+  }
 
-img {
-  animation: marquee 18s linear infinite;
-  width: 100px;
-  height: 100px;
-  margin: 0 10px;
-  border-radius: 15px;
-  object-fit: contain;
+  > div > .cont {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    margin-bottom: 40px;
+    padding: 10px;
+    border-radius: 50px;
+    gap: 15px;
+    img {
+      animation: marquee 18s linear infinite;
+      width: 100px;
+      height: 100px;
+      margin: 0 10px;
+      border-radius: 15px;
+      object-fit: contain;
+    }
+
+    @media (max-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+
+      img {
+        animation: none;
       }
     }
   }
-}
 
+  @media (max-width: 768px) {
+    padding: 5px;
+  }
 
-//Animations
+  // Espaciado entre bloques de datos
+  > div > strong:not(:first-of-type) {
+    margin-top: 40px;
+  }
 
-@keyframes marquee {
- 
-0% {
-    transform: translateX(0);
+  @keyframes fadeIn {
+    0% {
+      transform: translateY(30px);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(30px);
+    }
   }
-  100% {
-    transform: translateX(-1000%);
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(750%);
+    }
+    100% {
+      transform: translateX(-1000%);
+    }
   }
-  0% {
-    transform: translateX(750%);
-  }
-}
 `;
 
 const Herramientas = () => {
-
   return (
-    <Sectionmain>
-      <section className='SkillsPrin'>
+    <SectionMain>
+      {/* Sección 1 - solo visible en desktop */}
+      <SkillSection>
+        {/* Tarjeta 1 */}
+        <Card
+          bg="radial-gradient(at center, #fffd98, #ffffff)"
+          z={2}
+          animate="fadeIn 3s infinite"
+        >
+          <h2>Herramientas de diseño principales</h2>
+          <img
+            src="https://res.cloudinary.com/dehpi4905/image/upload/v1753734033/developer-2-06-512_jltg4u.webp"
+            alt="Diseño"
+          />
+        </Card>
 
-        <div><h2>Herramientas de diseno peincipales</h2> <img src="https://res.cloudinary.com/dehpi4905/image/upload/v1753734033/developer-2-06-512_jltg4u.webp" alt="" /></div>
-        <div className='prin'>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" alt="" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="" />
-          <img src="https://res.cloudinary.com/dehpi4905/image/upload/v1753732485/Adobe_After_Effects_CC_icon.svg_v3ni2k.png" alt="" />
-        </div>
-        <div> <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="" />
-          <img src="https://res.cloudinary.com/dehpi4905/image/upload/v1753730230/6aecc665-9f30-4dc7-bacc-880d8e66c7bb_tf0ke2.png" alt="" />
-          <img src="https://res.cloudinary.com/dehpi4905/image/upload/v1753732568/angular-icon-logo-5FC0C40EAC-seeklogo.com_ixngik.png" alt="" />
-          <img src="https://res.cloudinary.com/dehpi4905/image/upload/v1753732702/mysql-5-logo-png-transparent_ebetfi.png" alt="" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg" alt="" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" alt="" />
-        </div>
-        <div><h2>Herramientas de programacion peincipales</h2>
-          <img src="https://res.cloudinary.com/dehpi4905/image/upload/v1753734033/developer-2-06-512_jltg4u.webp" alt="" /></div>
-      </section>
-      <section>
+        {/* Tarjeta 2 */}
+        <Card
+          bg="radial-gradient(at center, #b2d48a, #fffffe)"
+          z={2}
+          animate="fadeIn 4s infinite"
+        >
+          <h2>Herramientas de programación principales</h2>
+          <img
+            src="https://res.cloudinary.com/dehpi4905/image/upload/v1753734033/developer-2-06-512_jltg4u.webp"
+            alt="Programación"
+          />
+        </Card>
 
+        {/* Portada izquierda */}
+        <OverlayFlex bg="radial-gradient(at center, #7f7df1, #ffffff)" left>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg"
+            alt="Illustrator"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg"
+            alt="Figma"
+          />
+          <img
+            src="https://res.cloudinary.com/dehpi4905/image/upload/v1753732485/Adobe_After_Effects_CC_icon.svg_v3ni2k.png"
+            alt="AE"
+          />
+        </OverlayFlex>
+
+        {/* Portada derecha */}
+        <OverlayFlex
+          bg="radial-gradient(at center, #918ff7, #ffffff)"
+          right
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(3, 30%)",
+            justifyItems: "center",
+            alignItems: "center",
+            gap: "5px",
+          }}
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+            alt="React"
+          />
+          <img
+            src="https://res.cloudinary.com/dehpi4905/image/upload/v1753730230/6aecc665-9f30-4dc7-bacc-880d8e66c7bb_tf0ke2.png"
+            alt="Icon"
+          />
+          <img
+            src="https://res.cloudinary.com/dehpi4905/image/upload/v1753732568/angular-icon-logo-5FC0C40EAC-seeklogo.com_ixngik.png"
+            alt="Angular"
+          />
+          <img
+            src="https://res.cloudinary.com/dehpi4905/image/upload/v1753732702/mysql-5-logo-png-transparent_ebetfi.png"
+            alt="MySQL"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg"
+            alt="Sass"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
+            alt="JS"
+          />
+        </OverlayFlex>
+      </SkillSection>
+
+      {/* Sección 2 - visible en todos los dispositivos */}
+      <InfoSection>
         <div>
-          <strong>diseño</strong>
-          <div className='cont'>
-            {Diseno.map((element, index) => (
-              <img key={index} src={element} alt="Diseño Programas" />
+          <strong>Diseño</strong>
+          <div className="cont">
+            {Diseno.map((src, i) => (
+              <img key={i} src={src} alt="Diseño" />
             ))}
           </div>
 
-          <strong>frameworks</strong>
-          <div className='cont'>
-            {Framework.map((element, index) => (
-              <img key={index} src={element} alt="Diseño Programas" />
+          <strong>Frameworks</strong>
+          <div className="cont">
+            {Framework.map((src, i) => (
+              <img key={i} src={src} alt="Framework" />
             ))}
           </div>
 
-          <strong>librerias</strong>
-          <div className='cont'>
-            {Librerias.map((element, index) => (
-              <img key={index} src={element} alt="Diseño Programas" />
+          <strong>Librerías</strong>
+          <div className="cont">
+            {Librerias.map((src, i) => (
+              <img key={i} src={src} alt="Librería" />
             ))}
           </div>
-          <strong>lenguajes</strong>
-          <div className='cont'>
-            {lenguajes.map((element, index) => (
-              <img key={index} src={element} alt="Diseño Programas" />
+
+          <strong>Lenguajes</strong>
+          <div className="cont">
+            {lenguajes.map((src, i) => (
+              <img key={i} src={src} alt="Lenguaje" />
             ))}
           </div>
         </div>
-      </section>
-    </Sectionmain>
-  )
-}
+      </InfoSection>
+    </SectionMain>
+  );
+};
 
-export default Herramientas
+export default Herramientas;
