@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { FaReact, FaAngular } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+import ModalContactos from '../Contactos/modal-contactos';
 
 
 const Section = styled.section`
@@ -84,6 +86,8 @@ const Section = styled.section`
 
 
 const Presentacion = () => {
+  const [showContactModal, setShowContactModal] = useState(false);
+
   return (
     <Section className='Presentacion'>
       <div>
@@ -102,13 +106,16 @@ const Presentacion = () => {
           utilizo líneas de código y diseños extravagantes.
         </p>
         <div className='botones  animate__animated animate__fadeInDown animate__delay-1s' >
-          <a href="#" id="contactame">Contactame</a>
+          <Link to="#" onClick={e => { e.preventDefault(); setShowContactModal(true); }}>
+            Contactame
+          </Link>
           <a
             id="descargarcv"
             target="_blank"
-            href="../../assets/Archivos/CamiloSOLCV-12025.pdf">Descargar CV</a>
+            href="Archivos/CamiloSOLCV-12025.pdf">Descargar CV</a>
         </div>
       </div>
+      <ModalContactos open={showContactModal} onClose={() => setShowContactModal(false)} />
     </Section>
   )
 }

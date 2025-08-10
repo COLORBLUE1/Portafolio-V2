@@ -100,7 +100,8 @@ const ModalContactos = ({ open, onClose }) => {
           <BtnClose onClick={onClose} aria-label="Cerrar modal">
             &times;
           </BtnClose>
-          <h3>Contacto</h3>
+                  <strong>Dejame un mensaje y me comunicare contigo:</strong>
+
           <ContactForm />
         </Container>
       </Overlay>
