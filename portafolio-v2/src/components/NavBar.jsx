@@ -75,6 +75,11 @@ const NavCont = styled.nav`
         position: relative;
 }
 
+a {
+    li{
+        color: #353535;
+    }
+}
 
         li {
             font-family: roboto;
@@ -191,6 +196,7 @@ const NavBar = () => {
     const location = useLocation();
     const [active, setActive] = useState('Sobre mí');
     const [theme, setTheme] = useState('light'); // default
+    const [showContactModal, setShowContactModal] = useState(false);
 
 
     useEffect(() => {
@@ -205,12 +211,11 @@ const NavBar = () => {
             case '/skills':
                 setActive('Skills');
                 break;
-            case '/contacto':
-                modal();
-                break;
             default:
                 setActive('Sobre mí');
         }
+        // Cierra el modal si cambias de ruta
+        setShowContactModal(false);
     }, [location]);
 
 
@@ -220,7 +225,7 @@ const NavBar = () => {
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
         }
-};
+    };
 
     // Toggle theme and persist in localStorage
     const toggleTheme = () => {
@@ -253,37 +258,41 @@ const NavBar = () => {
     }, [theme]);
 
 
+    // Estado para el menú hamburguesa
+    const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
+
+    // Abrir/cerrar menú hamburguesa
     const HandleResize = () => {
-        const botonMenu = document.querySelector('.hamburgerMenu');
-        const hamburgerMenuContainer = document.querySelector('.hamburgerMenuContainer');
+        setIsHamburgerOpen(prev => !prev);
+    };
 
-        // Asegúrate que el menú empieza oculto con left -500px
-        hamburgerMenuContainer.style.left = hamburgerMenuContainer.style.left || '-100%';
-
-        // Evita añadir múltiples event listeners
-        const onClick = () => {
-            if (hamburgerMenuContainer.style.left === '0') {
-                hamburgerMenuContainer.style.left = '-100%';  // Ocultar menú
-            } else {
-                hamburgerMenuContainer.style.left = '0';        // Mostrar menú
+    // Cerrar menú al hacer clic fuera
+    useEffect(() => {
+        if (!isHamburgerOpen) return;
+        const handleClickOutside = (e) => {
+            const menu = document.querySelector('.hamburgerMenuContainer');
+            const button = document.querySelector('.hamburgerMenu');
+            if (menu && !menu.contains(e.target) && button && !button.contains(e.target)) {
+                setIsHamburgerOpen(false);
             }
         };
-
-        // Remueve listener previo para evitar duplicados (por seguridad)
-        botonMenu.removeEventListener('click', onClick);
-        botonMenu.addEventListener('click', onClick);
-    };
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, [isHamburgerOpen]);
 
     return (
         <NavCont>
-            <div onClick={() => HandleResize()} className="hamburgerMenu animate__animated animate__fadeInDown">
+            <div onClick={HandleResize} className="hamburgerMenu animate__animated animate__fadeInDown">
                 <RxHamburgerMenu />
             </div>
             <ul className="animate__animated animate__fadeInDown">
                 <Link to="/"><li className={active === 'Sobre mí' ? 'active' : ''} onClick={() => { handleScroll('sobre-mi'); setActive('Sobre mí'); }}>Sobre mí</li></Link>
                 <Link to="/proyectos"><li className={active === 'Proyectos' ? 'active' : ''} onClick={() => { handleScroll('proyectos'); setActive('Proyectos'); }}>Proyectos</li></Link>
                 <Link to="/skills"><li className={active === 'Skills' ? 'active' : ''} onClick={() => { handleScroll('skills'); setActive('Skills'); }}>Skills</li></Link>
-                <a ><li onClick={() => { modal('block !important'); }}>Contacto</li></a>
+                {/* Botón de contacto: igual que los demás, pero solo abre el modal */}
+                <Link to="#" onClick={e => { e.preventDefault(); setShowContactModal(true); }}>
+                    <li style={{ cursor: 'pointer' }}>Contacto</li>
+                </Link>
                 <div className="contenedor_swich animate__animated animate__fadeInUp">
                     <div className="swich" id="swich" onClick={toggleTheme} style={{ backgroundColor: theme === 'dark' ? '#424242' : 'white', outline: theme === 'light' ? '2px solid #0000007f' : 'none' }}>
                         <img className='animate__animated animate__fadeInDown'
@@ -300,12 +309,18 @@ const NavBar = () => {
 
             {/* //Hamburguer menu for mobile view */}
 
-            <div className="hamburgerMenuContainer animate__animated animate__fadeInLeft">
+            <div
+                className="hamburgerMenuContainer animate__animated animate__fadeInLeft"
+                style={{ left: isHamburgerOpen ? '0' : '-100%' }}
+            >
                 <ul>
                     <li className={active === 'Sobre mí' ? 'active' : ''} onClick={() => { handleScroll('sobre-mi'); setActive('Sobre mí'); }}><Link to="/">Sobre mí</Link></li>
                     <li className={active === 'Proyectos' ? 'active' : ''} onClick={() => { handleScroll('proyectos'); setActive('Proyectos'); }}><Link to="/proyectos">Proyectos</Link></li>
                     <li className={active === 'Skills' ? 'active' : ''} onClick={() => { handleScroll('skills'); setActive('Skills'); }}><Link to="/skills">Skills</Link></li>
-                    <li className={active === 'Contacto' ? 'active' : ''} onClick={() => { handleScroll('contacto'); setActive('Contacto'); }}><Link to="/contacto">Contacto</Link></li>
+                    {/* Botón de contacto: igual que los demás, pero solo abre el modal */}
+                    <Link to="#" onClick={e => { e.preventDefault(); setShowContactModal(true); }}>
+                        <li style={{ cursor: 'pointer' }}>Contacto</li>
+                    </Link>
                     <div className="contenedor_swich animate__animated animate__fadeInUp">
                         <div className="swich" id="swich" onClick={toggleTheme} style={{ backgroundColor: theme === 'dark' ? '#424242' : 'white', outline: theme === 'light' ? '2px solid #0000007f' : 'none' }}>
                             <img className='animate__animated animate__fadeInDown'
@@ -319,9 +334,13 @@ const NavBar = () => {
                         </div>
                     </div>
                 </ul>
-
             </div>
 
+            {/* Modal de contacto, controlado por estado */}
+            <ModalContactos
+                open={showContactModal}
+                onClose={() => setShowContactModal(false)}
+            />
         </NavCont>
     );
 };

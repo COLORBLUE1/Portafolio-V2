@@ -1,5 +1,6 @@
 import styled, { keyframes } from 'styled-components';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import ContactForm from './ContactForm';
 
 const fadeIn = keyframes`
   from { opacity: 0 }
@@ -21,17 +22,21 @@ const Overlay = styled.div`
   display: ${(props) => (props.display ? props.display : 'none')};
   position: fixed;
   inset: 0;
-  background-color: #12121291;
-  backdrop-filter: blur(5px);
+  background-color: #a1a1a191;
+  backdrop-filter: blur(8px);
   animation: ${fadeIn} 0.3s ease forwards;
   z-index: 1000;
+
+  justify-content: center;
+    align-items: center;
+  
 `;
 
 const Container = styled.div`
-  position: ${(props) => (props.isMobile ? 'fixed' : 'absolute')};
-  background-color: ${(props) => (props.isMobile ? 'rgba(255, 255, 255, 0.95)' : '#fefefe')};
+  position: fixed;
+  background-color: #fefefe;
   padding: 20px 40px;
-  width: ${(props) => (props.isMobile ? '90%' : '320px')};
+  width: 90%;
   max-width: 400px;
   max-height: 80vh;
   overflow-y: auto;
@@ -41,11 +46,12 @@ const Container = styled.div`
   color: #111111;
   text-align: center;
   animation: ${fadeInDown} 0.3s ease forwards;
-  top: ${(props) => (props.isMobile ? '50%' : props.position?.top + 'px')};
-  left: ${(props) => (props.isMobile ? '50%' : props.position?.left + 'px')};
-  transform: ${(props) => (props.isMobile ? 'translate(-50%, -50%)' : 'translate(-50%, 0)')};
   z-index: 1001;
   font-family: 'Roboto', sans-serif;
+
+  @media (max-width: 768px) {
+    width: 60%;
+}
 `;
 
 const BtnClose = styled.button`
@@ -64,39 +70,40 @@ const BtnClose = styled.button`
   }
 `;
 
-const ModalContactos = ({ display, onClose, isMobile, position }) => {
+
+const ModalContactos = ({ open, onClose }) => {
   // Cerrar con ESC
   useEffect(() => {
+    if (!open) return;
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') onClose();
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [onClose]);
+  }, [onClose, open]);
 
-  // Cerrar clic en overlay (solo en móvil)
+  // Cerrar clic en overlay (en cualquier dispositivo)
   const handleOverlayClick = (e) => {
     if (e.target === e.currentTarget) onClose();
   };
 
+  if (!open) return null;
+
   return (
     <>
-      {isMobile && <Overlay display={display} onClick={handleOverlayClick} />}
-      <Container
-        isMobile={isMobile}
-        position={position}
-        aria-modal="true"
-        role="dialog"
-      >
-        <BtnClose onClick={onClose} aria-label="Cerrar modal">
-          &times;
-        </BtnClose>
-        <h3>Contacto</h3>
-        <p>
-          Aquí puedes poner el formulario o datos de contacto que desees.
-        </p>
-        {/* Aquí más contenido */}
-      </Container>
+      <Overlay display={open ? 'flex' : 'none'} onClick={handleOverlayClick} >
+
+        <Container
+          aria-modal="true"
+          role="dialog"
+        >
+          <BtnClose onClick={onClose} aria-label="Cerrar modal">
+            &times;
+          </BtnClose>
+          <h3>Contacto</h3>
+          <ContactForm />
+        </Container>
+      </Overlay>
     </>
   );
 };

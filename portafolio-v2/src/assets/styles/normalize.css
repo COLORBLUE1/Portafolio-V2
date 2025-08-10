@@ -91,64 +91,70 @@ body {
     color: #464646;
   }
 
-.hamburgerMenuContainer{
-    ul li {
-            a {
-                color: #ffffff !important;
-            }
+  .hamburgerMenuContainer {
+    ul a {
+      li {
+        color: #ffffff !important;
+      }
     }
-}
 
-.footer{
-  color: white;
+    li {
+      a {
+        color: #ffffff !important;
+      }
+    }
+  }
+
+  .footer {
+    color: white;
     div:first-child {
       p {
-      color: #222222;
+        color: #222222;
       }
     }
     strong {
       color: white;
       a {
         color: aqua;
+      }
+    }
+
+    ul h2 {
+      color: #ffffff !important;
     }
   }
 
-  ul h2{
-      color: #ffffff !important;
-    }
-}
-
- div:last-child  ul {
+  div:last-child ul {
     h2 {
       color: #ffffff;
     }
-    li a{
+    li a {
       color: #bfadff;
     }
-}
-
-.card-swap-section {
-  background-color: rgba(94, 23, 23, 0);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.404);
-
-  div:first-child {
-    h2 {
-      color: rgb(255, 255, 255);
-    }
-
-    a {
-      background-color: rgb(43, 43, 43);
-      border: 1px solid #ffffffa8;
-      color: rgb(255, 255, 255);
-    }
   }
+
+  .card-swap-section {
+    background-color: rgba(94, 23, 23, 0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.404);
+
+    div:first-child {
+      h2 {
+        color: rgb(255, 255, 255);
+      }
+
+      a {
+        background-color: rgb(43, 43, 43);
+        border: 1px solid #ffffffa8;
+        color: rgb(255, 255, 255);
+      }
+    }
     .card {
-    border: 1px solid #ffffff;
-    background-color: rgba(138, 138, 138, 0.582);
-    backdrop-filter: blur(15px);
+      border: 1px solid #ffffff;
+      background-color: rgba(138, 138, 138, 0.582);
+      backdrop-filter: blur(15px);
+    }
   }
-}
-.informacio {
+  .informacio {
     background-color: #252525c3 !important;
 
     h4 {
@@ -158,16 +164,14 @@ body {
     p {
       color: #8d8d8d !important;
     }
-}
+  }
 
-.Presentacion {
-
+  .Presentacion {
     h3 {
       color: #a3a3a371;
     }
+  }
 }
-}
-
 
 /**
  * Render the `main` element consistently in IE.
@@ -227,8 +231,8 @@ a {
   background-color: transparent;
 }
 
-ul{
-    padding: 0;
+ul {
+  padding: 0;
 }
 
 li {
