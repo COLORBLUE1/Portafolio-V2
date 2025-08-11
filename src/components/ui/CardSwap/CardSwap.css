@@ -1,0 +1,106 @@
+.card-swap-section {
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 60px;
+  padding: 50px;
+  width: 60%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: auto;
+  box-shadow: 0 0 9px rgba(75, 75, 75, 0.555);
+  transition: all 1s;
+
+  div:first-child {
+    width: 80%;
+
+    h2 {
+      color: rgb(0, 0, 0);
+      font-size: 30px;
+      font-family: inco;
+      width: 75%;
+    }
+
+    a {
+      background-color: rgb(255, 255, 255);
+      border: 1px solid #3a3a3a60;
+      padding: 10px;
+      border-radius: 20px;
+      width: 500px;
+      color: rgb(70, 82, 255);
+      font-family: inco;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 2s;
+
+      &:hover {
+        background-color: rgba(0, 225, 255, 0.479);
+        cursor: pointer;
+        position: relative;
+        left: 15px;
+        text-decoration: underline;
+      }
+    }
+    @media (max-width: 768px) {
+      text-align: center;
+      h2 {
+        width: 100%;
+      }
+    }
+  }
+
+  .card-swap-container {
+    transform: translate(5%, 20%);
+    transform-origin: bottom right;
+    perspective: 900px;
+  }
+
+  .card {
+    position: absolute;
+    top: 54%;
+    left: 45%;
+    border-radius: 12px;
+    border: 1px solid #3a3a3a60;
+    background-color: rgba(255, 255, 255, 0.582);
+    backdrop-filter: blur(10px);
+    transform-style: preserve-3d;
+    will-change: transform;
+    backface-visibility: hidden;
+    overflow: hidden;
+    h3 {
+      margin-bottom: 0;
+      margin-left: 10px;
+      font-family: roboto;
+    }
+
+    p {
+      font-family: inco;
+      margin: 0;
+      margin-bottom: 10px;
+      margin-left: 10px;
+      font-size: 15px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+
+    .card-swap-container {
+      transform: scale(0.75) translate(25%, 25%);
+    }
+  }
+
+  @media (max-width: 480px) {
+    flex-wrap: wrap;
+
+    .card-swap-container {
+      transform: scale(0.7) translate(25%, 25%);
+    }
+  }
+}
