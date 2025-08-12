@@ -23,7 +23,7 @@ const Section = styled.section`
     h2 {
       text-align: center;
       color: #3b3b3b;
-      font-size: 30px;
+      font-size: clamp(1.25rem, 0.804rem + 1.19vw, 1.875rem);
       font-weight: 800;
       line-height: 0.1em;
       letter-spacing: 0.3em;
@@ -58,8 +58,8 @@ const Section = styled.section`
     width: 70%;
     figure img {
         position: relative;
-        top: -100px;
-        scale: 1.8;
+        top: -50px;
+        scale: 1.7;
         transition: all 1s ease;
       }
     }
@@ -91,7 +91,6 @@ const Section = styled.section`
         height: 50px;
         object-fit: contain;
         transition: all 1s ease;
-        
       }
     }
 
@@ -172,12 +171,12 @@ const Informacion = () => {
             alt="mause down scroll"
           />
         </div>
-          <h4>Ingeniero en sistemas - Desarrollador web</h4>
-          <h4>¿Que puedo aportar?</h4>
-          <p>  Como programador front-end, aporto habilidades en HTML, CSS y
-            JavaScript para desarrollar interfaces intuitivas y visualmente
-            atractivas. Con el objetivo de optimizar el rendimiento y la
-            experiencia del usuario en cada proyecto.</p>
+        <h4>Ingeniero en sistemas - Desarrollador web</h4>
+        <h4>¿Que puedo aportar?</h4>
+        <p>  Como programador front-end, aporto habilidades en HTML, CSS y
+          JavaScript para desarrollar interfaces intuitivas y visualmente
+          atractivas. Con el objetivo de optimizar el rendimiento y la
+          experiencia del usuario en cada proyecto.</p>
       </div>
     </Section>
   )

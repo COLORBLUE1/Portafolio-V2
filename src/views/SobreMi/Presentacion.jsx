@@ -26,7 +26,7 @@ const Section = styled.section`
     justify-items: center;
     
     h1 {
-      font-size: clamp(3.8rem, -2.825rem + 16.333vw, 11.875rem);
+      font-size: clamp(3rem, -2.825rem + 16.333vw, 11.875rem);
       line-height: 0.1em;
       letter-spacing: 0.1em;
       color: rgb(0 182 255);
@@ -39,7 +39,7 @@ const Section = styled.section`
     }
     h3 {
       color: #00000070;
-      font-size: clamp(0.625rem, 0.179rem + 1.19vw, 1.25rem); 
+      font-size: clamp(0.5rem, 0.179rem + 1.19vw, 1.25rem); 
       font-weight: 400;
       line-height: 0em;
       letter-spacing: 0.5em;
@@ -50,7 +50,7 @@ const Section = styled.section`
 
     p {
       width:clamp(21.875rem, -2.679rem + 65.476vw, 56.25rem);
-      font-size: clamp(0.938rem, 0.714rem + 0.595vw, 1.25rem);
+      font-size: clamp(0.1rem, 0.714rem + 0.595vw, 1.25rem);
       margin-bottom: 30px;
       text-align: center;
       color: #929292f1;
