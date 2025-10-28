@@ -76,7 +76,7 @@ div:last-child {
   letter-spacing: 0.1em;
   
     h2 {
-font-size: clamp(1.875rem, 1.429rem + 1.19vw, 2.5rem);
+font-size: clamp(1rem, 1.429rem + 1.19vw, 2.5rem);
   }
 
 figure {
@@ -84,7 +84,7 @@ figure {
 
  img {
   width: 400px;
-  top: 100px;
+  top: 130px;
   position: relative;
   object-fit: contain;
   scale: 1.5;

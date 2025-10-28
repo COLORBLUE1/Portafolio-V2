@@ -50,7 +50,7 @@ const Container = styled.div`
   font-family: 'Roboto', sans-serif;
 
   @media (max-width: 768px) {
-    width: 60%;
+    width: 60% !important;
 }
 `;
 
