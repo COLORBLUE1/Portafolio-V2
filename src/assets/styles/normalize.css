@@ -158,17 +158,20 @@ body {
     background-color: #252525c3 !important;
 
     h4 {
-      color: #f0d5d5 !important;
+      color: #b6b7fa !important;
     }
 
     p {
-      color: #8d8d8d !important;
+      color: #ffffff !important;
     }
   }
 
   .Presentacion {
     h3 {
-      color: #a3a3a371;
+      color: #a3a3a3;
+    }
+    p {
+      color: #ffffff;
     }
   }
 }

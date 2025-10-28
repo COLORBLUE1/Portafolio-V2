@@ -14,7 +14,7 @@ const Section = styled.section`
   justify-content: center;
   padding: 20px;
   box-sizing: border-box;
-  color: #333;
+  color: #af1616;
   font-family: Arial, sans-serif;
   overflow-y: auto;
   transition: all 1s ease;
@@ -38,7 +38,7 @@ const Section = styled.section`
 
     }
     h3 {
-      color: #00000070;
+      color: #525252;
       font-size: clamp(0.625rem, 0.179rem + 1.19vw, 1.25rem); 
       font-weight: 400;
       line-height: 0em;
@@ -53,35 +53,37 @@ const Section = styled.section`
       font-size: clamp(0.938rem, 0.714rem + 0.595vw, 1.25rem);
       margin-bottom: 30px;
       text-align: center;
-      color: #929292f1;
+      color: #3f3f3ff0;
       font-family: roboto;
     }
+    
     .botones {
       display: flex;
       flex-wrap: wrap;
       a {
-        letter-spacing: 0.1em;
         border-radius: 30px;
         background-color: rgb(0 182 255);
         color: white;
         text-decoration: none;
         padding: 10px 15px;
         margin: 10px;
+        font-weight: 700;
     }
 
-    #descargarcv{
+    .descargarcv{
       outline: rgb(0 182 255) solid 2px;
-      background-color: transparent;
+      background: #c4c4c437;
   }
 
       a:hover {
         background-color: aqua !important;
-        color: black;
+        color: #4b4b4b;
         transition: all 0.3s ease;
         scale: 1.1;
+        outline: 2px solid white;
+      }
+    }
   }
-}
-}
 `;
 
 
@@ -97,11 +99,11 @@ const Presentacion = () => {
           id="subtitulo-sobremi"
           className="animate__animated animate__fadeInUp animate__delay-1s"
         >
-          desarrollador front-End <span><FaReact color='rgb(0, 255, 255)' /> <FaAngular color='rgba(250, 53, 53, 0.699)' /></span>
+          desarrollador front-End <span><FaReact color='rgb(140, 0, 255)' /> <FaAngular color='rgba(250, 53, 53, 0.699)' /></span>
         </h3>
         <p className="animate__animated animate__fadeInUp animate__delay-1s">
           ¡Bienvenidos a mi increíble y deslumbrante portafolio web! Aquí
-          encontrarás una mezcla perfecta de talento, creatividad y un toque de
+          encontrarás una mezcla perfecta e talento, creatividad y un toque de
           locura. Soy como un chef de la web, pero en lugar de ingredientes,
           utilizo líneas de código y diseños extravagantes.
         </p>
@@ -110,7 +112,7 @@ const Presentacion = () => {
             Contactame
           </Link>
           <a
-            id="descargarcv"
+            className="descargarcv"
             target="_blank"
             href="Archivos/CamiloSOLCV-12025.pdf">Descargar CV</a>
         </div>

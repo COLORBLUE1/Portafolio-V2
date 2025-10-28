@@ -8,13 +8,14 @@ import { Link } from 'react-router-dom';
 import { demoItems } from '../components/ui/FlowingMenu/data';
 import BlurText from '../components/ui/BlurText/BlurText';
 import MetaBalls from '../components/ui/MetaBalls/MetaBalls';
+import Aos from 'aos';
 
 
 const SobreMi = () => {
   useEffect(() => {
     document.title = 'Sobre Mi - Portafolio';
     window.scrollTo(0, 0);
-    AOS.init();
+    Aos.init();
   }, []);
 
 
