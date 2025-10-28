@@ -33,11 +33,12 @@ const FooterSection = styled.footer`
       
       p {
       font-family: inco;
-      color: #222222;
-      font-weight: 600;
+      color: #222222b9;
+      font-weight: 800;
       letter-spacing: 0.2em;
+      text-transform: uppercase;
       }
-  
+
       img {
       width: 65px;
       height: 65px;
@@ -46,12 +47,13 @@ const FooterSection = styled.footer`
     strong {
       font-size: 0.8em;
       font-family: inco;
+      color: #494949f4;
       a {
-        text-transform: uppercase;
+      text-transform: uppercase;
+      color: #008cff;
     }
   }
 }
-
 
  div:last-child {
     display: flex;
@@ -64,18 +66,24 @@ const FooterSection = styled.footer`
     list-style: none;
     padding: 0;
     h2{
-      color: #333333;
+      color: #353434b5;
       font-size: 1.5em;
       margin-bottom: 10px;
       font-family: roboto;
       letter-spacing: 6px;
     }
-    li a{
-      color: #977fee;
-
+    li {
+         margin: 10px 0;
+         text-align: left;
+      a {
+      color: #696969;
       font-family: inco;
       &:hover{
         color: #2366f7;
+      }
+    }
+      @media (max-width: 768px) {
+      text-align: center;
       }
     }
   }
@@ -95,15 +103,6 @@ const FooterSection = styled.footer`
       letter-spacing: auto;
       }
     }
-    strong {
-      font-size: 0.8em;
-      font-family: inco;
-      a {
-                color: aqua;
-
-        text-transform: uppercase;
-      }
-    }
   }
   
   div:last-child {
@@ -111,6 +110,10 @@ const FooterSection = styled.footer`
     align-items: center;
     width: 90%;
     margin: 0 auto;
+
+    li{
+      text-align: center;
+    }
   }
 }
 `;
@@ -127,15 +130,15 @@ const Footer = () => {
       </div>
       <div><ul>
         <h2>Adicional</h2>
-        <li><a href="">Github</a></li>
-        <li><a href="">Codepen</a></li>
-        <li><a href="">Linkedin</a></li>
+        <li><a href="https://github.com/COLORBLUE1">Github</a></li>
+        <li><a href="https://codepen.io/COLORBLUE1">Codepen</a></li>
+        <li><a href="https://www.linkedin.com/in/camilo-sol/">Linkedin</a></li>
       </ul>
         <ul>
           <h2>Contactame</h2>
-          <li><a href="">whatsapp</a></li>
-          <li><a href="">Telegram</a></li>
-          <li><a href="">camilosol123@gmail.com</a></li>
+          <li><a href="https://wa.me/573173457029">whatsapp</a></li>
+          <li><a href="https://web.telegram.org/k/#@Camilo_boy">Telegram</a></li>
+          <li><a href="mailto:camilosol123@gmail.com">camilosol123@gmail.com</a></li>
         </ul>
       </div>
     </FooterSection>

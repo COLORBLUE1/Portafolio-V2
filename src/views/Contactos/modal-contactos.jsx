@@ -101,7 +101,6 @@ const ModalContactos = ({ open, onClose }) => {
             &times;
           </BtnClose>
                   <strong>Dejame un mensaje y me comunicare contigo:</strong>
-
           <ContactForm />
         </Container>
       </Overlay>
