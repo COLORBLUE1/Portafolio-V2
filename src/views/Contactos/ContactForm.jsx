@@ -1,6 +1,6 @@
 
 import styled from 'styled-components';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import { useRef, useState } from 'react';
 
 const FormContainer = styled.form`
