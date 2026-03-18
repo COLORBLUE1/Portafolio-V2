@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components'
+import { useTranslation } from '../../i18n/useTranslation';
 
 const Section = styled.section`
   width: 100%;
@@ -121,6 +122,7 @@ figure {
 `;
 
 const LoUltimo = () => {
+  const { t } = useTranslation();
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     const checkScreenSize = () => {
@@ -154,7 +156,7 @@ const LoUltimo = () => {
         className="Educacion"
         id="Educacion"
       >
-        <h2 id="Miraloultimo">Mira lo ultimo</h2>
+        <h2 id="Miraloultimo">{t('latest.header')}</h2>
         <figure>
           <img
             src={isMobile ? "https://res.cloudinary.com/dehpi4905/image/upload/v1751384460/ChatGPT_Image_Jul_1__2025__10_40_25_AM-removebg-preview_ztbiyn.png" : "https://res.cloudinary.com/dehpi4905/image/upload/v1748704013/Portafolio/fixvdrg0athbp9ddp321.png"}

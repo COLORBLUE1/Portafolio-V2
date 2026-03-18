@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { FaReact, FaAngular } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import ModalContactos from '../Contactos/modal-contactos';
+import { useTranslation } from '../../i18n/useTranslation';
 
 
 const Section = styled.section`
@@ -89,32 +90,30 @@ const Section = styled.section`
 
 const Presentacion = () => {
   const [showContactModal, setShowContactModal] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <Section className='Presentacion'>
       <div>
-        <h1 className="animate__animated animate__fadeInUp">Camilo sol</h1>
+        <h1 className="animate__animated animate__fadeInUp">{t('present.title')}</h1>
 
         <h3
           id="subtitulo-sobremi"
           className="animate__animated animate__fadeInUp animate__delay-1s"
         >
-          desarrollador front-End <span><FaReact color='rgb(140, 0, 255)' /> <FaAngular color='rgba(250, 53, 53, 0.699)' /></span>
+          {t('present.subtitle')} <span><FaReact color='rgb(140, 0, 255)' /> <FaAngular color='rgba(250, 53, 53, 0.699)' /></span>
         </h3>
         <p className="animate__animated animate__fadeInUp animate__delay-1s">
-          ¡Bienvenidos a mi increíble y deslumbrante portafolio web! Aquí
-          encontrarás una mezcla perfecta e talento, creatividad y un toque de
-          locura. Soy como un chef de la web, pero en lugar de ingredientes,
-          utilizo líneas de código y diseños extravagantes.
+          {t('present.welcome')}
         </p>
         <div className='botones  animate__animated animate__fadeInDown animate__delay-1s' >
           <Link to="#" onClick={e => { e.preventDefault(); setShowContactModal(true); }}>
-            Contactame
+            {t('present.contact')}
           </Link>
           <a
             className="descargarcv"
             target="_blank"
-            href="Archivos/CamiloSOLCV-12025.pdf">Descargar CV</a>
+            href="Archivos/CamiloSOLCV-12026.pdf">{t('present.downloadCV')}</a>
         </div>
       </div>
       <ModalContactos open={showContactModal} onClose={() => setShowContactModal(false)} />

@@ -5,6 +5,10 @@ import { Link, useLocation } from "react-router-dom"; // Use useLocation from re
 import { RxHamburgerMenu, RxHeight } from "react-icons/rx";
 import ModalContactos from '../views/Contactos/modal-contactos';
 
+// translation helpers
+import { useTranslation } from '../i18n/useTranslation';
+import { useLanguage } from '../i18n/LanguageContext';
+
 const NavCont = styled.nav`
     width: 100%;
     position: fixed;
@@ -194,7 +198,9 @@ a {
 
 const NavBar = () => {
     const location = useLocation();
-    const [active, setActive] = useState('Sobre mí');
+    const { t } = useTranslation();
+    const { lang, changeLanguage } = useLanguage();
+    const [active, setActive] = useState(t('nav.about'));
     const [theme, setTheme] = useState('light'); // default
     const [showContactModal, setShowContactModal] = useState(false);
 
@@ -203,16 +209,16 @@ const NavBar = () => {
         const path = location.pathname;
         switch (path) {
             case '/':
-                setActive('Sobre mí');
+                setActive(t('nav.about'));
                 break;
             case '/proyectos':
-                setActive('Proyectos');
+                setActive(t('nav.projects'));
                 break;
             case '/skills':
-                setActive('Skills');
+                setActive(t('nav.skills'));
                 break;
             default:
-                setActive('Sobre mí');
+                setActive(t('nav.about'));
         }
         // Cierra el modal si cambias de ruta
         setShowContactModal(false);
@@ -286,12 +292,12 @@ const NavBar = () => {
                 <RxHamburgerMenu />
             </div>
             <ul className="animate__animated animate__fadeInDown">
-                <Link to="/"><li className={active === 'Sobre mí' ? 'active' : ''} onClick={() => { handleScroll('sobre-mi'); setActive('Sobre mí'); }}>Sobre mí</li></Link>
-                <Link to="/proyectos"><li className={active === 'Proyectos' ? 'active' : ''} onClick={() => { handleScroll('proyectos'); setActive('Proyectos'); }}>Proyectos</li></Link>
-                <Link to="/skills"><li className={active === 'Skills' ? 'active' : ''} onClick={() => { handleScroll('skills'); setActive('Skills'); }}>Skills</li></Link>
+                <Link to="/"><li className={active === t('nav.about') ? 'active' : ''} onClick={() => { handleScroll('sobre-mi'); setActive(t('nav.about')); }}>{t('nav.about')}</li></Link>
+                <Link to="/proyectos"><li className={active === t('nav.projects') ? 'active' : ''} onClick={() => { handleScroll('proyectos'); setActive(t('nav.projects')); }}>{t('nav.projects')}</li></Link>
+                <Link to="/skills"><li className={active === t('nav.skills') ? 'active' : ''} onClick={() => { handleScroll('skills'); setActive(t('nav.skills')); }}>{t('nav.skills')}</li></Link>
                 {/* Botón de contacto: igual que los demás, pero solo abre el modal */}
                 <Link to="#" onClick={e => { e.preventDefault(); setShowContactModal(true); }}>
-                    <li style={{ cursor: 'pointer' }}>Contacto</li>
+                    <li style={{ cursor: 'pointer' }}>{t('nav.contact')}</li>
                 </Link>
                 <div className="contenedor_swich animate__animated animate__fadeInUp">
                     <div className="swich" id="swich" onClick={toggleTheme} style={{ backgroundColor: theme === 'dark' ? '#424242' : 'white', outline: theme === 'light' ? '2px solid #0000007f' : 'none' }}>
@@ -301,8 +307,8 @@ const NavBar = () => {
                             alt="Switch Theme Icon"
                         />
                     </div>
-                    <div className="swich_2" id="swich_2">
-                        <h6 className='animate__animated animate__fadeInUp' id="ES-EN">EN</h6>
+                    <div className="swich_2" id="swich_2" onClick={() => changeLanguage(lang === 'es' ? 'en' : 'es')} style={{cursor:'pointer'}}>
+                        <h6 className='animate__animated animate__fadeInUp' id="ES-EN">{lang === 'es' ? 'EN' : 'ES'}</h6>
                     </div>
                 </div>
             </ul>
@@ -314,12 +320,12 @@ const NavBar = () => {
                 style={{ left: isHamburgerOpen ? '0' : '-100%' }}
             >
                 <ul>
-                    <li className={active === 'Sobre mí' ? 'active' : ''} onClick={() => { handleScroll('sobre-mi'); setActive('Sobre mí'); }}><Link to="/">Sobre mí</Link></li>
-                    <li className={active === 'Proyectos' ? 'active' : ''} onClick={() => { handleScroll('proyectos'); setActive('Proyectos'); }}><Link to="/proyectos">Proyectos</Link></li>
-                    <li className={active === 'Skills' ? 'active' : ''} onClick={() => { handleScroll('skills'); setActive('Skills'); }}><Link to="/skills">Skills</Link></li>
+                    <li className={active === t('nav.about') ? 'active' : ''} onClick={() => { handleScroll('sobre-mi'); setActive(t('nav.about')); }}><Link to="/">{t('nav.about')}</Link></li>
+                    <li className={active === t('nav.projects') ? 'active' : ''} onClick={() => { handleScroll('proyectos'); setActive(t('nav.projects')); }}><Link to="/proyectos">{t('nav.projects')}</Link></li>
+                    <li className={active === t('nav.skills') ? 'active' : ''} onClick={() => { handleScroll('skills'); setActive(t('nav.skills')); }}><Link to="/skills">{t('nav.skills')}</Link></li>
                     {/* Botón de contacto: igual que los demás, pero solo abre el modal */}
                     <Link to="#" onClick={e => { e.preventDefault(); setShowContactModal(true); }}>
-                        <li style={{ cursor: 'pointer' }}>Contacto</li>
+                        <li style={{ cursor: 'pointer' }}>{t('nav.contact')}</li>
                     </Link>
                     <div className="contenedor_swich animate__animated animate__fadeInUp">
                         <div className="swich" id="swich" onClick={toggleTheme} style={{ backgroundColor: theme === 'dark' ? '#424242' : 'white', outline: theme === 'light' ? '2px solid #0000007f' : 'none' }}>
@@ -329,8 +335,8 @@ const NavBar = () => {
                                 alt="Switch Theme Icon"
                             />
                         </div>
-                        <div className="swich_2" id="swich_2">
-                            <h6 className='animate__animated animate__fadeInUp' id="ES-EN">EN</h6>
+                        <div className="swich_2" id="swich_2" onClick={() => changeLanguage(lang === 'es' ? 'en' : 'es')} style={{cursor:'pointer'}}>
+                            <h6 className='animate__animated animate__fadeInUp' id="ES-EN">{lang === 'es' ? 'EN' : 'ES'}</h6>
                         </div>
                     </div>
                 </ul>

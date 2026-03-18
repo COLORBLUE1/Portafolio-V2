@@ -24,23 +24,24 @@
     }
 
     a {
-      background-color: rgb(255, 255, 255);
       border: 1px solid #3a3a3a60;
       padding: 10px;
       border-radius: 20px;
       width: 500px;
-      color: rgb(70, 82, 255);
       font-family: inco;
       text-transform: uppercase;
       text-decoration: none;
-      transition: all 2s;
-
+      transition: all 1s;
+      top: 0;
+      
       &:hover {
-        background-color: rgba(0, 225, 255, 0.479);
+        background-color: rgb(255, 255, 255);
         cursor: pointer;
         position: relative;
-        left: 15px;
+        top: -4px;
         text-decoration: underline;
+        color: rgb(0, 0, 0);
+         transition: all 1s;
       }
     }
     @media (max-width: 768px) {
@@ -88,6 +89,9 @@
     }
   }
 
+
+
+
   @media (max-width: 768px) {
     flex-wrap: wrap;
 
@@ -95,6 +99,8 @@
       transform: scale(0.75) translate(25%, 25%);
     }
   }
+
+
 
   @media (max-width: 480px) {
     flex-wrap: wrap;

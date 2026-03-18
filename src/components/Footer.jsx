@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { logo } from '../assets/const';
+import { useTranslation } from '../i18n/useTranslation';
 
 const FooterSection = styled.footer`
   width: 100%;
@@ -119,23 +120,24 @@ const FooterSection = styled.footer`
 `;
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <FooterSection className='footer'>
       <div>
         <span>
           <img src={logo} alt="Description" />
-          <p>Cada día se aprende algo</p>
+          <p>{t('footer.slogan')}</p>
         </span>
         <strong>2025 - <a target='_blank' href="https://github.com/COLORBLUE1">@Color blue</a></strong>
       </div>
       <div><ul>
-        <h2>Adicional</h2>
+        <h2>{t('footer.additional')}</h2>
         <li><a href="https://github.com/COLORBLUE1">Github</a></li>
         <li><a href="https://codepen.io/COLORBLUE1">Codepen</a></li>
         <li><a href="https://www.linkedin.com/in/camilo-sol/">Linkedin</a></li>
       </ul>
         <ul>
-          <h2>Contactame</h2>
+          <h2>{t('footer.contact')}</h2>
           <li><a href="https://wa.me/573173457029">whatsapp</a></li>
           <li><a href="https://web.telegram.org/k/#@Camilo_boy">Telegram</a></li>
           <li><a href="mailto:camilosol123@gmail.com">camilosol123@gmail.com</a></li>

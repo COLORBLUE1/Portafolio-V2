@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { useTranslation } from '../../i18n/useTranslation';
 
 const Section = styled.section`
   width: 100%;
@@ -156,10 +157,11 @@ const Section = styled.section`
 `;
 
 const Informacion = () => {
+  const { t } = useTranslation();
   return (
     <Section>
       <div data-aos="fade-up" data-aos-duration="2000" className="yo" id="yo">
-        <h2 id="estesoyyo">Este soy yo</h2>
+        <h2 id="estesoyyo">{t('info.header')}</h2>
         <figure>
           <img src="https://res.cloudinary.com/dehpi4905/image/upload/v1749327251/photo_5055586398052134396_y-removebg-preview_vf8w7s.png" alt="" />
         </figure>
@@ -171,12 +173,9 @@ const Informacion = () => {
             alt="mause down scroll"
           />
         </div>
-        <h4>Ingeniero en sistemas - Desarrollador web</h4>
-        <h4>¿Que puedo aportar?</h4>
-        <p>  Como programador front-end, aporto habilidades en HTML, CSS y
-          JavaScript para desarrollar interfaces intuitivas y visualmente
-          atractivas. Con el objetivo de optimizar el rendimiento y la
-          experiencia del usuario en cada proyecto.</p>
+        <h4>{t('info.subtitle')}</h4>
+        <h4>{t('info.question')}</h4>
+        <p>{t('info.paragraph')}</p>
       </div>
     </Section>
   )

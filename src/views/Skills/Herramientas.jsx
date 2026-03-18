@@ -12,6 +12,7 @@ const SectionMain = styled.section`
   flex-direction: column;
   gap: 50px;
   padding: 30px;
+  margin-top: 300px;
 `;
 
 const SkillSection = styled.section`
