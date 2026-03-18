@@ -1,6 +1,6 @@
-import styled, { keyframes } from 'styled-components';
-import { useEffect, useState } from 'react';
-import ContactForm from './ContactForm';
+import styled, { keyframes } from "styled-components";
+import { useEffect, useState } from "react";
+import ContactForm from "./ContactForm";
 
 const fadeIn = keyframes`
   from { opacity: 0 }
@@ -19,7 +19,7 @@ const fadeInDown = keyframes`
 `;
 
 const Overlay = styled.div`
-  display: ${(props) => (props.display ? props.display : 'none')};
+  display: ${(props) => (props.display ? props.display : "none")};
   position: fixed;
   inset: 0;
   background-color: #a1a1a191;
@@ -28,8 +28,7 @@ const Overlay = styled.div`
   z-index: 1000;
 
   justify-content: center;
-    align-items: center;
-  
+  align-items: center;
 `;
 
 const Container = styled.div`
@@ -47,11 +46,11 @@ const Container = styled.div`
   text-align: center;
   animation: ${fadeInDown} 0.3s ease forwards;
   z-index: 1001;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 
   @media (max-width: 768px) {
     width: 60% !important;
-}
+  }
 `;
 
 const BtnClose = styled.button`
@@ -70,16 +69,15 @@ const BtnClose = styled.button`
   }
 `;
 
-
 const ModalContactos = ({ open, onClose }) => {
   // Cerrar con ESC
   useEffect(() => {
     if (!open) return;
     const handleKeyDown = (e) => {
-      if (e.key === 'Escape') onClose();
+      if (e.key === "Escape") onClose();
     };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
   }, [onClose, open]);
 
   // Cerrar clic en overlay (en cualquier dispositivo)
@@ -91,16 +89,12 @@ const ModalContactos = ({ open, onClose }) => {
 
   return (
     <>
-      <Overlay display={open ? 'flex' : 'none'} onClick={handleOverlayClick} >
-
-        <Container
-          aria-modal="true"
-          role="dialog"
-        >
+      <Overlay display={open ? "flex" : "none"} onClick={handleOverlayClick}>
+        <Container aria-modal="true" role="dialog">
           <BtnClose onClick={onClose} aria-label="Cerrar modal">
             &times;
           </BtnClose>
-                  <strong>Dejame un mensaje y me comunicare contigo:</strong>
+          <strong>Dejame un mensaje y me comunicare contigo:</strong>
           <ContactForm />
         </Container>
       </Overlay>
